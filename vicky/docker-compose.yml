@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    command: >
+      sh -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/app
+    environment:
+      - http_proxy=http://your_proxy_server:your_proxy_port
+      - https_proxy=http://your_proxy_server:your_proxy_port
+# Use the official Python image as a base image
+
+

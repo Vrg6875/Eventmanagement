@@ -1,0 +1,53 @@
+
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'register.css' %}">
+
+
+
+
+<h2>CREATE NEW ACCOUNT</h2>
+<br>
+
+
+<form method="post" action="{% url 'register' %}">
+    {% csrf_token %}
+    {% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label"><b>First name</b></label>
+      <input type="text" name="first_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+     
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label"><b>last name</b></label>
+      <input type="text" name="last_name" class="form-control" id="exampleInputPassword1">
+    </div>
+
+    <div>
+      <label class="form-check-label" for="exampleCheck1"><b>username</b></label>
+      <input type="text" name="username" class="form-control"id="exampleCheck1">
+    </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label"><b>password</b></label>
+        <input type="password" name="password1" class="form-control" id="exampleInputPassword1">
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label"><b>confirm password</b></label>
+        <input type="password" name="password2" class="form-control" id="exampleInputPassword1">
+      </div>
+      
+    </div>
+    <div>
+        <p>already have a account <a href="/login/">login</a></p>
+
+    </div>
+  
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
