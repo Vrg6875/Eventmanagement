@@ -15,11 +15,14 @@ from .views import logout_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.home,name='home'),
+    path('auth/',views.home,name='home'),
+    path('',views.front),
+    path('front/',views.front),
 
     path('event/',views.event,name='event'),
     path('prince/',views.prince,name='prince'),
     path('mehndi/',views.mehndi,name='mehndi'),
+    path('utkarsh/',views.utkarsh,name='utkarsh'),
   
     
     path('vacant/',views.vacant,name='vacant'),
@@ -34,10 +37,31 @@ urlpatterns = [
 
     path('login/',views.login,name='login'),
 
-
+    
+    path('contact/',views.contact, name='contact'),
 
 
     path('logout/', logout_view, name='logout'),
+
+
+
+    path('about/',views.about, name='about'),
+    path('ourwork/',views.ourwork, name='ourwork'),
+    #services we provide
+    path('decor/',views.decor, name='decor'),
+    path('food/',views.food, name='food'),
+    path('destination/',views.destination, name='destination'),
+    path('meeting/',views.meeting, name='meeting'),
+    path('marriage/',views.marriage, name='marriage'),
+    path('festival/',views.festival, name='festival'),
+    path('vendor/',views.vendor, name='vendor'),
+    path('entertainment/',views.entertainment, name='entertainment'),
+
+
+
+
+
+
 
 
 

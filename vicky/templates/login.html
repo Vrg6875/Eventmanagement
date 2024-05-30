@@ -1,34 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
 
-
-{% load static %}
-<link rel="stylesheet" href="{% static 'login.css' %}">
-
-
-<form method="post">
-    {% csrf_token %}
-   
-    <h2>USER LOGIN</h2>
-    <br>
-    {% if messages %}
-    <ul class="main">
-      {% for message in messages %}
-      <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-      {% endfor %}
-  </ul>
-  {% endif %}
-    
-  <div>
-  <label class="form-check-label" for="exampleCheck1"><b>Username</b></label>
-  <input type="text" name="username"  class="form-control" id="exampleCheck1">
-  </div>
-  <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label"><b>Password</b></label>
-      <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'front.css' %}">
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+          <li><a href="/front/">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="/contact/">Contact Us</a></li>
+          <li><a href="#our-work">Our Work</a></li>
+        </ul>
     </div>
-  
-    <div>
-      <p>don't  have a account please create <a href="/register/">signup</a></p>
-  
-  </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form> 
+    <div class="header">
+        <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Wedding" style="filter: brightness(0.6);">
+        <div class="overlay">
+            <div>
+            <form method="post">
+                {% csrf_token %}
+                <h2 style="color: white;">USER LOGIN</h2>
+                <br>
+                {% if messages %}
+                <ul class="main">
+                  {% for message in messages %}
+                  <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                  {% endfor %}
+              </ul>
+            
+              {% endif %}
+        <div>      
+        <label><b>Username</b></label>
+        <input type="text" name="username"  class="form-control" id="exampleCheck1">
+        </div>
+        <div>
+            <label for="exampleInputPassword1" class="form-label"><b>Password</b></label>
+            <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        
+        <div>
+            <p>don't  have a account please create <a href="/register/">signup</a></p>
+        </div>
+          <button type="submit" class="vicky">Submit</button> 
+        </div>
+    </div>
+</form> 
+
+ 

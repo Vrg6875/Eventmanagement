@@ -8,25 +8,65 @@ logging.debug('this is a debug meesage')
 
 from event.models import vic_event,vic_register
 
+def utkarsh(request):
+    if request.method == 'GET':
+        # Get data from URL parameters
+        name=request.GET.get('name')
+        email = request.GET.get('email')
+
+        email_content = f'''
+        name:  {name}
+        Email: {email}
+        '''
+        send_mail(
+             'Enquiry details',#subejct heading
+             email_content,#show message in mail
+             'vg314671@gmail.com',#from
+             ['vg314670@gmail.com'],#where
+             fail_silently=False
+         )
+        utkarsh1(request)#it is fucntion 
+        return HttpResponseRedirect("/contact/")
+        
+def utkarsh1(request):
+    event_messsage = f'''
+        Dear {request.GET.get('name')},
+
+I hope this message finds you well.
+
+I am writing to inquire about your event management services. My organization, is planning an event and we are seeking professional assistance to ensure its success.'''
+      
+    send_mail(
+        'Thank you for your enquiryy!',#subject
+         event_messsage,#message show hoga
+        'vg314671@gmail.com',  # from
+        [request.GET.get('email')],  # recipient_list should be a list
+        fail_silently=False
+    )
+
+    messages.success(request, 'Thank you, your enquiry has been created successfully!')
+    return HttpResponseRedirect("/contact/")
+    
 def prince(request):
     if request.method == 'GET':
         # Get data from URL parameters
+        your_name=request.GET.get('your_name')
         event_name = request.GET.get('event_name')
         event_date = request.GET.get('event_date')
-        event_time = request.GET.get('event_time')
+      
         event_mail = request.GET.get('event_mail')
         event_state = request.GET.get('event_state')
         event_city = request.GET.get('event_city')
-        
         event_description = request.GET.get('event_description')
         event_category = request.GET.get('event_category')
         guests = request.GET.get('guests')
 
         # Format email content
-        email_content = f'''Event Details:
+        email_content = f'''
+        Your name:  {your_name}
         Event Name: {event_name}
         Event Date: {event_date}
-        Event Time: {event_time}
+       
         Event mail: {event_mail}
         Event state: {event_state}
         Event city: {event_city}
@@ -46,10 +86,22 @@ def prince(request):
          )
         vicky1(request)#it is fucntion 
         return HttpResponseRedirect("/event/")
+    
 def vicky1(request):
+    event_messsage = f'''
+        Dear {request.GET.get('your_name')},
+
+        We are thrilled to extend our heartfelt thanks to you for your valuable participation in {request.GET.get('event_name')} held on {request.GET.get('event_date')}. Your presence and active engagement were pivotal to making this event a grand success.
+
+        The insights shared, the connections made, and the enthusiasm displayed by all attendees truly exemplified the spirit of collaboration and learning that we aimed to foster. We are grateful for the opportunity to have hosted such an inspiring and impactful event.
+
+        A special thank you to our speakers, sponsors, and volunteers for their dedication and hard work. Your contributions were instrumental in creating an unforgettable experience for everyone involved.
+
+        We look forward to your continued support and participation in future events. Together, we can achieve even greater milestones.
+        '''
     send_mail(
-        'Thank you for your event submission!(vicky_event_planner)',#subject
-        'your event was submitted',#message
+        'Thank you for your event submission!',#subject
+         event_messsage,#message show hoga
         'vg314671@gmail.com',  # from
         [request.GET.get('event_mail')],  # recipient_list should be a list
         fail_silently=False
@@ -67,9 +119,10 @@ def mehndi(request):
     if request.method == 'GET':
         print('vikcy')
         # Get data from URL parameters
+        your_name=request.GET.get('your_name')
         event_name = request.GET.get('event_name')
         event_date = request.GET.get('event_date')
-        event_time = request.GET.get('event_time')
+       
         event_mail = request.GET.get('event_mail')
         event_state = request.GET.get('event_state')
         event_city = request.GET.get('event_city')
@@ -79,10 +132,11 @@ def mehndi(request):
         guests = request.GET.get('guests')
 
         # Format email content
-        email_content = f'''Event Details:
+        email_content = f'''
+        Your name:  {your_name}
         Event Name: {event_name}
         Event Date: {event_date}
-        Event Time: {event_time}
+    
         Event mail: {event_mail}
         Event state: {event_state}
         Event city: {event_city}
@@ -107,7 +161,7 @@ def mehndi(request):
      
 def vicky2(request):
     send_mail(
-        'Thank you for your event submission!(vicky_event_planner)',#subject
+        'Thank you for your event submission!',#subject
         'your event was updated',#message
         'vg314671@gmail.com',  # from
         [request.GET.get('event_mail')],  # recipient_list should be a list
@@ -125,9 +179,10 @@ def event(request):
     if request.method == 'POST':
         try:
             data={'vrg':vrg}
+            your_namee=request.POST.get('your_name')
             event_namee = request.POST.get('event-name')
             event_datee = request.POST.get('event-date')
-            event_timee = request.POST.get('event-time')
+           
             event_maill = request.POST.get('mail')
             event_statee = request.POST.get('state')
             event_cityy = request.POST.get('city')
@@ -136,13 +191,13 @@ def event(request):
             guestss = request.POST.get('guests')
             event_categoryy = request.POST.get('event-category')
 
-            if not all([event_namee, event_datee, event_timee,event_maill,event_statee,event_cityy, event_dess, guestss, event_categoryy]):
+            if not all([event_namee, event_datee,event_maill,event_statee,event_cityy, event_dess, guestss, event_categoryy,your_namee]):
                 messages.info(request, 'All fields are required')
                 return redirect('/event')
 
             if vic_event.objects.filter(event_date=event_datee):
-               if vic_event.objects.filter(event_time=event_timee).exists():
-                   messages.info(request,'this time was already booked')
+               if vic_event.objects.filter(event_date=event_datee).exists():
+                   messages.info(request,'this day was already booked')
                    return redirect('/event')
                
             #if vic_event.objects.filter(email=event_maill):   
@@ -153,19 +208,21 @@ def event(request):
             vic_event.objects.create(
                 event_name=event_namee,
                 event_date=event_datee,
-                event_time=event_timee,
+            
                 
                 event_description=event_dess,
                 event_category=event_categoryy,
                 guests=guestss,
                 email=event_maill,
                 state=event_statee,
-                city=event_cityy
+                city=event_cityy,
+                your_name=your_namee,
+
             )
             #return HttpResponseRedirect('/growbiz')
            
-            return HttpResponseRedirect('/prince/?event_name={}&event_date={}&event_time={}&event_description={}&event_category={}&guests={}&event_mail={}&event_state={}&event_city={}'.format(
-                event_namee, event_datee, event_timee, event_dess, event_categoryy, guestss,event_maill,event_statee,event_cityy))
+            return HttpResponseRedirect('/prince/?your_name={}&event_name={}&event_date={}&event_description={}&event_category={}&guests={}&event_mail={}&event_state={}&event_city={}'.format(
+                your_namee,event_namee, event_datee, event_dess, event_categoryy, guestss,event_maill,event_statee,event_cityy,your_namee))
 
         except Exception as e:
             print(e)  
@@ -194,10 +251,10 @@ def update_event(request,id):
     if request.method == 'POST':
         try:
             print('vicky update')
-            
+            your_namee=request.POST.get('your_name')
             event_namee = request.POST.get('event-name')
             event_datee = request.POST.get('event-date')
-            event_timee = request.POST.get('event-time')
+          
             event_maill = request.POST.get('mail')
             event_statee = request.POST.get('state')
             event_cityy= request.POST.get('city')
@@ -206,7 +263,7 @@ def update_event(request,id):
             guestss = request.POST.get('guests')
             event_categoryy = request.POST.get('event-category')
 
-            if not all([event_namee, event_datee, event_timee, event_dess, guestss, event_categoryy,event_maill,event_statee,event_cityy]):
+            if not all([event_namee, event_datee, event_dess, guestss, event_categoryy,event_maill,event_statee,event_cityy,your_namee]):
                 messages.info(request, 'All fields are required')
                 return redirect('/event')
             
@@ -217,16 +274,17 @@ def update_event(request,id):
             vic_event.objects.update(
                 event_name=event_namee,
                 event_date=event_datee,
-                event_time=event_timee,
+              
                 event_description=event_dess,
                 event_category=event_categoryy,
                 guests=guestss, email=event_maill,
                 state=event_statee,
-                city=event_cityy
+                city=event_cityy,
+                your_name=your_namee
             )
             
-            return HttpResponseRedirect('/mehndi/?event_name={}&event_date={}&event_time={}&event_description={}&event_category={}&guests={}&event_mail={}&event_state={}&event_city={}'.format(
-                event_namee, event_datee, event_timee,  event_dess, event_categoryy, guestss,event_maill,event_statee,event_cityy))
+            return HttpResponseRedirect('/mehndi/?event_name={}&event_date={}&event_description={}&event_category={}&guests={}&event_mail={}&event_state={}&event_city={}&your_name{}'.format(
+                event_namee, event_datee,  event_dess, event_categoryy, guestss,event_maill,event_statee,event_cityy,your_namee))
 
             
         except Exception as e:
@@ -238,6 +296,12 @@ def update_event(request,id):
 def home(request):
      
      return render(request,"home.html")
+def front(request):
+     
+     return render(request,"front.html")
+
+
+
 
 
 
@@ -312,4 +376,74 @@ from django.contrib.auth import logout
 def logout_view(request):
     logout(request)
     return HttpResponseRedirect('/login/')  # Redirect to the login page after logout
+
+
+
+from event.models import vic_contact
+def contact(request):
+
+    if request.method == 'POST':
+        try:    
+            namee=request.POST.get('name')
+            emaill = request.POST.get('email')
+            
+            if not all([namee,emaill]):
+                messages.info(request, 'All fields are required')
+                return redirect('/contact')
+            
+            vic_contact.objects.create(
+                name=namee,
+                email=emaill
+               
+            )
+            return HttpResponseRedirect('/utkarsh/?name={}&email={}'.format(
+                namee, emaill))
+            
+        except Exception as e:
+            print(e) 
+            pass 
+    return render(request,"contact.html")
+
+def about(request):
+     
+     return render(request,"about.html")
+def ourwork(request):
+     
+     return render(request,"ourwork.html")
+
+
+
+#services
+
+def vendor(request):
+     
+     return render(request,"vendor.html")
+
+def food(request):
+     
+     return render(request,"food.html")
+
+def marriage(request):
+     
+     return render(request,"marriage.html")
+
+def destination(request):
+     
+     return render(request,"destination.html")
+
+def festival(request):
+     
+     return render(request,"festival.html")
+
+def decor(request):
+     
+     return render(request,"decor.html")
+
+def entertainment(request):
+     
+     return render(request,"entertainment.html")
+
+def meeting(request):
+     
+     return render(request,"meeting.html")
 

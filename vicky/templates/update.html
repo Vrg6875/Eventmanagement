@@ -39,9 +39,12 @@
     {% endfor %}
 </ul>
 {% endif %}
+        <div>
+        <label for="event-date">Your name:</label><br>
+        <input type="text" id="event-date" name="your_name"><br>
+        </div>
 
-
-
+        <div>
             <label for="event-name">Event Name:</label><br>
             <input type="text" id="event-name" name="event-name" value="{{ event.event_name }}"><br>
         </div>

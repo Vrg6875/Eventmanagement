@@ -1,118 +1,95 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Planner</title>
+    <title>Shaandaar Events - Redefining Class</title>
 
     {% load static %}
-    <link rel="stylesheet" href="{% static 'main.css' %}">
-<style>
-   
-    .main{
-        color:red;
-    }
-    span{
-        color: green;
-    }
-    .vickyimage {
-        font-family: Arial, sans-serif;
-        background-image: url('https://images.unsplash.com/photo-1469371670807-013ccf25f16a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-        
-        background-repeat: no-repeat;
-        background-size: cover;
-        margin: 0;
-        padding: 0;
-    }
-   
-</style>
+    <link rel="stylesheet" href="{% static 'front.css' %}">
 </head>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<body class="vickyimage">
-    
-    <h1 id="event-planner" >Event Planner</h1>
-   
-
-    <form method="post" action="#" >
-        {% csrf_token %}
-        <div>
-            {% if messages %}
-<ul class="main">
-    {% for message in messages %}
-    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-    {% endfor %}
-</ul>
-{% endif %}
-
-       <div>
-        <h2>Book <span>Now!</span></h2>
-        <label for="event-name">Event Name:</label><br>
-        <input type="text" id="event-name" name="event-name" value="{{ vrg.event_name }}"> <br>
-        </div>
-        <div>
-        <label for="event-date">Event Date:</label><br>
-        <input type="date" id="event-date" name="event-date"><br>
-        </div>
-     <div>   
-        <label for="event-time">Event Time:</label><br>
-        <input type="time" id="event-time" name="event-time"><br>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="/front/">Home</a></li>
+            <li><a href="/about/">About Us</a></li>
+            <li><a href="/contact/">Contact Us</a></li>
+            <li><a href="/ourwork/">Our Work</a></li>
+            <li><a href="/logout/">Logout</a></li>
+        </ul>
     </div>
+    <div class="header">
+        <img src="https://media.istockphoto.com/id/471906412/photo/beautiful-table-setting-for-an-wedding-reception-or-an-event.jpg?s=2048x2048&w=is&k=20&c=_eAWgEvA_hOaeJ4kQLJWR7rwFcmIm6h9_Z83B59t_fk="
+            alt="Wedding" style="filter: brightness(0.7);">
 
-    <div>
-        <label for="event-date">Event mail:</label><br>
-        <input type="email" id="event-date" name="mail"><br>
-        </div>
 
-    <div>
-      <label>select State</label>
-      <select class="form-control" id="inputState" name="state">
-                          <option value="SelectState">Select State</option>
-                         
-                          <option value="Bihar">Bihar</option>
-                          <option value="Chhattisgarh">Chhattisgarh</option>
-                          <option value="Goa">Goa</option>
-                          <option value="Gujarat">Gujarat</option>
-                          <option value="Haryana">Haryana</option>
-                          <option value="Himachal Pradesh">Himachal Pradesh</option>
-                          <option value="Jammu and Kashmir">Jammu and Kashmir</option>
-                          <option value="Nagaland">Nagaland</option>
-                          <option value="Orissa">Orissa</option>
-                          <option value="Punjab">Punjab</option>
-                      
-                          <option value="Uttar Pradesh">Uttar Pradesh</option>
-                          
+        <div class="overlay">
+            <form method="post" action="#">
+                {% csrf_token %}
+                <div>
+
+
+                    <div>
+                        {% if messages %}
+                        <ul class="main">
+                            {% for message in messages %}
+                            <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                                {% endfor %}
+                        </ul>
+                        {% endif %}
+                        <h2>Book Now!</h2>
+                        <br>
+                        <div>
+                            <label>Your name:</label>
+                            <input type="text" id="event-date" name="your_name">
+                        </div>
+                        <br>
+                    <div>
+                        <label>Event Name:</label>
+                        <input type="text" id="event-name" name="event-name" value="{{ vrg.event_name }}"> 
+                    </div>
+                    <br>
+                    <div>
+                        <label >Event Date:</label>
+                        <input type="date" id="event-date" name="event-date">
+                    </div>
+                    <br>
+
+                    <div>
+                        <label>Event mail:</label>
+                        <input type="email" id="event-date" name="mail"><br>
+                    </div>
+                    <br>
+                    <div>
+                        <label>select State</label>
+                        <select class="form-control" id="inputState" name="state">
+                            <option value="SelectState">Select State</option>
+
+                            <option value="Bihar">Bihar</option>
+                            <option value="Chhattisgarh">Chhattisgarh</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Haryana">Haryana</option>
+                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                            <option value="Nagaland">Nagaland</option>
+                            <option value="Orissa">Orissa</option>
+                            <option value="Punjab">Punjab</option>
+
+                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+
                         </select>
-    </div>
-   
+                    </div>
 
-     
-    <div>
-        <label>select City</label>
-        <select class="form-control" id="inputState" name="city">
+
+                    <br>
+                    <div>
+                        <label>select City</label>
+                        <select class="form-control" id="inputState" name="city">
                             <option value="SelectState">Select City</option>
-                           
+
                             <option value="Bihar">patna</option>
                             <option value="Chhattisgarh">Chhattisgarh</option>
                             <option value="Goa">Goa</option>
@@ -123,39 +100,40 @@
                             <option value="Nagaland">Nagaland</option>
                             <option value="Orissa">Orissa</option>
                             <option value="Punjab">mohali</option>
-                        
+
                             <option value="Uttar Pradesh">mirzapur</option>
-                            
-                          </select>
-      </div>
-     <div>   
-        <label for="event-description">Event Description:</label><br>
-        <textarea id="event-description" name="event-description" rows="4" cols="50"></textarea><br>
-     </div>   
-        <label for="guests">Guests (comma-separated):</label><br>
-        <input type="text" id="guests" name="guests"><br>
-    </div>  
 
-        <div>
-        <label for="event-category">Event Category:</label><br>
-        <select id="event-category" name="event-category">
-            <option value="meeting">Meeting</option>
-            <option value="party">Party</option>
-            <option value="appointment">Appointment</option>
-            <option value="festival">festival</option>
-            <!-- Add more options as needed -->
-        </select>
-        <br><br>
-    </div>
-    
-    
-    <h3 class="main">Check the Available date and time</h3><a href="/vacant/"><h3>click</h3></a></p>
-         
-        <input type="submit" value="Create Event">
-        <div class="logout-link">
-        <a href="/logout/">logout</a>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="event-description">Event Description:</label>
+                        <textarea id="small-textarea" name="event-description" rows="4" cols="50"></textarea><br>
+                    </div><br>
+                    <label for="guests">Total no of Guests:</label>
+                    <input type="text" id="guests" name="guests">
+                </div>
+                  <br>
+                  <br>
+                <div>
+                    <label for="event-category">Event Category:</label>
+                    <select id="event-category" name="event-category">
+                        <option value="meeting">Meeting</option>
+                        <option value="party">Party</option>
+                        <option value="appointment">Appointment</option>
+                        <option value="festival">festival</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                    <br><br>
+                </div>
+
+
+                <p>Check the Available date and time</p><a href="/vacant/">click</a>
+
+                <input type="submit" value="Create Event">
+
+
+            </form>
+
         </div>
-
-    </form>
-</body>
-</html>
+    </div>
