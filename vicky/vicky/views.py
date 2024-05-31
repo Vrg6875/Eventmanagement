@@ -2,7 +2,7 @@ from django.http import HttpResponse,HttpResponseRedirect
 from django.shortcuts import render,redirect
 from django.contrib import messages
 from django.core.mail import send_mail
-import logging
+import logging                                   #hivicky
 logging.basicConfig(level=logging.DEBUG)
 logging.debug('this is a debug meesage')
 
