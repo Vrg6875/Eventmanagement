@@ -12,6 +12,4 @@ services:
     environment:
       - http_proxy=http://your_proxy_server:your_proxy_port
       - https_proxy=http://your_proxy_server:your_proxy_port
-# Use the official Python image as a base image
-
-
+   
