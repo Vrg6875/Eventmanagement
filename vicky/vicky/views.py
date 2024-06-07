@@ -197,7 +197,6 @@ def event(request):
                 return redirect('/event')
 
             if vic_event.objects.filter(event_date=event_datee):
-               if vic_event.objects.filter(event_date=event_datee).exists():
                    messages.info(request,'this day was already booked')
                    return redirect('/event')
                
@@ -220,7 +219,7 @@ def event(request):
                 your_name=your_namee,
 
             )
-            #return HttpResponseRedirect('/growbiz')
+           
            
             return HttpResponseRedirect('/prince/?your_name={}&event_name={}&event_date={}&event_description={}&event_category={}&guests={}&event_mail={}&event_state={}&event_city={}'.format(
                 your_namee,event_namee, event_datee, event_dess, event_categoryy, guestss,event_maill,event_statee,event_cityy,your_namee))
@@ -230,6 +229,31 @@ def event(request):
             pass
 
     return render(request, "event.html",data)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

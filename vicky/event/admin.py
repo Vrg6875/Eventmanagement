@@ -11,5 +11,3 @@ class vic_contact_admin(admin.ModelAdmin):
     list_display=('name', 'email')
 
 admin.site.register(vic_event, vic_event_admin)   
-admin.site.register(vic_register, vic_register_admin)
-admin.site.register(vic_contact, vic_contact_admin)
