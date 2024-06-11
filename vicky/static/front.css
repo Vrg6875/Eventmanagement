@@ -387,3 +387,86 @@ textarea{
     text-align: left; /* Justify the text for a more balanced appearance */
     line-height: 1.6;
 }
+
+
+
+/*formobile
+
+
+/* Default styles (desktop) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.header img {
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar li {
+        float: none;
+    }
+
+    .navbar li a {
+        text-align: left;
+        padding: 14px;
+    }
+
+    .overlay {
+        position: static;
+        transform: none;
+        text-align: center;
+        padding: 20px;
+    }
+
+    form {
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+
+    form input,
+    form select,
+    form textarea {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
