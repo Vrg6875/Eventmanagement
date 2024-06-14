@@ -1,12 +1,17 @@
-span{
-    color:rgb(142, 40, 12)
-}
+/* General Styles */
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    background-repeat: no-repeat;
 }
 
+/* Span Style */
+span {
+    color: rgb(142, 40, 12);
+}
+
+/* Navbar Styles */
 .navbar {
     background-color: black;
     padding: 1rem 0;
@@ -38,6 +43,7 @@ body {
     border-radius: 5px;
 }
 
+/* Header Styles */
 .header {
     position: relative;
     text-align: center;
@@ -49,9 +55,25 @@ body {
     height: auto;
 }
 
+/* Quotes Styles */
+.quotes {
+    font-family: 'Arial, sans-serif';
+    font-size: 1.8em;
+    color: white;
+    margin: 70px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.quotes p {
+    margin: 1px 0;
+}
+
 .overlay {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -60,15 +82,16 @@ body {
     font-size: 3rem;
     font-weight: bold;
     white-space: nowrap;
-    text-align: left; /* This ensures the text stays in one line */
+    text-align: left;
 }
 
-
+/* Content Styles */
 .content {
     text-align: center;
     padding: 2rem;
 }
 
+/* Button Styles */
 button {
     background-color: black;
     color: white;
@@ -83,14 +106,21 @@ button:hover {
     background-color: #333;
 }
 
+/* Heading Styles */
 h1 {
     font-size: 2em;
     text-align: center;
     display: block;
-    
-
 }
 
+h2 {
+    color: rgb(248, 250, 248);
+    text-align: center;
+    margin: auto;
+    width: 300px;
+}
+
+/* Services Grid */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -125,38 +155,31 @@ h1 {
     font-size: 1.2em;
     text-transform: uppercase;
 }
-.vrg{
-    
-        background-color:white; /* Black background */
-        color: rgb(24, 22, 22); /* White text color for contrast */
-        padding: 20px; /* Padding around the text */
-        text-align: center; /* Center-align the text */
-        font-size:1.2em; /* Increase font size for readability */
-        line-height: 2; /* Increase line height for better readability */
-        border-radius: 10px; /* Rounded corners for the background */
-        max-width: 800px; /* Limit the width of the paragraph */
-        margin: 0 auto; /* Center the paragraph horizontally */
 
-    
+/* VRG Style */
+.vrg {
+    background-color: white;
+    color: rgb(24, 22, 22);
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 2;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
 }
-h2{
-    color: rgb(248, 250, 248);
-}
-.main{
+
+/* Main Style */
+.main {
     color: green;
 }
-/* login.css */
 
-/* Form container */
-.main{
-    color:red;
-}
+/* Form Styles */
 form {
     width: 300px;
     margin: auto;
 }
 
-/* Form fields */
 .form-control {
     width: 100%;
     padding: 10px;
@@ -166,7 +189,6 @@ form {
     box-sizing: border-box;
 }
 
-/* Submit button */
 .btn-primary {
     background-color: #007bff;
     color: #fff;
@@ -176,23 +198,21 @@ form {
     cursor: pointer;
 }
 
-/* Submit button hover effect */
 .btn-primary:hover {
     background-color: #0056b3;
 }
 
-/* Link style */
+/* Link Styles */
 a {
     text-decoration: none;
     color: #007bff;
 }
 
-/* Link hover effect */
 a:hover {
     text-decoration: underline;
 }
 
-/* Error message styling */
+/* Error Message Styles */
 .messages {
     list-style-type: none;
     padding: 0;
@@ -205,41 +225,25 @@ a:hover {
 .error {
     color: red;
 }
-h2 {
-    width: 300px;
-    margin: auto;
-    text-align: center; /* Center the text horizontally */
-}
-body {
-   
-    background-repeat: no-repeat;
-  
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+
+/* Label Style */
 label {
     display: block;
     text-align: left;
     margin-bottom: 0px;
-    margin-top:0px;
+    margin-top: 0px;
     font-weight: bold;
 }
-.vicky {
-    background-color: black; /* Set background color */
-    color: white; /* Set text color */
-    padding: 10px 20px; /* Add padding for better appearance */
-    text-decoration: none; /* Remove default underline */
-}
-input {
-    width: 100%; /* Make inputs take up full width */
-    padding: 8px; /* Add padding for better appearance */
-    margin-bottom: 8px; /* Add space between inputs */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
-}
-/* event.css */
 
-/* Event category select styles */
+/* Input Styles */
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+}
+
+/* Event Category Select Styles */
 #event-category {
     width: 100%;
     padding: 8px;
@@ -249,20 +253,20 @@ input {
     box-sizing: border-box;
 }
 
-/* Available date and time message styles */
+/* Available Date and Time Message Styles */
 .main {
     color: red;
     text-align: center;
     margin-top: 20px;
 }
 
-/* Available date and time link styles */
+/* Available Date and Time Link Styles */
 .main a {
     text-decoration: none;
     color: green;
 }
 
-/* Create Event button styles */
+/* Create Event Button Styles */
 input[type="submit"] {
     background-color: black;
     color: white;
@@ -274,41 +278,36 @@ input[type="submit"] {
     margin-top: 10px;
 }
 
-/* Create Event button hover effect */
 input[type="submit"]:hover {
     background-color: #333;
 }
-textarea{
+
+/* Textarea Styles */
+textarea {
     color: rgb(16, 16, 16);
     border: none;
     padding: 10px 10px;
     font-size: 1rem;
     cursor: pointer;
-   
     margin-top: 20px;
     box-sizing: border-box;
 }
 
 #small-textarea {
-    width: 300px; 
-    height:70px;
-}
-.mehndi {
-    text-align: center; /* Center the text */
-    font-size: 1.2em; /* Optional: Adjust the font size if needed */
-    color: #333; /* Optional: Change the text color if needed */
-    padding: 20px; /* Optional: Add padding for better appearance */
-    margin: 0 auto; /* Center the element horizontally if it has a fixed width */
-}
-.service-item {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-    position: relative;
-    text-align: center;
+    width: 300px;
+    height: 70px;
 }
 
+/* Mehndi Style */
+.mehndi {
+    text-align: center;
+    font-size: 1.2em;
+    color: #333;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* Vicky Grid */
 .vicky-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -316,25 +315,25 @@ textarea{
     justify-items: center;
 }
 
-
+/* Pogo Style */
 .pogo {
     font-size: 2rem;
     font-weight: bold;
     white-space: nowrap;
     text-align: left;
-    /* This ensures the text stays in one line */
 }
 
+/* Peader Style */
 .peader {
     position: relative;
-    
     color: rgb(29, 27, 27);
-    max-width: 170ch; /* Limit the width of the text */
-    margin: 10 auto; /* Center the paragraph within its container */
-    text-align: left; /* Justify the text for a more balanced appearance */
+    max-width: 170ch;
+    margin: 10 auto;
+    text-align: left;
     line-height: 1.6;
 }
 
+/* Pverlay Style */
 .pverlay {
     position: absolute;
     top: 50%;
@@ -342,131 +341,194 @@ textarea{
     transform: translate(-50%, -50%);
 }
 
+/* Text Image Container */
 .text-image-container {
     display: flex;
-    align-items: center; 
+    align-items: center;
     margin-top: 1%;
     justify-content: center;
-     
 }
 
 .right-image {
-    margin-left: 10px; /* Adjust as needed */
+    margin-left: 10px;
     width: 400px;
- 
 }
+
 .centered-text {
-    text-align: center; /* Align text to center */
+    text-align: center;
 }
 
 .centered-text p {
-    max-width: 160ch; /* Limit the width of the text */
-    margin: 100 auto; /* Center the paragraph within its container */
-    text-align: left; /* Justify the text for a more balanced appearance */
-    line-height: 1.6; /* Increase line height for better readability */
-}
-
-.left-image {
-    margin-left: 10px; /* Adjust as needed */
-    width: 350px;
-}
-.utkarsh{
-    text-align: right;
-    margin-right: 2%;
-    display: flex;
-    align-items: center; 
-    margin-top: 1%;/
-  
-}
-.raj {
-    position: relative;
-    
-    color: rgb(29, 27, 27);
-    max-width: 140ch; /* Limit the width of the text */
-    margin: 10 auto; /* Center the paragraph within its container */
-    text-align: left; /* Justify the text for a more balanced appearance */
+    max-width: 160ch;
+    margin: 100 auto;
+    text-align: left;
     line-height: 1.6;
 }
 
-
-
-/*formobile
-
-
-/* Default styles (desktop) */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+.left-image {
+    margin-left: 10px;
+    width: 350px;
 }
 
-.navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
+/* Utkarsh Style */
+.utkarsh {
+    text-align: right;
+    margin-right: 2%;
+    display: flex;
+    align-items: center;
+    margin-top: 1%;
 }
 
-.navbar li {
-    float: left;
+/* Raj Style */
+.raj {
+    position: relative;
+    color: rgb(29, 27, 27);
+    max-width: 140ch;
+    margin: 10 auto;
+    text-align: left;
+    line-height: 1.6;
 }
 
-.navbar li a {
-    display: block;
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar li {
+        margin: 0.5rem 0;
+    }
+
+    .services-grid, .vicky-grid {
+        grid-template-columns: 1fr; /* Single column for services and vicky-grid on mobile */
+    }
+
+    .header img {
+        height: auto; /* Ensure header image is responsive */
+    }
+
+    .right-image, .left-image {
+        width: 100%; /* Ensure images are responsive */
+        margin-left: 0; /* Remove left margin for mobile */
+    }
+
+    .text-image-container {
+        flex-direction: column; /* Stack text and images vertically */
+    }
+
+    .content {
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+
+    .vrg {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    .pogo {
+        font-size: 1.5rem; /* Adjust font size for mobile */
+    }
+
+    .logo {
+        font-size: 2rem;
+        text-align: center; /* Center the logo text for mobile */
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        width: auto;
+        font-size: 1em;
+    }
+
+    .mehndi {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    .utkarsh {
+        flex-direction: column;
+        text-align: center;
+        margin-right: 0;
+        align-items: center;
+    }
+
+    .peader, .raj, .centered-text p {
+        margin: 0.5rem;
+        padding: 1rem;
+        max-width: 100%;
+    }
+
+    .form-control, #event-category, #small-textarea, form, textarea {
+        width: 100%; /* Ensure form elements are responsive */
+    }
+}
+
+.vicky {
+    display: inline-block;
+    background-color: black;
     color: white;
-    text-align: center;
-    padding: 14px 16px;
+    padding: 10px 20px;
     text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
 }
 
-.header img {
-    width: 100%;
-    height: auto;
+.vicky:hover {
+    background-color: #333; /* Slightly lighter black for hover effect */
 }
 
-.overlay {
+/* Footer Styles */
+.foot {
+    background-color: rgb(46, 44, 44); /* Black background color */
+    color: #fff; /* White text color */
+    padding: 10px; /* Add some padding around the text */
+    text-align: center; /* Center the text */
+}
+
+.foot p {
+    margin: 0; /* Remove the default margin of the paragraph element */
+    font-size: 20px; /* Set the font size of the text */
+}
+
+/* Event Styles */
+.overevent {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
 }
 
-/* Mobile styles */
-@media (max-width: 768px) {
-    .navbar ul {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
+/* Contact Styles */
+.overcontact {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
-    .navbar li {
-        float: none;
-    }
+.overourwork {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
-    .navbar li a {
-        text-align: left;
-        padding: 14px;
-    }
+.overaboutus {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
-    .overlay {
-        position: static;
-        transform: none;
-        text-align: center;
-        padding: 20px;
-    }
-
-    form {
-        display: block;
-        width: 100%;
-        padding: 10px;
-    }
-
-    form input,
-    form select,
-    form textarea {
-        width: 100%;
-        margin: 5px 0;
-    }
+.overlogin {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
