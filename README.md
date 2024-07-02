@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Eventmanagement
 =======
 =======
@@ -11,3 +12,5 @@ An Event management allows user to plan and manage events efficiently it include
 # Event-planner
 An Event planner project an event planner project allows user to plan and manage events efficiently it include features like creation event schedules, managing guest list sending invitivation 
 >>>>>>> 06af940 (Initial commit)
+=======
+>>>>>>> f7692fd (Update README.md)
