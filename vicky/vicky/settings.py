@@ -71,12 +71,18 @@ WSGI_APPLICATION = 'vicky.wsgi.application'
  
 
 
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'eventplanner',# in termina database create name(anythhing)
+        'USER': 'postgres', 
+        'PASSWORD': 'vicky@123',
+        'HOST': 'db',
+        'PORT': '5432',
     }
 }
+
 
 
 

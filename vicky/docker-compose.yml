@@ -10,6 +10,43 @@ services:
     volumes:
       - .:/app
     environment:
-      - http_proxy=http://your_proxy_server:your_proxy_port
-      - https_proxy=http://your_proxy_server:your_proxy_port
-   
+      # Remove these lines if you don't use proxy
+      # - http_proxy=http://your_proxy_server:your_proxy_port
+      # - https_proxy=http://your_proxy_server:your_proxy_port
+      DJANGO_ALLOWED_HOSTS: "0.0.0.0"  # Ensure this environment variable is set
+    depends_on:
+      - db
+    networks:
+      - vicky_network
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: eventplanner
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: vicky@123
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - vicky_network
+
+  pgadmin:
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: vickyrajgupta2003@gmail.com    
+      PGADMIN_DEFAULT_PASSWORD: vicky@123
+    ports:
+      - "5050:80"
+    networks:
+      - vicky_network
+
+volumes:
+  postgres_data:
+
+networks:
+  vicky_network:
+    driver: bridge
