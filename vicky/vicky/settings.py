@@ -82,7 +82,11 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+<<<<<<< HEAD
 #vicky raj guupta
+=======
+#vrg
+>>>>>>> feature2
 
 
 
