@@ -1,0 +1,550 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-repeat: no-repeat;
+}
+
+/* Span Style */
+span {
+    color: rgb(142, 40, 12);
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: black;
+    padding: 1rem 0;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 1rem;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #333;
+    border-radius: 5px;
+}
+
+/* Header Styles */
+.header {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.header img {
+    width: 100%;
+    height: auto;
+}
+
+/* Quotes Styles */
+.quotes {
+    font-family: 'Arial, sans-serif';
+    font-size: 1.8em;
+    color: white;
+    margin: 70px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.quotes p {
+    margin: 1px 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo {
+    font-size: 3rem;
+    font-weight: bold;
+    white-space: nowrap;
+    text-align: left;
+}
+
+/* Content Styles */
+.content {
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Button Styles */
+/* button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #333;
+} */
+
+button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    box-shadow: 0 1px hsla(0, 84%, 44%, 0.15) inset;
+    background: hsl(0, 67%, 45%);
+  }
+  
+  button::after {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    filter: blur(20px);
+    background: radial-gradient(50% 50% at center, hsl(var(--hue) 80% 85%), hsl(var(--hue) 80% 70%), transparent);
+  }
+  
+/* Heading Styles */
+h1 {
+    font-size: 2em;
+    text-align: center;
+    display: block;
+}
+
+h2 {
+    color: rgb(248, 250, 248);
+    text-align: center;
+    margin: auto;
+    width: 300px;
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-items: center;
+}
+
+.service-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+.service-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.service-item h2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+/* VRG Style */
+.vrg {
+    background-color: white;
+    color: rgb(24, 22, 22);
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 2;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Main Style */
+.main {
+    color: green;
+}
+
+/* Form Styles */
+form {
+    width: 300px;
+    margin: auto;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Link Styles */
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Error Message Styles */
+.messages {
+    list-style-type: none;
+    padding: 0;
+}
+
+.messages li {
+    margin-bottom: 10px;
+}
+
+.error {
+    color: red;
+}
+
+/* Label Style */
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-weight: bold;
+}
+
+/* Input Styles */
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+}
+
+/* Event Category Select Styles */
+#event-category {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Available Date and Time Message Styles */
+.main {
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Available Date and Time Link Styles */
+.main a {
+    text-decoration: none;
+    color: green;
+}
+
+/* Create Event Button Styles */
+input[type="submit"] {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #333;
+}
+
+/* Textarea Styles */
+textarea {
+    color: rgb(16, 16, 16);
+    border: none;
+    padding: 10px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+#small-textarea {
+    width: 300px;
+    height: 70px;
+}
+
+/* Mehndi Style */
+.mehndi {
+    text-align: center;
+    font-size: 1.2em;
+    color: #333;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* Vicky Grid */
+.vicky-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-items: center;
+}
+
+/* Pogo Style */
+.pogo {
+    font-size: 2rem;
+    font-weight: bold;
+    white-space: nowrap;
+    text-align: left;
+}
+
+/* Peader Style */
+.peader {
+    position: relative;
+    color: rgb(29, 27, 27);
+    max-width: 170ch;
+    margin: 10 auto;
+    text-align: left;
+    line-height: 1.6;
+}
+
+/* Pverlay Style */
+.pverlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Text Image Container */
+.text-image-container {
+    display: flex;
+    align-items: center;
+    margin-top: 1%;
+    justify-content: center;
+}
+
+.right-image {
+    margin-left: 10px;
+    width: 400px;
+}
+
+.centered-text {
+    text-align: center;
+}
+
+.centered-text p {
+    max-width: 160ch;
+    margin: 100 auto;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.left-image {
+    margin-left: 10px;
+    width: 350px;
+}
+
+/* Utkarsh Style */
+.utkarsh {
+    text-align: right;
+    margin-right: 2%;
+    display: flex;
+    align-items: center;
+    margin-top: 1%;
+}
+
+/* Raj Style */
+.raj {
+    position: relative;
+    color: rgb(29, 27, 27);
+    max-width: 140ch;
+    margin: 10 auto;
+    text-align: left;
+    line-height: 1.6;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar li {
+        margin: 0.5rem 0;
+    }
+
+    .services-grid, .vicky-grid {
+        grid-template-columns: 1fr; /* Single column for services and vicky-grid on mobile */
+    }
+
+    .header img {
+        height: auto; /* Ensure header image is responsive */
+    }
+
+    .right-image, .left-image {
+        width: 100%; /* Ensure images are responsive */
+        margin-left: 0; /* Remove left margin for mobile */
+    }
+
+    .text-image-container {
+        flex-direction: column; /* Stack text and images vertically */
+    }
+
+    .content {
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+
+    .vrg {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    .pogo {
+        font-size: 1.5rem; /* Adjust font size for mobile */
+    }
+
+    .logo {
+        font-size: 2rem;
+        text-align: center; /* Center the logo text for mobile */
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        width: auto;
+        font-size: 1em;
+    }
+
+    .mehndi {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    .utkarsh {
+        flex-direction: column;
+        text-align: center;
+        margin-right: 0;
+        align-items: center;
+    }
+
+    .peader, .raj, .centered-text p {
+        margin: 0.5rem;
+        padding: 1rem;
+        max-width: 100%;
+    }
+
+    .form-control, #event-category, #small-textarea, form, textarea {
+        width: 100%; /* Ensure form elements are responsive */
+    }
+}
+
+.vicky {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.vicky:hover {
+    background-color: #333; /* Slightly lighter black for hover effect */
+}
+
+/* Footer Styles */
+.foot {
+    background-color: rgb(46, 44, 44); /* Black background color */
+    color: #fff; /* White text color */
+    padding: 10px; /* Add some padding around the text */
+    text-align: center; /* Center the text */
+}
+
+.foot p {
+    margin: 0; /* Remove the default margin of the paragraph element */
+    font-size: 20px; /* Set the font size of the text */
+}
+
+/* Event Styles */
+.overevent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Contact Styles */
+.overcontact {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.overourwork {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.overaboutus {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.overlogin {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

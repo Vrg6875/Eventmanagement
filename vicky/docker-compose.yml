@@ -21,7 +21,7 @@ services:
 
   db:
     image: postgres
-    restart: always
+    #restart: always
     environment:
       POSTGRES_DB: eventplanner
       POSTGRES_USER: postgres

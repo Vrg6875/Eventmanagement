@@ -1,0 +1,88 @@
+h1{
+    color: aliceblue;
+}
+
+#event-planner {
+    text-align: center;
+}
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+  /* Adjust the path accordingly */
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Form Styles */
+form {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f7f0f7;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(218, 53, 204, 0.1);
+}
+
+label {
+    font-weight: bold;
+    color:rgb(38, 12, 39)
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+p {
+    color: red;
+}
+
+
+/* styles.css */
+
+.logout-link {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    color: rgb(59, 18, 224);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.logout-link a {
+    color: rgb(42, 15, 199);
+    text-decoration: none;
+}
+
+.logout-link a:hover {
+    text-decoration: underline;
+}
