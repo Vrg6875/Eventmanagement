@@ -161,3 +161,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build')
 
 
 
+<<<<<<< HEAD
+=======
+#rajj
+>>>>>>> 63808d2 (Resolve conflicts in settings.py)
