@@ -35,7 +35,7 @@ services:
 
   pgadmin:
     image: dpage/pgadmin4
-    restart: always
+    #restart: always
     environment:
       PGADMIN_DEFAULT_EMAIL: vickyrajgupta2003@gmail.com    
       PGADMIN_DEFAULT_PASSWORD: vicky@123

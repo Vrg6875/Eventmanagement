@@ -78,7 +78,7 @@ DATABASES = {
         'NAME': 'eventplanner',# in termina database create name(anythhing)
         'USER': 'postgres', 
         'PASSWORD': 'vicky@123',
-        'HOST': 'db',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
 }
