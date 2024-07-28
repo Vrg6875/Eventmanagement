@@ -158,11 +158,3 @@ import os
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build')
-
-
-
-<<<<<<< HEAD
-#hi vrgh
-=======
-#hi vicky
->>>>>>> b9a8b21 (addsomwfeature)
