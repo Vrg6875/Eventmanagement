@@ -160,4 +160,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build')
 
 
 
-#hi vrg
+#hi vicky
