@@ -160,5 +160,9 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build')
 
 
+<<<<<<< HEAD
 
 
+=======
+#hi vicky
+>>>>>>> 5198228 (add feature)
