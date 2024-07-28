@@ -82,8 +82,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-#vicky raj guupta
-#vrg
+
 
 
 
