@@ -78,7 +78,7 @@ DATABASES = {
         'NAME': 'eventplanner',# in termina database create name(anythhing)
         'USER': 'postgres', 
         'PASSWORD': 'vicky@123',
-        'HOST': 'localhost',
+        'HOST': 'db',
         'PORT': '5432',
     }
 }
@@ -161,4 +161,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build')
 
 
 
-#rajj
+#rajjkrr
