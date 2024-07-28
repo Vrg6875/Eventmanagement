@@ -159,7 +159,4 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build')
 
 
-<<<<<<< HEAD
-=======
 #fdf
->>>>>>> 09bc92d (addfeture)
