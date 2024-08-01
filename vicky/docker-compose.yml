@@ -50,3 +50,5 @@ volumes:
 networks:
   vicky_network:
     driver: bridge
+
+
