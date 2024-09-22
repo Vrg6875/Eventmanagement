@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Events</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'front.css' %}">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <ul>
+            <li><a href="/front/">Home</a></li>
+            <li><a href="/about/">About Us</a></li>
+            <li><a href="/contact/">Contact Us</a></li>
+            <li><a href="/ourwork/">Our Work</a></li>
+            <li><a href="/logout/">Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Header Image and Booking Form -->
+    <div class="header">
+        <img src="https://media.istockphoto.com/id/471906412/photo/beautiful-table-setting-for-an-wedding-reception-or-an-event.jpg?s=2048x2048&w=is&k=20&c=_eAWgEvA_hOaeJ4kQLJWR7rwFcmIm6h9_Z83B59t_fk=" alt="Wedding" style="filter: brightness(0.7);">
+        <div class="overevent">
+            <form id="event-form" method="post" action="{% url 'success' %}">
+                {% csrf_token %}
+                {% if messages %}
+                <ul class="white">
+                    {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+
+                <h2>Pay advance </h2>
+                <br>
+          
+                <div>
+                    <label>Amount (in INR):</label>
+                    <input type="text" id="amount" name="amount" required>
+                </div>
+            
+                <div>
+                    <input type="submit" id="submit-button" value="Pay">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Razorpay Script -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+        document.getElementById('event-form').onsubmit = function(e) {
+            e.preventDefault(); // Prevent form submission
+
+            var amount = document.getElementById('amount').value * 100; // Convert to paise
+            var name = "Event Booking User";  // Prefill with default data or fetch dynamically
+            var email = "user@example.com";   // Prefill with default email or fetch dynamically
+
+            var options = {
+                "key": "rzp_test_99vNN4U8nibiie", // Razorpay test key
+                "amount": amount, // Amount in paise
+                "currency": "INR",
+                "name": "Vicky Event",
+                "description": "Event Booking",
+                "image": "https://example.com/your_logo",
+                "order_id": "{{ payment.id }}", // Order ID passed from backend
+                "callback_url": "{% url 'success' %}", // Success URL
+                "prefill": {
+                    "name": name,
+                    "email": email,
+                },
+                "notes": {
+                    "address": "Razorpay Corporate Office"
+                },
+                "theme": {
+                    "color": "#3399cc"
+                },
+                "handler": function (response) {
+                    // Submit the form programmatically after successful payment
+                    document.getElementById('event-form').submit();
+                },
+                "modal": {
+                    "ondismiss": function () {
+                        alert("Payment cancelled");
+                    }
+                }
+            };
+
+            var rzp1 = new Razorpay(options);
+            rzp1.open();
+        };
+    </script>
+
+    <!-- Footer -->
+    <div class="foot">
+        <p>&copy; 2024 Vicky Event Planner. All rights reserved.</p>
+    </div>
+</body>
+</html>

@@ -39,9 +39,11 @@ class vic_event(models.Model):
     event_category = models.CharField(max_length=100)
     guests = models.IntegerField()
     email = models.EmailField()
-    state = models.CharField(max_length=100)
+   
     city = models.CharField(max_length=100)
     your_name = models.CharField(max_length=100)
+
+ 
 
     def __str__(self):
         return self.event_name

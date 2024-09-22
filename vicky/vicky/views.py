@@ -56,7 +56,7 @@ def prince(request):
         event_date = request.GET.get('event_date')
       
         event_mail = request.GET.get('event_mail')
-        event_state = request.GET.get('event_state')
+     
         event_city = request.GET.get('event_city')
         event_description = request.GET.get('event_description')
         event_category = request.GET.get('event_category')
@@ -69,7 +69,7 @@ def prince(request):
         Event Date: {event_date}
        
         Event mail: {event_mail}
-        Event state: {event_state}
+      
         Event city: {event_city}
         
         Event Description: {event_description}
@@ -81,12 +81,12 @@ def prince(request):
         send_mail(
              'Event details',#subejct heading
              email_content,#show message in mail
-             'vg314671@gmail.com',#from
-             ['vg314670@gmail.com'],#where
+             'vg314671@gmail.com',#yaha se mail admin ko v ja raha and customer ko v
+             ['vg314670@gmail.com'],#where #admin ke pass
              fail_silently=False
          )
         vicky1(request)#it is fucntion 
-        return HttpResponseRedirect("/event/")
+        return redirect('/payment/') 
     
 def vicky1(request):
     event_messsage = f'''
@@ -103,12 +103,12 @@ def vicky1(request):
     send_mail(
         'Thank you for your event submission!',#subject
          event_messsage,#message show hoga
-        'vg314671@gmail.com',  # from
+        'vg314671@gmail.com',  # from yaha s admin ke pass and custoomer
         [request.GET.get('event_mail')],  # recipient_list should be a list
         fail_silently=False
     )
 
-    messages.success(request, 'Thank you, your event has been created successfully!')
+    messages.success(request, 'Thank you, your event has been created successfully! Now pay your advance')
     return HttpResponseRedirect("/event/")
 
     
@@ -125,7 +125,7 @@ def mehndi(request):
         event_date = request.GET.get('event_date')
        
         event_mail = request.GET.get('event_mail')
-        event_state = request.GET.get('event_state')
+      
         event_city = request.GET.get('event_city')
         
         event_description = request.GET.get('event_description')
@@ -139,7 +139,7 @@ def mehndi(request):
         Event Date: {event_date}
     
         Event mail: {event_mail}
-        Event state: {event_state}
+      
         Event city: {event_city}
         
         Event Description: {event_description}
@@ -171,64 +171,306 @@ def vicky2(request):
 
     messages.success(request, 'Thank you, your event has been updated successfully!')
     
+from django.shortcuts import render, redirect
+from django.contrib import messages
+
+
+def event(request):
+    data = {}
+    vrg = vic_event.objects.all()
+
+    if request.method == 'POST':
+        your_namee = request.POST.get('your_name')
+        event_namee = request.POST.get('event-name')
+        event_datee = request.POST.get('event-date')
+        event_maill = request.POST.get('mail')
+        event_cityy = request.POST.get('state')  # Changed to match HTML
+        event_dess = request.POST.get('event-description')
+        guestss = request.POST.get('guests')
+        event_categoryy = request.POST.get('event-category')
+
+        # Validate if all fields are filled
+        if not all([your_namee, event_namee, event_datee, event_maill, event_cityy, event_dess, guestss, event_categoryy]):
+            messages.info(request, 'All fields are required.')
+            return redirect('/event')
+
+        # Check for date availability
+        if vic_event.objects.filter(event_date=event_datee).exists():
+            messages.info(request, 'This day is already booked.')
+            return redirect('/event')
+
+        # Create the event if validations pass
+        vic_event.objects.create(
+            your_name=your_namee,
+            event_name=event_namee,
+            event_date=event_datee,
+            event_description=event_dess,
+            event_category=event_categoryy,
+            guests=guestss,
+            email=event_maill,
+            city=event_cityy,
+        )
+
+        return HttpResponseRedirect('/prince/?your_name={}&event_name={}&event_date={}&event_description={}&event_category={}&guests={}&event_mail={}&event_city={}'.format(
+        your_namee,event_namee, event_datee, event_dess, event_categoryy, guestss,event_maill,event_cityy,your_namee))
 
     
 
-def event(request):
-    data={}
-    vrg=vic_event.objects.all()
-    if request.method == 'POST':
+    data = {'vrg': vrg}
+    return render(request, "event.html", data)
+
+    
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import razorpay
+from django.shortcuts import render, redirect
+from django.conf import settings
+from payment.models import vic_payment
+
+def payment(request):
+    data = {}
+    
+    if request.method == "POST":
         try:
-            data={'vrg':vrg}
-            your_namee=request.POST.get('your_name')
-            event_namee = request.POST.get('event-name')
-            event_datee = request.POST.get('event-date')
-           
-            event_maill = request.POST.get('mail')
-            event_statee = request.POST.get('state')
-            event_cityy = request.POST.get('city')
-          
-            event_dess = request.POST.get('event-description')
-            guestss = request.POST.get('guests')
-            event_categoryy = request.POST.get('event-category')
-
-            if not all([event_namee, event_datee,event_maill,event_statee,event_cityy, event_dess, guestss, event_categoryy,your_namee]):
-                messages.info(request, 'All fields are required')
-                return redirect('/event')
-
-            if vic_event.objects.filter(event_date=event_datee):
-                   messages.info(request,'this day was already booked')
-                   return redirect('/event')
-               
-            #if vic_event.objects.filter(email=event_maill):   
-                   messages.info(request,'email was already taken')
-                   return redirect('/event')
-
+            amount = int(request.POST.get("amount")) * 100  # Convert amount to paise (for Razorpay)
             
-            vic_event.objects.create(
-                event_name=event_namee,
-                event_date=event_datee,
+            # Initialize Razorpay client with your keys
+            client = razorpay.Client(auth=("rzp_test_99vNN4U8nibiie", "skaxJRRsbGRiklj1f67LI4p4"))
             
-                
-                event_description=event_dess,
-                event_category=event_categoryy,
-                guests=guestss,
-                email=event_maill,
-                state=event_statee,
-                city=event_cityy,
-                your_name=your_namee,
-
-            )
-           
-           
-            return HttpResponseRedirect('/prince/?your_name={}&event_name={}&event_date={}&event_description={}&event_category={}&guests={}&event_mail={}&event_state={}&event_city={}'.format(
-                your_namee,event_namee, event_datee, event_dess, event_categoryy, guestss,event_maill,event_statee,event_cityy,your_namee))
-
+            # Create an order with Razorpay
+            payment = client.order.create({
+                'amount': amount,
+                'currency': 'INR',
+                'payment_capture': '1'  # Auto capture
+            })
+            
+            # Store payment details in the database
+            vic_payment.objects.create(amount=amount, payment_id=payment['id'])
+            
+            # Pass the payment object to the template
+            data = {'payment': payment}
+            return redirect('/success/')
         except Exception as e:
-            print(e)  
-            pass
+            print(f"Error: {e}")
+            # Handle the error and show the user a message
+            return redirect('/event')  # You can handle this better as needed
+      
+    return render(request, "payment.html", data)
 
-    return render(request, "event.html",data)
+
+
+
+
+
+
+
+
+
+def success(request):
+   
+     return render(request,"success.html")     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -281,14 +523,14 @@ def update_event(request,id):
             event_datee = request.POST.get('event-date')
           
             event_maill = request.POST.get('mail')
-            event_statee = request.POST.get('state')
+            
             event_cityy= request.POST.get('city')
             
             event_dess = request.POST.get('event-description')
             guestss = request.POST.get('guests')
             event_categoryy = request.POST.get('event-category')
 
-            if not all([event_namee, event_datee, event_dess, guestss, event_categoryy,event_maill,event_statee,event_cityy,your_namee]):
+            if not all([event_namee, event_datee, event_dess, guestss, event_categoryy,event_maill,event_cityy,your_namee]):
                 messages.info(request, 'All fields are required')
                 return redirect('/event')
             
@@ -303,13 +545,13 @@ def update_event(request,id):
                 event_description=event_dess,
                 event_category=event_categoryy,
                 guests=guestss, email=event_maill,
-                state=event_statee,
+             
                 city=event_cityy,
                 your_name=your_namee
             )
             
-            return HttpResponseRedirect('/mehndi/?event_name={}&event_date={}&event_description={}&event_category={}&guests={}&event_mail={}&event_state={}&event_city={}&your_name{}'.format(
-                event_namee, event_datee,  event_dess, event_categoryy, guestss,event_maill,event_statee,event_cityy,your_namee))
+            return HttpResponseRedirect('/mehndi/?event_name={}&event_date={}&event_description={}&event_category={}&guests={}&event_mail={}&event_city={}&your_name{}'.format(
+                event_namee, event_datee,  event_dess, event_categoryy, guestss,event_maill,event_cityy,your_namee))
 
             
         except Exception as e:

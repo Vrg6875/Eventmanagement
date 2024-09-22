@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'event',
+    'payment'
     
 ]
 
@@ -83,7 +84,10 @@ DATABASES = {
         
     }
 }
-#vicky raj guupta
+
+RAZORPAY_KEY_ID = 'rzp_test_99vNN4U8nibiie'
+RAZORPAY_KEY_SECRET = 'skaxJRRsbGRiklj1f67LI4p4'
+
 
 
 

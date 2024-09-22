@@ -2,7 +2,7 @@ from django.contrib import admin
 from event.models import vic_event, vic_register,vic_contact #t
 
 class vic_event_admin(admin.ModelAdmin):
-    list_display=('event_name', 'event_date', 'event_description', 'event_category', 'guests','email','state','city','your_name')
+    list_display=('event_name', 'event_date', 'event_description', 'event_category', 'guests','email','city','your_name')
 
 class vic_register_admin(admin.ModelAdmin):
     list_display=('fiest_name', 'last_name', 'password1','password2','username')

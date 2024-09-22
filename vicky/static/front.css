@@ -532,3 +532,8 @@ textarea {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.white {
+    color: rgb(247, 244, 244);
+    text-align: center;
+    margin-top: 20px;
+}
