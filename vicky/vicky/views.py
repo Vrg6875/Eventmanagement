@@ -243,14 +243,6 @@ def event(request):
 
 
 
-
-
-
-
-
-
-
-
 import razorpay
 from django.shortcuts import render, redirect
 from django.conf import settings
@@ -261,33 +253,45 @@ def payment(request):
     
     if request.method == "POST":
         try:
-            amount = int(request.POST.get("amount")) * 100  # Convert amount to paise (for Razorpay)
+            # Get the amount from the form and convert to paise (smallest currency unit for Razorpay)
+            amount = int(request.POST.get("amount")) * 100  
+            
+            # Print amount to check if it's received correctly
+            print(f"Amount (in paise): {amount}")
             
             # Initialize Razorpay client with your keys
-            client = razorpay.Client(auth=("rzp_test_99vNN4U8nibiie", "skaxJRRsbGRiklj1f67LI4p4"))
+            client = razorpay.Client(auth=(settings.RAZORPAY_KEY_ID, settings.RAZORPAY_KEY_SECRET))
             
             # Create an order with Razorpay
             payment = client.order.create({
                 'amount': amount,
                 'currency': 'INR',
-                'payment_capture': '1'  # Auto capture
+                'payment_capture': '1'  # Auto capture payment
             })
             
-            # Store payment details in the database
-            vic_payment.objects.create(amount=amount, payment_id=payment['id'])
+            # Print payment details to verify they are correct
+            print(f"Payment details: {payment}")
             
-            # Pass the payment object to the template
-            data = {'payment': payment}
+            # Store payment details in the database
+            event = vic_payment(amount=str(amount), payment_id=payment['id'])  # Cast amount to string
+            event.save()  # Save the event object to the database
+            
+            # Check if payment was saved successfully
+            print(f"Payment saved in DB with ID: {event.id}")
+            
+            # Pass the payment object to the template (for Razorpay's frontend integration)
+            data['payment'] = payment
+            
+            # Redirect to the success page or handle further payment processing as needed
             return redirect('/success/')
+        
         except Exception as e:
+            # Print any errors during the process
             print(f"Error: {e}")
-            # Handle the error and show the user a message
-            return redirect('/event')  # You can handle this better as needed
-      
+            return redirect('/event')  # Handle errors better if needed
+
+    # Render the template for a GET request without a 'payment' key
     return render(request, "payment.html", data)
-
-
-
 
 
 

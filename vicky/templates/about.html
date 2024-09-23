@@ -9,17 +9,7 @@
     <link rel="stylesheet" href="{% static 'front.css' %}">
 </head>
 <body>
-    <div class="navbar">
-        <ul>
-          <li><a href="/front/">Home</a></li>
-          <li><a href="/about/">About Us</a></li>
-          <li><a href="/contact/">Contact Us</a></li>
-          <li><a href="/ourwork/">Our Work</a></li>
-          <li><a href="/auth/">Login/Signup</a></li>
-          <li><a href="/event/">Book Event</a></li>
-         
-        </ul>
-    </div>
+    {% include 'header.html' %}
     <div class="header">
         <img src="https://media.istockphoto.com/id/1064911922/photo/beautiful-wedding-couple-in-park.jpg?s=2048x2048&w=is&k=20&c=FFd_TMN38TSsEVVrb2SF_gdaV2SyvRu7nZdak3IfUlg=" alt="Wedding" style="filter: brightness(0.6);">
         <div class="overaboutus">
@@ -108,13 +98,9 @@
            
         </div>
     </div>
-    <div class="content">
-        <h1>Best Wedding Planner in Chandigarh</h1>
-        <p>Putting all the beautiful pieces together and crafting one-of-a-kind experiences.</p>
-        <a href="/contact" class="vicky">Contact us</a>
-    </div>
-    <div class="foot">
-        <p>&copy;2024 Vicky Event planner. All rights reserved.</p>
-    </div>
+
+<br>
+    {% include 'footer.html' %}
+ 
 </body>
 </html>
