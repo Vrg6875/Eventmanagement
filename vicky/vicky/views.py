@@ -590,6 +590,7 @@ def register(request):
         password11 = request.POST.get('password1')
         password22 = request.POST.get('password2')
 
+
         # Check if all fields are filled
         if not all([first_namee, last_namee, usernamee, password11, password22]):
             messages.error(request, "All fields are required.")
@@ -611,7 +612,7 @@ def register(request):
             messages.error(request, 'Passwords do not match')
 
         # Redirect to the registration page
-        return HttpResponseRedirect('/register')
+        return HttpResponseRedirect('/login')
 
     return render(request, "register.html")
 

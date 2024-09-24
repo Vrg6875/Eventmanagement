@@ -609,5 +609,54 @@ textarea {
 
 
 .logofront{
-    margin-left: -300px;
+    margin-left: -250px;
+}
+
+
+
+
+
+/* Styling for the call-to-action box */
+.cta-box {
+    position: relative;
+    background-color: #fff;
+    text-align: center;
+    padding: 40px;
+    margin: 50px auto;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* CTA text styling */
+.cta-text {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: white;
+    margin: 20px 0;
+}
+
+/* Styling for the CTA links */
+.cta-link {
+    display: inline-block;
+    background-color: #ff6600;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for CTA links */
+.cta-link:hover {
+    background-color: #e65c00;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Spacing for the buttons */
+.cta-link + .cta-text {
+    margin-top: 30px;
 }
