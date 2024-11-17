@@ -1,20 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vicky events</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     {% load static %}
-    <link rel="stylesheet" href="{% static 'front.css' %}">
+    <link rel="stylesheet" href="{% static 'contact.css' %}">
+
+    <!-- Include Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-5oYO2uhC3V7m1TjR6LBha/NbXwnwJozp5BQTLWX59tnXJHFzHYNcbCt3mrXTVt4p" crossorigin="anonymous">
+    <style>
+        
+    </style>
 </head>
+
 <body>
-   {% include 'header.html' %}
+
+
+
+
+ <!-- Navbar Section -->
+ <div class="navbar">
+    <ul>
+        <li>
+            <img src="{% static 'logo.jpg' %}" width="180" height="80" alt="YouTube Logo" style="filter: brightness(2.3);">
+        </li>
+        <li><a href="/front/">Home</a></li>
+        <li><a href="/about/">About Us</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+        <li><a href="/ourwork/">Our Work</a></li>
+        <li><a href="/auth/">Get Started / Sign In</a></li>
+        <li><a href="/auth/">Book Event</a></li>
+    </ul>
+
+
+
+    <!-- Carousel Section -->
+    <div class="container-fluid p-0">
+        <!-- Carousel -->
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000">
+                    <img src="https://images.unsplash.com/photo-1485770958101-9dd7e4ea6d93?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                         class="d-block w-100" alt="Carousel Image 1" 
+                         style="max-height: 500px; object-fit: cover; filter: brightness(50%); transition: opacity 1s ease-in-out;">
+                    <!-- Text Overlay -->
+                    <div class="carousel-caption d-flex align-items-center justify-content-center" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                        <h1 style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">Contact<br> <p style="font-size: x-small;">Home>>Contact</p></h1>
+                        <br>
+                        
+                       
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+<div class="logo">
+
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Let’s bring your vision to life. Get in touch today!"
+</div>
+
+
+</div>
+
+
+
     <div class="header">
-        <img src="https://images.unsplash.com/photo-1629890718918-d759b2d1463b?q=80&w=2059&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Wedding"style="filter: brightness(0.6);">
+        <img src="https://images.unsplash.com/photo-1629890718918-d759b2d1463b?q=80&w=2059&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Wedding"style="filter: brightness(0.4);">
         <div class="overcontact">
             <div class="logo">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reach Out To Us <br>&nbsp;&nbsp;&nbsp;We would love to hear from you! <br>Contact us directly by filling this form
+                <br><br>
+                &nbsp;&nbsp;&nbsp;Reach Out To Us <br>&nbsp;&nbsp;&nbsp;We would love to hear from you! <br>Contact us directly by filling this form
        </div>
 
        <form method="post" action="#" >
@@ -34,12 +110,12 @@
 
      <div>
          <label for="event-name" style="display: block; margin-bottom: 5px;">Name:</label>
-         <input type="text" id="event-name" name="name" placeholder="enter name" style="width: 100%; padding: 8px; margin-bottom: 10px;">
+         <input type="text" id="event-name" name="name" placeholder="enter name" required style="width: 100%; padding: 8px; margin-bottom: 10px;">
      </div>
      
      <div>
          <label for="event-date" style="display: block; margin-bottom: 5px;">Event mail:</label>
-         <input type="email" id="event-date" name="email" placeholder="enter email" style="width: 100%; padding: 8px; margin-bottom: 10px;">
+         <input type="email" id="event-date" name="email" placeholder="enter email" required style="width: 100%; padding: 8px; margin-bottom: 10px;">
      </div>
      
      <div>
@@ -50,31 +126,38 @@
          <br>
          
 
-         <table>
-         <thead>
-             <tr>
-                 <th>Contact Information</th>
-             </tr>
-            
-         </thead>
-         <tbody>
-             <tr>
-                 <td>Phone: +91 8210224732 <br> +91 9507682919</td>
-             </tr>
-                 
-             <tr>
-    
-             <td><b>Address</b>:Lifestye Residency sector 116 mohali</td>
-             </tr>  
-             <tr>
-                 <td><b>Email:</b><a href="vickyrajgupta2003@gmail.com">vickyrajgupta2003@gmail.com</a>
-             </tr>
-             <tr>
 
-                 <td><b>Websites</b> <a href="/front/" target="_blank" rel="noopener noreferrer">vickyevents.com</a></td>
-             </tr>
-             </table>
+
   </div>  
+
+
+  <div class="contact-table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Contact Information</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Phone: +91 8210224732 <br> +91 9507682919</td>
+            </tr>
+            <tr>
+                <td><b>Address:</b> Lifestyle Residency, Sector 116, Mohali</td>
+            </tr>  
+            <tr>
+                <td><b>Email:</b> <a href="mailto:vickyrajgupta2003@gmail.com">vickyrajgupta2003@gmail.com</a></td>
+            </tr>
+            <tr>
+                <td><b>Website:</b> <a href="/front/" target="_blank" rel="noopener noreferrer">vickyevents.com</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+
  </form>
 
      </div>

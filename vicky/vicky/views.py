@@ -612,7 +612,7 @@ def register(request):
             messages.error(request, 'Passwords do not match')
 
         # Redirect to the registration page
-        return HttpResponseRedirect('/login')
+        return HttpResponseRedirect('/register')
 
     return render(request, "register.html")
 

@@ -1,21 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaandaar Events - Redefining Class</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     {% load static %}
-    <link rel="stylesheet" href="{% static 'front.css' %}">
+    <link rel="stylesheet" href="{% static 'contact.css' %}">
+
+    <!-- Include Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-5oYO2uhC3V7m1TjR6LBha/NbXwnwJozp5BQTLWX59tnXJHFzHYNcbCt3mrXTVt4p" crossorigin="anonymous">
+    <style>
+        
+    </style>
 </head>
+
 <body>
-    {% include 'header.html' %}
+
+
+
+
+ <!-- Navbar Section -->
+ <div class="navbar">
+    <ul>
+        <li>
+            <img src="{% static 'logo.jpg' %}" width="180" height="80" alt="YouTube Logo" style="filter: brightness(2.3);">
+        </li>
+        <li><a href="/front/">Home</a></li>
+        <li><a href="/about/">About Us</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+        <li><a href="/ourwork/">Our Work</a></li>
+        <li><a href="/auth/">Get Started / Sign In</a></li>
+        <li><a href="/auth/">Book Event</a></li>
+    </ul>
+
+
+
+    <!-- Carousel Section -->
+    <div class="container-fluid p-0">
+        <!-- Carousel -->
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000">
+                    <img src="https://media.istockphoto.com/id/930842206/photo/wedding-ceremony-arch-altar-decorated-with-flowers-on-the-lawn.jpg?s=2048x2048&w=is&k=20&c=PMJYy8b09wv_SvnQAmSH2enKeqZryxA_YIu3FuGnqhA=" 
+                         class="d-block w-100" alt="Carousel Image 1" 
+                         style="max-height: 500px; object-fit: cover; filter: brightness(55%); transition: opacity 1s ease-in-out;">
+                    <!-- Text Overlay -->
+                    <div class="carousel-caption d-flex align-items-center justify-content-center" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                        <h1 style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">Our Work<br> <p style="font-size: x-small;">Home>>Our work</p></h1>
+                        <br>
+                        
+                       
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+ 
+
+<div class="logo">
+
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;""Our work speaks for itself – each detail tells a unique story.""
+</div>
+</div>
+
     <div class="header">
-        <img src="https://media.istockphoto.com/id/1175680526/photo/this-ceremony-is-the-meeting-of-two-souls.jpg?s=2048x2048&w=is&k=20&c=YgqDw_jLDglrehY-8rsIVNJMDswW21O_oGHWdZvkBag=" alt="Wedding" style="filter: brightness(0.6);">
+        <img src="https://media.istockphoto.com/id/907912938/photo/colorful-themed-wedding-stage-and-chairs-hindu-traditional-wedding.jpg?s=2048x2048&w=is&k=20&c=ied5pHFpvRpEDpinufFrdl6UdduPAiUn09zGvLXchE0=" alt="Wedding" style="filter: brightness(0.6);">
         <div class="overourwork">
-            <div class="logo">
-                <h1>OUR WORK</h1>
-            </div> 
+           
             <div class="quotes">    
                 <p>"Where memories are made, and moments are cherished."</p> 
                 <p>"Transforming spaces, creating unforgettable experiences."</p> 
@@ -90,73 +151,7 @@
    <div class="services-container">
     <br>
     <br>
-        <h1>SERVICES WE PROVIDES</h1>
-        <br>
-        <br>
-
-        <div class="services-grid">
-            <div class="service-item">
-                    <a href="/destination/">
-                    <img src="https://plus.unsplash.com/premium_photo-1661964149725-fbf14eabd38c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZGVzdGluYXRpb258ZW58MHx8MHx8fDA%3D" alt="Destination and Venues">
-                      </a>
-                    <h2>DESTINATION</h2>
-                    <div class="overlay">
-                    </div>
-            
-            </div>
-
-            <div class="service-item">
-                <a href="/meeting/">
-                    <img src="https://plus.unsplash.com/premium_photo-1661778490723-371305b4fb06?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWVldGluZ3xlbnwwfHwwfHx8MA%3D%3D" alt="Vendor Management">
-                </a>
-                <h2>MEETING</h2>
-            </div>
-
-            <div class="service-item">
-                <a href="/festival/">
-                    <img src="https://media.istockphoto.com/id/1415056757/photo/colorful-wedding-tents-at-night.jpg?s=2048x2048&w=is&k=20&c=cPPzyEfHvnKxZuh8nlAsCoK3mhSE-qTSe6MAnT-ecv0=" alt="Decor Management">
-                </a>
-                <h2>FESTIVAL</h2>
-            </div>
-
-            <div class="service-item">
-                <a href="/marriage/">
-                    <img src="https://media.istockphoto.com/id/1399000012/photo/guests-throwing-confetti-over-bride-and-groom-as-they-walk-past-after-their-wedding-ceremony.jpg?s=2048x2048&w=is&k=20&c=G8zuGJUuEK9HXwx1xEYPYwrcajt8r3K8nSVFeEzLHFY=" alt="Logistics">
-                </a>
-                <h2>MARRIAGE</h2>
-            </div>
-
-            <div class="service-item">
-                <a href="/entertainment/">
-                    <img src="https://images.unsplash.com/photo-1496337589254-7e19d01cec44?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGVudGVydGFpbm1lbnR8ZW58MHx8MHx8fDA%3D" alt="Entertainment">
-                </a>
-                <h2>ENTERTAINMENT</h2>
-            </div>
-
-            <div class="service-item">
-                <a href="/decor/">
-                    <img src="https://media.istockphoto.com/id/1409447147/photo/creative-composition-at-living-room-interior-with-design-beige-sofa-black-coffee-table-plants.jpg?s=2048x2048&w=is&k=20&c=ZnV2CcG7lBA4ePAXgvLRjDMSjAcZKFd9nk1Z1Ury9bo=" alt="Decor Management">
-                </a>
-                <h2>Decor Management</h2>
-            </div>
-            <div class="service-item">
-                <a href="/vendor/">
-                    <img src="https://media.istockphoto.com/id/1272683903/photo/handicraft-market-in-olinda-pernambuco.jpg?s=2048x2048&w=is&k=20&c=YFYJ9Ji7Rdfu7FviqB-m3JxjAwGRAebgnGla4TXKAwM=" alt="Vendor Management">
-                </a>
-                <h2>Vendor Management</h2>
-            </div>
-            <div class="service-item">
-                <a href="/food/">
-                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Food and beverage">
-                </a>
-                <h2>Food and beverage</h2>
-            </div>
-        </div>
-        
-           
-        </div>
-    </div>
-    <br>
+      
     {% include 'footer.html' %}
     
 </body>

@@ -1,3 +1,75 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.background-image {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.overlay h2 {
+    margin: 0 0 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #218838;
+}
+
+.foot {
+    text-align: center;
+    margin-top: 20px;
+    color: #fff;
+}
+
 /* General Styles */
 body {
     margin: 0;
@@ -424,6 +496,7 @@ label {
     margin-bottom: 0px;
     margin-top: 0px;
     font-weight: bold;
+    color:white;
 }
 
 /* Input Styles */
@@ -951,22 +1024,6 @@ textarea {
 }
 
 
-/* Remove black overlay on carousel control icons */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: transparent; /* Make the background transparent */
-    background-size: 20px 20px; /* Set the arrow icon size */
-    background-image: none; /* Remove the default background image */
-}
-
-/* Add a custom icon for the previous and next buttons */
-.carousel-control-prev-icon::after,
-.carousel-control-next-icon::after {
-    content: '<'; /* Left arrow for prev */
-    font-size: 24px;
-    color: #191616; /* Arrow color */
-}
-
 
 /* Services title styling */
 .services-title h1 {
@@ -1001,3 +1058,4 @@ textarea {
 .carousel-control-next:hover .carousel-control-next-icon {
     background-color: transparent;
 }
+

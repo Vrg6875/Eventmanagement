@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Events</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'front.css' %}">
+    <link rel="stylesheet" href="{% static 'event.css' %}">
 </head>
 
 <body>
@@ -19,13 +19,14 @@
             <li><a href="/about/">About Us</a></li>
             <li><a href="/contact/">Contact Us</a></li>
             <li><a href="/ourwork/">Our Work</a></li>
+            <li><a href="/logout/">Logout</a></li>
            
 
         </ul>
     </div>
     <!-- Header Image and Booking Form -->
     <div class="header">
-        <img src="https://media.istockphoto.com/id/471906412/photo/beautiful-table-setting-for-an-wedding-reception-or-an-event.jpg?s=2048x2048&w=is&k=20&c=_eAWgEvA_hOaeJ4kQLJWR7rwFcmIm6h9_Z83B59t_fk=" alt="Wedding" style="filter: brightness(0.7);">
+        <img src="https://media.istockphoto.com/id/471906412/photo/beautiful-table-setting-for-an-wedding-reception-or-an-event.jpg?s=2048x2048&w=is&k=20&c=_eAWgEvA_hOaeJ4kQLJWR7rwFcmIm6h9_Z83B59t_fk=" alt="Wedding" style="filter: brightness(0.5);">
         <div class="overevent">
             <form id="event-form" method="post">
                 {% csrf_token %}

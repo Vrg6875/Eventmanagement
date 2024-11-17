@@ -1,96 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Home</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
     {% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'front.css' %}">
 
-    <!-- Include Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-5oYO2uhC3V7m1TjR6LBha/NbXwnwJozp5BQTLWX59tnXJHFzHYNcbCt3mrXTVt4p" crossorigin="anonymous">
-    <style>
-        
-    </style>
-</head>
 
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-5oYO2uhC3V7m1TjR6LBha/NbXwnwJozp5BQTLWX59tnXJHFzHYNcbCt3mrXTVt4p" crossorigin="anonymous">
+</head>
 <body>
 
 
 
 
- <!-- Navbar Section -->
- <div class="navbar">
-    <ul>
-        <li>
-            <img src="{% static 'logo.jpg' %}" width="180" height="80" alt="YouTube Logo" style="filter: brightness(2.3);">
-        </li>
-        <li><a href="">Home</a></li>
-        <li><a href="/about/">About Us</a></li>
-        <li><a href="/contact/">Contact Us</a></li>
-        <li><a href="/ourwork/">Our Work</a></li>
-        <li><a href="/auth/">Get Started / Sign In</a></li>
-        <li><a href="/auth/">Book Event</a></li>
-    </ul>
 
 
 
-    <!-- Carousel Section -->
-<div class="container-fluid p-0">
-    <!-- Carousel -->
-    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="3000">
-                <img src="https://media.istockphoto.com/id/1436677904/photo/closeup-of-hands-with-henna-tattoos-during-an-indian-traditional-wedding-ceremony-kanyadan.jpg?s=2048x2048&w=is&k=20&c=7a_kLj6FW_0tE6yGldVy8xNAjZeVUVAdSrKcf4JcGj0=" class="d-block w-100" alt="Carousel Image 1" style="max-height: 500px; object-fit: cover; transition: opacity 1s ease-in-out;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    <div class="container-fluid p-0">
+        <!-- Carousel -->
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="Carousel Image 1">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="Carousel Image 2">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="Carousel Image 3">
+                </div>
             </div>
-            <div class="carousel-item" data-bs-interval="3000">
-                <img src="https://media.istockphoto.com/id/959256720/photo/happy-couple-in-thai-traditional-clothes-standing-outside-ancient-building-with-blurred.jpg?s=2048x2048&w=is&k=20&c=pZB_Tbv1l845dunaqNPury_vowEYBOjc3CJZ9IeMwZA=" class="d-block w-100" alt="Carousel Image 2" style="max-height: 500px; object-fit: cover; transition: opacity 1s ease-in-out;">
-            </div>
-            <div class="carousel-item" data-bs-interval="3000">
-                <img src="https://media.istockphoto.com/id/2167906375/photo/couple-holding-betel-leaf-along-with-mangalsutra-gracefully-looking-at-each-other.jpg?s=2048x2048&w=is&k=20&c=rrDLLueVa-2CFL2u8esD7A-IDFLAoNhZGVCv-H2DwJA=" class="d-block w-100" alt="Carousel Image 3" style="max-height: 500px; object-fit: cover; transition: opacity 1s ease-in-out;">
-            </div>
+
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-
-        <!-- Next Button -->
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
     </div>
-</div>
 
-<div class="logo">
-
-    
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Let's Plan Your Fairytale Together !
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
 
@@ -107,56 +96,28 @@
 
 
     <div class="header">
-        
-    <br>
-        <div class="pogo">
-            Best Wedding Planner in Chandigarh
-        </div>
-      
-       <br>
-
-        <div class="renu">
-           <p>
-            Putting all the beautiful pieces together and crafting one-of-a-kind wedding experiences of all shapes and sizes, we at Shaandaar Events are known as the best wedding planners in Chandigarh. As the best wedding planner in Chandigarh, we have designed and produced events across the globe, ranging from an intimate wedding for fifty people to a grand-scale wedding for more than thousands. As the best wedding planner in Chandigarh, we take pride in being the architects of your most momentous life event. Renowned for our exceptional craftsmanship, we have earned the esteemed title of the best wedding planner in Chandigarh. And the results are nothing less than MAGIC!
-
-At Shaandaar Events, we take immense pride in our reputation as the best wedding planner in Chandigarh. With our meticulous diligence and unmatched creativity, we as the best wedding planner in Chandigarh continue to surpass expectations in wedding designs and production. From conceptualization to execution, we, as the best wedding planner in Chandigarh, strive to curate unforgettable wedding experiences that reflect the unique personalities and dreams of each couple. Our team of the best wedding planner in Chandigarh consists of dedicated professionals, who work tirelessly to ensure that every element, from venue selection to decor, catering, entertainment, and more can seamlessly come together to create a symphony of beauty and joy. We, as the best wedding planner in Chandigarh, understand the significance of this momentous occasion and aim to leave a lasting impression, turning dreams into reality. With Shaandaar Events, your wedding day becomes a magical celebration that will be cherished for a lifetime.
-           </p>
-
-            <img src="{% static 'event.jpg' %}" class="r-image">
-        </div>
-
-<br>
-        <div class="shivam">
-            
-            <div class="text-image-container">
-                <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="l-image">
-               <div class="utkarsh">
-                <p>
-                    At Grand Event Planners, we specialize in curating extraordinary and unforgettable experiences for our clients, offering a personalized approach to event planning that is second to none. From grand celebrations to intimate gatherings, we ensure that every event we organize is a reflection of our clients' unique style and vision. Whether it's a wedding, corporate function, or a milestone event, our team is dedicated to making every detail perfect, ensuring that your special occasion is nothing short of magical. With years of experience, we have built a reputation for excellence, consistently exceeding our clients' expectations.
-                
-                    Our expertise spans a wide range of services, including event design, venue selection, logistics management, catering, entertainment, and everything in between. As one of the leading event planners in the industry, we take pride in offering a comprehensive, all-inclusive service that removes the stress from your event planning process. We believe that no detail is too small to be overlooked, and we work tirelessly to ensure that everything is executed flawlessly. Whether you are planning an intimate gathering for a few close friends or a large-scale celebration for hundreds of guests, we have the expertise and resources to bring your vision to life.
-                
-                    Every event we plan is unique, and we tailor our services to fit the specific needs and desires of our clients. Our team works closely with you every step of the way, from the initial consultation to the final execution of your event. We take the time to get to know you and understand your goals, ensuring that we create an event that truly reflects your personality and tastes. Our goal is to make your event planning experience as enjoyable and stress-free as possible, so you can focus on what matters most – enjoying your celebration.
-                
-                    
-                </p>
-                
-               </div>
+        <img src="https://media.istockphoto.com/id/471906412/photo/beautiful-table-setting-for-an-wedding-reception-or-an-event.jpg?s=2048x2048&w=is&k=20&c=_eAWgEvA_hOaeJ4kQLJWR7rwFcmIm6h9_Z83B59t_fk=" alt="Wedding" style="filter: brightness(0.5);">
+        <div class="overlay">
+            <div class="logo">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Welcome to Vicky events <br>
+                Let's Plan Your Fairytale Together !
             </div>
-           
-          
 
-         </div>
-
-       
+            <div class="quotes">
+                <p>"Turning your vision into reality, one event at a time."</p>
+                <p>"Crafting unforgettable moments that last a lifetime."</p>
+                <p>"Your perfect day, our perfect planning."</p>
+                <p>"We bring the magic to your special moments."</p>
+                <p>"Events designed to dazzle, memories made to cherish."</p>
+                <p>"Where your dreams meet our creativity."</p>
+              
+            </div>
+        </div>
     </div>
 
     <br>
     <br>
-   <div class="services-title">
     <h1>SERVICES WE PROVIDE</h1>
-</div>
-
     <br>
     <br>
 
@@ -300,32 +261,32 @@ At Shaandaar Events, we take immense pride in our reputation as the best wedding
 
 
 
-        <script>
-            // JavaScript to handle popup message
-            const whatsappIcon = document.querySelector('.whatsapp-icon');
-            const popupMessage = document.getElementById('popupMessage');
-            const whatsappLink = document.querySelector('.whatsapp-link');
-    
-            // Show popup when mouse enters the WhatsApp icon
-            whatsappLink.addEventListener('mouseenter', () => {
-                popupMessage.style.display = 'block';
-            });
-    
-            // Hide popup when mouse leaves the WhatsApp icon
-            whatsappLink.addEventListener('mouseleave', () => {
-                popupMessage.style.display = 'none';
-            });
-    
-            // JavaScript to show the WhatsApp icon when scrolling
-            window.onscroll = function () {
-                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                    whatsappIcon.style.display = 'block'; // Show the icon after scrolling 100px
-                } else {
-                    whatsappIcon.style.display = 'none'; // Hide the icon when scrolled to the top
-                }
-            };
-        </script>
+<!-- JavaScript for WhatsApp popup functionality -->
+<script>
+    const whatsappIcon = document.querySelector('.whatsapp-icon');
+    const popupMessage = document.getElementById('popupMessage');
+    const whatsappLink = document.querySelector('.whatsapp-link');
 
+    // Show popup when mouse enters the WhatsApp icon
+    whatsappLink.addEventListener('mouseenter', () => {
+        popupMessage.style.display = 'block';
+    });
+
+    // Hide popup when mouse leaves the WhatsApp icon
+    whatsappLink.addEventListener('mouseleave', () => {
+        popupMessage.style.display = 'none';
+    });
+
+    // JavaScript to show the WhatsApp icon when scrolling
+    window.onscroll = function () {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            whatsappIcon.style.display = 'block'; // Show the icon after scrolling 100px
+        } else {
+            whatsappIcon.style.display = 'none'; // Hide the icon when scrolled to the top
+        }
+    };
+    
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
 
@@ -340,3 +301,6 @@ At Shaandaar Events, we take immense pride in our reputation as the best wedding
 </body>
 
 </html>
+
+
+

@@ -3,79 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaandaar Events - Redefining Class</title>
-
+    <title>Book Events</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'front.css' %}">
+    <link rel="stylesheet" href="{% static 'register.css' %}">
 </head>
+
 <body>
-  <div class="navbar">
-    <ul>
-        <li>
-            <img src="{% static 'logo.jpg' %}" width="180" height="80" alt="YouTube Logo" class="logofront" style="filter: brightness(2.3);">>
-        </li>
-        
-        <li><a href="/front/">Home</a></li>
-        <li><a href="/about/">About Us</a></li>
-        <li><a href="/contact/">Contact Us</a></li>
-        <li><a href="/ourwork/">Our Work</a></li>
-      
-      
-    </ul>
-</div>
+    <div class="navbar">
+        <ul>
+            <li>
+                <img src="{% static 'logo.jpg' %}" width="180" height="80" alt="Event Logo" class="logofront" style="filter: brightness(2.3);">
+            </li>
+            <li><a href="/front/">Home</a></li>
+            <li><a href="/about/">About Us</a></li>
+            <li><a href="/contact/">Contact Us</a></li>
+            <li><a href="/ourwork/">Our Work</a></li>
+        </ul>
+    </div>
 
     <div class="header">
-        <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Wedding" style="filter: brightness(0.6);">
+        <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Wedding Background" class="background-image">
+        
+        <!-- Overlay Form Container -->
         <div class="overlay">
-                <h2>CREATE NEW ACCOUNT</h2>
-                          <br>
+            <h2>CREATE NEW ACCOUNT</h2>
+            <form method="post" action="{% url 'register' %}">
+                {% csrf_token %}
 
-<form method="post" action="{% url 'register' %}">
-    {% csrf_token %}
-    {% if messages %}
-<ul class="messages">
-    {% for message in messages %}
-    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-    {% endfor %}
-</ul>
-{% endif %}
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label"><b>First name</b></label>
-      <input type="text" name="first_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-     
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label"><b>last name</b></label>
-      <input type="text" name="last_name" class="form-control" id="exampleInputPassword1">
-    </div>
 
-    <div>
-      <label class="form-check-label" for="exampleCheck1"><b>username</b></label>
-      <input type="text" name="username" class="form-control"id="exampleCheck1">
-    </div>
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label"><b>password</b></label>
-        <input type="password" name="password1" class="form-control" id="exampleInputPassword1">
-      </div>
 
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label"><b>confirm password</b></label>
-        <input type="password" name="password2" class="form-control" id="exampleInputPassword1">
-      </div>
-    <div>
-        <p>already have a account <a href="/login/">login</a></p>
 
-    </div>
-     <div>
-    <button type="submit" class="vicky">Submit</button>
+                {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
 
+
+
+
+                <div class="form-group">
+                    <label for="firstName"><b>First Name</b></label>
+                    <input type="text" name="first_name" class="form-control" id="firstName">
+                </div>
+                <div class="form-group">
+                    <label for="lastName"><b>Last Name</b></label>
+                    <input type="text" name="last_name" class="form-control" id="lastName">
+                </div>
+                <div class="form-group">
+                    <label for="username"><b>Username</b></label>
+                    <input type="text" name="username" class="form-control" id="username">
+                </div>
+                <div class="form-group">
+                    <label for="password1"><b>Password</b></label>
+                    <input type="password" name="password1" class="form-control" id="password1">
+                </div>
+                <div class="form-group">
+                    <label for="password2"><b>Confirm Password</b></label>
+                    <input type="password" name="password2" class="form-control" id="password2">
+                </div>
+                <p>Already have an account? <a href="/login/">Login</a></p>
+                <br>
+                <button type="submit" class="submit-button">Submit</button>
+                <br>
+            </form>
         </div>
     </div>
-</form>
-<div class="foot">
-  <p>&copy;2024 Vicky Event planner. All rights reserved.</p>
-</div>
-</head>
-</body>
 
- 
+    <div class="foot">
+        <p>&copy; 2024 Vicky Event Planner. All rights reserved.</p>
+    </div>
+</body>
+</html>

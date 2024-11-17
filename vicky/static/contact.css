@@ -409,6 +409,57 @@ a:hover {
     padding: 0;
 }
 
+
+/* Container to align the table to the right */
+.contact-table-container {
+    display: flex;
+    justify-content: flex-end; /* Aligns the table to the right */
+    padding: 20px; /* Optional: Adjust padding as needed */
+}
+
+/* Table styling */
+table {
+    width: auto; /* Allows the table to fit its content */
+    color: white; /* Text color */
+  
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+thead th {
+    font-size: 1.5em;
+    padding-bottom: 5px;
+}
+
+tbody td {
+    font-size: 1.1em;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .messages li {
     margin-bottom: 10px;
 }
@@ -424,6 +475,7 @@ label {
     margin-bottom: 0px;
     margin-top: 0px;
     font-weight: bold;
+    color: #ddd;
 }
 
 /* Input Styles */
