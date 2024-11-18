@@ -282,6 +282,19 @@ span {
     padding: 2rem;
 }
 
+
+
+
+dear {
+    background-color: rgb(214, 27, 27);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
 /* Button Styles */
 button {
     background-color: black;
@@ -542,11 +555,11 @@ textarea {
 .text-image-container p {
     flex: 1; /* Allows text to take up available space */
     text-align: justify;
-    margin: 0;
+   
     line-height: 1.6;
     font-size: 16px;
     max-width: 600px;
-    margin-left: 50px;
+    margin-left: 0px;
 }
 
 .text-image-container .r-image {
@@ -568,12 +581,13 @@ textarea {
 
 .l-image {
     /* Sets image width to 100% of its container */
-   max-width: 400px;  /* Maximum width of 300px */
+   max-width: 500px;  /* Maximum width of 300px */
    height: 60px; 
    display: flex;
    justify-content: flex-start; /* Align image to the left */
    width: 100%;
-   margin-left: 140px;
+   margin-left: 120px;
+   border-radius: 60px;
     /* Maintain aspect ratio */
 }
 
@@ -610,13 +624,15 @@ textarea {
     margin: 0;
     line-height: 1.6;
     font-size: 16px;
-    max-width: 600px;
+    max-width: 800px;
     margin-left: 100px;
 }
 
 .renu .r-image {
-    width: 300px; /* Set image width */
+    width: 500px; /* Set image width */
     height: auto;
+    margin-right: 200px;
+    border-radius: 60px;
     object-fit: cover;
 }
 
@@ -677,7 +693,7 @@ textarea {
 
 .r-image {
     /* Sets image width to 100% of its container */
-   max-width: 400px;  /* Maximum width of 300px */
+   max-width: 500px;  /* Maximum width of 300px */
    height: 600px; 
    display: flex;
    justify-content: flex-start; /* Align image to the left */
@@ -773,14 +789,15 @@ textarea {
     background-color: #333; /* Slightly lighter black for hover effect */
 }
 
-/* Footer Styles */
 .foot {
-    background-color: black; /* Black background color */
-    color: #fff; /* White text color */
-    padding: 10px; /* Add some padding around the text */
     text-align: center;
-    margin-bottom: 7px; /* Center the text */
+    background-color: #5a0505;
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
 }
+
 
 .foot p {
     margin: 0; /* Remove the default margin of the paragraph element */
@@ -830,16 +847,15 @@ textarea {
 }
 
 
-
 .whatsapp-button {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    left: 20px; /* Changed from right to left */
     background-color: #131414; /* WhatsApp green */
     color: white;
     border-radius: 50%;
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -855,16 +871,11 @@ textarea {
 .whatsapp-icon {
     position: fixed;
     bottom: 100px;  /* 20px from the bottom */
-    right: 80px;   /* 20px from the right */
+    left: 80px;    /* 20px from the left */
     z-index: 1000; /* Makes sure the icon appears on top of other elements */
     display: none; /* Initially hidden */
     cursor: pointer;
 }
-
-
-
-/* WhatsApp icon style */
-
 
 /* Popup message styling */
 .popup-message {
@@ -878,8 +889,8 @@ textarea {
     font-size: 14px;
     z-index: 1000;
     bottom: 120%; /* Position directly above the icon */
-    left: 90%;
-    transform: translateX(-50%); /* Center the popup horizontally */
+    left: 3%; /* Position it on the left side */
+    transform: translateX(0); /* No horizontal translation, keep aligned to the left */
     white-space: nowrap;
 }
 
@@ -888,8 +899,8 @@ textarea {
     content: "";
     position: absolute;
     top: 100%; /* Arrow at the bottom of the popup */
-    left: 50%;
-    transform: translateX(-50%);
+    left: 40%;
+    transform: translateX(-50%); /* Center the arrow horizontally */
     border-width: 5px;
     border-style: solid;
     border-color: black transparent transparent transparent;
@@ -1001,3 +1012,136 @@ textarea {
 .carousel-control-next:hover .carousel-control-next-icon {
     background-color: transparent;
 }
+
+
+
+/* Chatbot Container */
+.chatbot-container {
+    position: fixed;
+    right: 60px;
+    bottom: 70px;
+}
+
+/* Chatbot Icon */
+.chatbot-icon {
+    position: relative;
+    cursor: pointer;
+    background-color: #5a0505;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(102, 5, 5, 0.2);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.chatbot-icon:hover {
+    transform: scale(1.1);
+    background-color: #3e8e41;
+}
+
+/* Tooltip Text */
+.tooltip-text {
+    visibility: hidden;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 85px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 12px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+/* Show tooltip on hover */
+.chatbot-icon:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Chat Window */
+.chat-window {
+    position: fixed;
+    right: 20px;
+    bottom: 90px;
+    width: 400px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 1px;
+    display: flex;
+    flex-direction: column;
+    max-height: 400px;
+}
+
+.chat-header {
+    padding: 10px;
+    background-color: #5a0505;
+    color: white;
+    border-radius: 5px 5px 0 0;
+    position: relative;
+}
+
+/* Cancel Button (X) */
+.cancel-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.chat-body {
+    padding: 10px;
+    height: 250px;
+    overflow-y: auto;
+    color: white; /* Ensures text is white */
+    background-color: #333; /* Background color to contrast with white text */
+}
+
+/* Quick reply button styling */
+.quick-reply {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.quick-reply:hover {
+    background-color: #45a049;
+}
+
+/* Bot's message styling */
+.bot-message {
+    background-color: #444;
+    color: white;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+/* User's message styling */
+.user-message {
+    background-color: #5a0505;
+    color: white;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+
+
+

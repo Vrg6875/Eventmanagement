@@ -774,14 +774,15 @@ textarea {
     background-color: #333; /* Slightly lighter black for hover effect */
 }
 
-/* Footer Styles */
 .foot {
-    background-color: black; /* Black background color */
-    color: #fff; /* White text color */
-    padding: 10px; /* Add some padding around the text */
     text-align: center;
-    margin-bottom: 7px; /* Center the text */
+    background-color: #5a0505;
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
 }
+
 
 .foot p {
     margin: 0; /* Remove the default margin of the paragraph element */

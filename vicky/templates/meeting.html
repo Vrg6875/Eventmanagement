@@ -3,27 +3,31 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaandaar Events - Redefining Class</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Contact Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     {% load static %}
     <link rel="stylesheet" href="{% static 'front.css' %}">
+
+    <!-- Include Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
-    <div class="navbar">
+    <!-- Navbar Section -->
+    <nav class="navbar">
         <ul>
-            <li><a href="/">Home</a></li>
+            <li>
+                <img src="{% static 'logo.jpg' %}" width="180" height="80" alt="Logo" style="filter: brightness(2.3);">
+            </li>
+            <li><a href="/front/">Home</a></li>
             <li><a href="/about/">About Us</a></li>
             <li><a href="/contact/">Contact Us</a></li>
             <li><a href="/ourwork/">Our Work</a></li>
-            <li><a href="/event/">Book Event</a></li>
+            <li><a href="/auth/">Get Started / Sign In</a></li>
+            <li><a href="/auth/">Book Event</a></li>
         </ul>
-    </div>
-    <br>
-    <br>
-    <br><br>
-    <br>
+    </nav>
     <br>
     <br>
     <br>
@@ -50,6 +54,7 @@
                 the Best Wedding Planner"
 
             </div>
+            <br>
 
             <div class="text-image-container">
                 <p>As the best wedding planner in the industry, we understand that entertainment is a vital aspect of
@@ -114,11 +119,13 @@
 
 
 
-
     <div class="content">
         <h1>Best Wedding Planner in Chandigarh</h1>
-        <p>Putting all the beautiful pieces together and crafting one-of-a-kind experiences.</p>
-        
-        <br>
+        <p>Putting all the beautiful pieces together and crafting one-of-a-kind experiences.</p><br>
         <a href="/contact" class="vicky">Contact us</a>
     </div>
+    <div class="foot">
+    <p>&copy;2024 Vicky Event planner. All rights reserved.</p>
+</div>
+</body>
+</html>

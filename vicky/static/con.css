@@ -1,0 +1,216 @@
+/* Right Image Styling */
+.right-image {
+    width: 100%; /* Ensures the image is responsive */
+    max-width: 1200px; /* Sets a larger maximum width */
+    height: auto; /* Maintains aspect ratio */
+    /* Adds rounded corners */
+     /* Adds a larger shadow for emphasis */
+    margin: 30px auto; /* Increases margin for more space around the image */
+    padding: 15px; /* Adds more padding around the image */
+    display: block; /* Centers the image horizontally */
+}
+
+
+/* Header Section */
+.header-section {
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+    text-align: left; /* Align all content to the left */
+    position: relative;
+}
+
+.header-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: pink;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.header-text p {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    color: white;
+    margin-bottom: 30px;
+    text-align: left; /* Align text to the left */
+}
+
+/* Text and Image Container */
+.text-image-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.text-image-container p {
+    max-width: 600px;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left; /* Align text to the left */
+}
+
+.text-image-container .right-image {
+    max-width: 300px;
+    border-radius: 10px;
+    align-self: flex-start; /* Align image with the top of the text */
+}
+
+/* Centered Text */
+.centered-text {
+    max-width: 700px;
+    margin: 30px auto 0;
+    text-align: left; /* Align text to the left */
+    color: white;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* Content Section */
+.content {
+    background-color: #ffffff;
+    padding: 50px 20px;
+    text-align: left; /* Align all content to the left */
+}
+
+.content h1 {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 1.1rem;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.content a.btn-primary {
+    background-color: #0f0e0e;
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.content a.btn-primary:hover {
+    background-color: #ffc107;
+    color: white;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #5a0505;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+}
+
+.navbar ul li {
+    padding: 0 15px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #f39c12;
+}
+
+/* Ensure the first item (logo) stays on the left, others align right */
+.navbar ul li:first-child {
+    margin-right: auto;
+}
+
+
+
+/* Centered Content Section */
+.content {
+    background-color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 1.1rem;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.content a.vicky {
+    background-color: #0f0e0e;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.content a.vicky:hover {
+    background-color: #665c3b;
+    color: white;
+}
+
+/* WhatsApp Icon on Right Side */
+.whatsapp-link {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.whatsapp-icon {
+    width: 50px; /* Adjust size as needed */
+    height: 50px;
+    transition: transform 0.3s;
+}
+
+.whatsapp-link:hover .whatsapp-icon {
+    transform: scale(1.1);
+}
+
+/* Popup Message */
+.popup-message {
+    display: none;
+    position: absolute;
+    right: 70px; /* Offset from the WhatsApp icon */
+    bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+/* Footer Section */
+.foot {
+    text-align: center;
+    background-color: #5a0505;
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}

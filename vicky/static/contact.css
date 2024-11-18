@@ -228,21 +228,23 @@ span {
     height: auto;
 }
 
-/* Quotes Styles */
 .quotes {
     font-family: 'Arial, sans-serif';
-    font-size: 1.8em;
     color: rgb(239, 230, 230);
-    margin: 70px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    text-align: justify;
+    width: 900px;
+    margin: 0 auto; /* Centers the quotes container */
 }
 
 .quotes p {
-    margin: 1px 0;
+    font-size: 1.7em;
+    line-height: 1.6; /* Adds spacing between lines for readability */
+    /* Ensures text starts at the top of the container */
 }
+
 
 
 
@@ -356,8 +358,9 @@ h2 {
     font-size: 1.2em;
     line-height: 2;
     border-radius: 10px;
-    max-width: 800px;
+    max-width: 1300px;
     margin: 0 auto;
+    text-align: justify;
 }
 
 /* Main Style */
@@ -825,14 +828,15 @@ textarea {
     background-color: #333; /* Slightly lighter black for hover effect */
 }
 
-/* Footer Styles */
 .foot {
-    background-color: black; /* Black background color */
-    color: #fff; /* White text color */
-    padding: 10px; /* Add some padding around the text */
     text-align: center;
-    margin-bottom: 7px; /* Center the text */
+    background-color: #5a0505;
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
 }
+
 
 .foot p {
     margin: 0; /* Remove the default margin of the paragraph element */
