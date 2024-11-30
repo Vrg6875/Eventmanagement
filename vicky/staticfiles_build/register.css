@@ -1,3 +1,75 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.background-image {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.overlay h2 {
+    margin: 0 0 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #218838;
+}
+
+.foot {
+    text-align: center;
+    margin-top: 20px;
+    color: #fff;
+}
+
 /* General Styles */
 body {
     margin: 0;
@@ -5,295 +77,6 @@ body {
     font-family: Arial, sans-serif;
     background-repeat: no-repeat;
 }
-
-/* General Header Styles */
-.header {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
-
-/* Image Styling */
-.header img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.6);
-}
-
-/* Overlay Styling */
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    /* Dark overlay */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-@media screen and (max-width: 768px) {
-    form {
-        max-width: 90%;
-        font-size: 0.9rem;
-    }
-    .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 70%;
-        /* Dark overlay */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    .header {
-        position: relative;
-        width: 100%;
-        height: 100vh;
-        overflow: hidden;
-    }
-    
-    /* Image Styling */
-    .header img {
-        width: 230%;
-        height: 10%;
-        object-fit:contain;
-        filter: brightness(0.6);
-    }
-
-    form h2 {
-        font-size: 1.5rem;
-    }
-
-    form input, form .vicky {
-        font-size: 0.9rem;
-    }
-}
-/* Form Styling */
-.overlay form {
-    /* Slightly darker background for the form */
-    padding: 30px;
-    border-radius: 8px;
-    width: 90%;
-    max-width: 400px;
-   
-    text-align: center;
-}
-
-/* Heading Styling */
-.overlay h2 {
-    color: white;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-/* Input Styling */
-.overlay input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
-/* Submit Button Styling */
-.vicky {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s;
-}
-
-.vicky:hover {
-    background-color: #45a049;
-}
-
-/* Link Styling for Signup */
-.overlay p a {
-    color: #4CAF50;
-    text-decoration: none;
-}
-
-.overlay p a:hover {
-    text-decoration: underline;
-}
-
-
-
-
-
-.navbar ul li:first-child img {
-    display: block; /* Ensure the image is visible */
-    max-width: 100%; /* Ensure it adjusts to fit its container */
-    height: auto; /* Maintain aspect ratio */
-    margin: 0 auto; /* Center it horizontally if needed */
-}
-
-/* Navbar Styles */
-.navbar {
-    background-color: #5a0505;
-    position: relative;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-/* Hamburger Menu Icon */
-.menu-icon {
-    display: none;
-    cursor: pointer;
-    flex-direction: column;
-    gap: 4px;
-    margin-left: 10px;
-}
-
-.menu-icon span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    transition: transform 0.3s ease;
-}
-
-/* Navbar Links */
-.nav-links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0;
-}
-
-
-
-.nav-links {
-    display: flex;
-    justify-content: flex-end;
-     /* Align all the links to the right */
-    padding: 0; /* Remove any padding */
-    margin-bottom:20px; /* Remove any margin */
-}
-
-.nav-links li {
-    list-style: none; /* Remove bullet points */
-}
-
-.nav-links li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 10px 15px; /* Padding inside the link */
-    margin-bottom: 40px; /* Adjusted margin to create space between links */
-    transition: color 0.3s ease;
-}
-
-.nav-links li a:hover {
-    color: #f39c12; /* Hover effect */
-}
-
-
-.nav-links li a:hover {
-    color: #f39c12;
-}
-
-
-
-/* Importing a stylish and unique Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Lora:wght@400;700&display=swap');
-
-/* Default: Hidden */
-.brand-heading {
-    display: none; /* Hidden by default */
-    color: #fff;
-    font-size: 36px; /* Larger font size for more impact */
-    font-family: 'Pacifico', cursive, serif; font-family: 'Pacifico', cursive, serif; /* Unique combination of Pacifico and Lora */
-    font-weight: bold;
-    text-align: center;
-    margin-right: 150px;
-    margin-left: 20px;
-    margin-top: 10px;
-    opacity: 0; /* Initially invisible */
-    transform: translateY(-30px) scale(0.8); /* Start from above and smaller */
-    animation: slideIn 1.5s ease-out forwards; /* Apply animation */
-}
-
-/* Animation for showing the heading with scaling and fading */
-@keyframes slideIn {
-    0% {
-        opacity: 0;
-        transform: translateY(-30px) scale(0.8); /* Start smaller and above */
-    }
-    50% {
-        opacity: 0.6;
-        transform: translateY(0) scale(1.05); /* Midway scale up slightly */
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0) scale(1); /* End at normal size */
-    }
-}
-
-/* Media Query for Laptop and Larger Screens */
-
-
-
-
-
-@media (min-width: 1024px) {
-    .brand-heading {
-        display: block; /* Show the heading on laptop and larger screens */
-    }
-}
-
-/* Responsive for Mobile and Tablet */
-@media (max-width: 1024px) {
-    /* Show the menu icon */
-    .menu-icon {
-        display: flex;
-    }
-    .brand-heading {
-        display: block;
-
-    }
-
-    /* Hide the nav links initially */
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 75px; /* Adjust based on your navbar height */
-        left: 0;
-        width: 100%;
-        background-color: #5a0505;
-        z-index: 1;
-    }
-
-    /* Show the nav links when the menu is open */
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        text-align: center;
-
-        margin-bottom: 21px;
-    }
-}
-
-
 
 
 
@@ -308,6 +91,63 @@ body {
 
 
 
+
+
+
+
+
+
+
+/* Navbar Styles */
+.navbar {
+    background-color: #5a0505;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+}
+
+.navbar ul li {
+    padding: 0 15px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #f39c12;
+}
+
+/* Make sure the first item (logo) stays on the left, and others align right */
+.navbar ul li:first-child {
+    margin-right: auto; /* This pushes the rest of the items to the right */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Logo Styles */
+.logofront {
+    filter: brightness(2.3);
+}
 
 
 
@@ -353,6 +193,14 @@ body {
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar ul li {
+        padding: 10px 0;
+    }
 
     .logofront {
         width: 150px;
@@ -440,6 +288,17 @@ span {
 
 
 
+/* Header Styles */
+.header {
+    position: relative;
+    text-align: center;
+    color: rgb(52, 7, 7);
+}
+
+.header img {
+    width: 100%;
+    height: auto;
+}
 
 /* Quotes Styles */
 .quotes {
@@ -493,19 +352,6 @@ span {
 .content {
     text-align: center;
     padding: 2rem;
-}
-
-
-
-
-dear {
-    background-color: rgb(214, 27, 27);
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 /* Button Styles */
@@ -647,17 +493,17 @@ a:hover {
 label {
     display: block;
     text-align: left;
-    margin-right: 290px;
-    
+    margin-bottom: 0px;
     margin-top: 0px;
     font-weight: bold;
-    color: white;
+    color:white;
 }
 
 /* Input Styles */
 input {
     width: 100%;
-    
+    padding: 8px;
+    margin-bottom: 8px;
     box-sizing: border-box;
 }
 
@@ -769,11 +615,11 @@ textarea {
 .text-image-container p {
     flex: 1; /* Allows text to take up available space */
     text-align: justify;
-   
+    margin: 0;
     line-height: 1.6;
     font-size: 16px;
     max-width: 600px;
-    margin-left: 0px;
+    margin-left: 50px;
 }
 
 .text-image-container .r-image {
@@ -795,13 +641,12 @@ textarea {
 
 .l-image {
     /* Sets image width to 100% of its container */
-   max-width: 500px;  /* Maximum width of 300px */
+   max-width: 400px;  /* Maximum width of 300px */
    height: 60px; 
    display: flex;
    justify-content: flex-start; /* Align image to the left */
    width: 100%;
-   margin-left: 120px;
-   border-radius: 60px;
+   margin-left: 140px;
     /* Maintain aspect ratio */
 }
 
@@ -838,15 +683,13 @@ textarea {
     margin: 0;
     line-height: 1.6;
     font-size: 16px;
-    max-width: 800px;
+    max-width: 600px;
     margin-left: 100px;
 }
 
 .renu .r-image {
-    width: 500px; /* Set image width */
+    width: 300px; /* Set image width */
     height: auto;
-    margin-right: 200px;
-    border-radius: 60px;
     object-fit: cover;
 }
 
@@ -907,7 +750,7 @@ textarea {
 
 .r-image {
     /* Sets image width to 100% of its container */
-   max-width: 500px;  /* Maximum width of 300px */
+   max-width: 400px;  /* Maximum width of 300px */
    height: 600px; 
    display: flex;
    justify-content: flex-start; /* Align image to the left */
@@ -918,12 +761,22 @@ textarea {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-    
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar li {
+        margin: 0.5rem 0;
+    }
+
     .services-grid, .vicky-grid {
         grid-template-columns: 1fr; /* Single column for services and vicky-grid on mobile */
     }
 
-    
+    .header img {
+        height: auto; /* Ensure header image is responsive */
+    }
 
     .right-image, .left-image {
         width: 100%; /* Ensure images are responsive */
@@ -993,49 +846,20 @@ textarea {
     background-color: #333; /* Slightly lighter black for hover effect */
 }
 
-/* General Body and Layout */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensure the body spans the full viewport height */
-    margin: 0; /* Remove default margin */
-}
-
-.header {
-    flex: 1; /* Allow the header to take up the remaining space */
-}
-
-/* Footer Styling */
 .foot {
-    background-color: #3d0101; /* Dark background color */
-    color: #fff; /* White text color */
-    text-align: center; /* Center the text */
-    padding: 20px 0; /* Adjust padding */
-    font-size: 1.2rem; /* Font size */
-    width: 100%; /* Full width */
-    margin-top: auto; /* Push the footer to the bottom */
-    position: relative; /* Default position */
-}
-
-/* Media Queries */
-
-/* For tablets and medium devices */
-@media screen and (max-width: 768px) {
-    .foot {
-        font-size: 1rem; /* Adjust font size for medium screens */
-        padding: 15px 0; /* Adjust padding */
-    }
-}
-
-/* For phones and small devices */
-@media screen and (max-width: 480px) {
-    .foot {
-        font-size: 0.9rem; /* Smaller font size for small screens */
-        padding: 10px 0; /* Further reduce padding */
-    }
+    text-align: center;
+    background-color: #5a0505;
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
 }
 
 
+.foot p {
+    margin: 0; /* Remove the default margin of the paragraph element */
+    font-size: 20px; /* Set the font size of the text */
+}
 
 /* Event Styles */
 .overevent {
@@ -1080,15 +904,16 @@ body {
 }
 
 
+
 .whatsapp-button {
     position: fixed;
     bottom: 20px;
-    left: 20px; /* Changed from right to left */
+    right: 20px;
     background-color: #131414; /* WhatsApp green */
     color: white;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 80px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1104,11 +929,16 @@ body {
 .whatsapp-icon {
     position: fixed;
     bottom: 100px;  /* 20px from the bottom */
-    left: 80px;    /* 20px from the left */
+    right: 80px;   /* 20px from the right */
     z-index: 1000; /* Makes sure the icon appears on top of other elements */
     display: none; /* Initially hidden */
     cursor: pointer;
 }
+
+
+
+/* WhatsApp icon style */
+
 
 /* Popup message styling */
 .popup-message {
@@ -1122,8 +952,8 @@ body {
     font-size: 14px;
     z-index: 1000;
     bottom: 120%; /* Position directly above the icon */
-    left: 3%; /* Position it on the left side */
-    transform: translateX(0); /* No horizontal translation, keep aligned to the left */
+    left: 90%;
+    transform: translateX(-50%); /* Center the popup horizontally */
     white-space: nowrap;
 }
 
@@ -1132,8 +962,8 @@ body {
     content: "";
     position: absolute;
     top: 100%; /* Arrow at the bottom of the popup */
-    left: 40%;
-    transform: translateX(-50%); /* Center the arrow horizontally */
+    left: 50%;
+    transform: translateX(-50%);
     border-width: 5px;
     border-style: solid;
     border-color: black transparent transparent transparent;
@@ -1195,22 +1025,6 @@ body {
 }
 
 
-/* Remove black overlay on carousel control icons */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: transparent; /* Make the background transparent */
-    background-size: 20px 20px; /* Set the arrow icon size */
-    background-image: none; /* Remove the default background image */
-}
-
-/* Add a custom icon for the previous and next buttons */
-.carousel-control-prev-icon::after,
-.carousel-control-next-icon::after {
-    content: '<'; /* Left arrow for prev */
-    font-size: 24px;
-    color: #191616; /* Arrow color */
-}
-
 
 /* Services title styling */
 .services-title h1 {
@@ -1245,136 +1059,4 @@ body {
 .carousel-control-next:hover .carousel-control-next-icon {
     background-color: transparent;
 }
-
-
-
-/* Chatbot Container */
-.chatbot-container {
-    position: fixed;
-    right: 60px;
-    bottom: 70px;
-}
-
-/* Chatbot Icon */
-.chatbot-icon {
-    position: relative;
-    cursor: pointer;
-    background-color: #5a0505;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 15px rgba(102, 5, 5, 0.2);
-    transition: transform 0.2s, background-color 0.2s;
-}
-
-.chatbot-icon:hover {
-    transform: scale(1.1);
-    background-color: #3e8e41;
-}
-
-/* Tooltip Text */
-.tooltip-text {
-    visibility: hidden;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 5px 10px;
-    border-radius: 5px;
-    position: absolute;
-    bottom: 85px;
-    left: 50%;
-    transform: translateX(-50%);
-    white-space: nowrap;
-    font-size: 12px;
-    z-index: 1;
-    opacity: 0;
-    transition: opacity 0.2s;
-}
-
-/* Show tooltip on hover */
-.chatbot-icon:hover .tooltip-text {
-    visibility: visible;
-    opacity: 1;
-}
-
-/* Chat Window */
-.chat-window {
-    position: fixed;
-    right: 20px;
-    bottom: 90px;
-    width: 400px;
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 1px;
-    display: flex;
-    flex-direction: column;
-    max-height: 400px;
-}
-
-.chat-header {
-    padding: 10px;
-    background-color: #5a0505;
-    color: white;
-    border-radius: 5px 5px 0 0;
-    position: relative;
-}
-
-/* Cancel Button (X) */
-.cancel-button {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.chat-body {
-    padding: 10px;
-    height: 250px;
-    overflow-y: auto;
-    color: white; /* Ensures text is white */
-    background-color: #333; /* Background color to contrast with white text */
-}
-
-/* Quick reply button styling */
-.quick-reply {
-    background-color: #4CAF50;
-    color: white;
-    padding: 8px;
-    margin: 5px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.quick-reply:hover {
-    background-color: #45a049;
-}
-
-/* Bot's message styling */
-.bot-message {
-    background-color: #444;
-    color: white;
-    padding: 8px;
-    margin: 5px 0;
-    border-radius: 5px;
-}
-
-/* User's message styling */
-.user-message {
-    background-color: #5a0505;
-    color: white;
-    padding: 8px;
-    margin: 5px 0;
-    border-radius: 5px;
-}
-
-
-
 

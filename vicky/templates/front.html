@@ -3,39 +3,56 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Home</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'front.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Include Font Awesome -->
+    <title>Home</title>
+
+    {% load static %}
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Main CSS -->
+<link rel="stylesheet" href="{% static 'home.css' %}?v=1.0">
+
+
+    <!-- Bootstrap CSS (from official CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Font (Pacifico) -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-5oYO2uhC3V7m1TjR6LBha/NbXwnwJozp5BQTLWX59tnXJHFzHYNcbCt3mrXTVt4p" crossorigin="anonymous">
-    <style>
-        
-    </style>
+
+    <!-- Optional: Local Bootstrap CSS (ensure the file exists in your static directory) -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 </head>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <body>
-
-
-
-
- <!-- Navbar Section -->
- <div class="navbar">
-    <ul>
-        <li>
-            <img src="{% static 'logo.jpg' %}" width="180" height="80" alt="YouTube Logo" style="filter: brightness(2.3);">
-        </li>
+<!-- Navbar Section -->
+<div class="navbar">
+    <div class="menu-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <!-- Heading for mobile view -->
+    <div class="brand-heading">Vicky Event</div>
+    <ul class="nav-links">
+        <!-- <li class="neta">
+            <img src="{% static 'logo.jpg' %}" width="180" height="80" alt="Logo" style="filter: brightness(2.3); margin-right: 800px;">
+        </li> -->
         <li><a href="">Home</a></li>
         <li><a href="/about/">About Us</a></li>
         <li><a href="/contact/">Contact Us</a></li>
         <li><a href="/ourwork/">Our Work</a></li>
         <li><a href="/auth/">Get Started / Sign In</a></li>
-        <li><a href="/auth/">Book Event</a></li>
+        <li><a href="/event/">Book Event</a></li>
     </ul>
+</div>
+
 
 
     <div class="container-fluid p-0">
@@ -60,21 +77,21 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
+            <div class="first">
+
+
+             Let's Plan Your Fairytale Together !
+            </div>
         </div>
+
     </div>
-    
 
 
 
 
 
-<div class="logo">
 
-    
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Let's Plan Your Fairytale Together !
-</div>
+
 
 
 </div>
@@ -108,50 +125,33 @@
 
 
     <div class="header">
-        
+
     <br>
-        <div class="pogo">
-            Best Wedding Planner in Chandigarh
+    <br>
+            <div class="pogo">
+            Best Wedding Planner in <br>Chandigarh
         </div>
-      
+
        <br>
+      
 
         <div class="renu">
            <p>
-            <br>
-            Putting all the beautiful pieces together and crafting one-of-a-kind wedding experiences of all shapes and sizes, we at Shaandaar Events are known as the best wedding planners in Chandigarh. As the best wedding planner in Chandigarh, we have designed and produced events across the globe, ranging from an intimate wedding for fifty people to a grand-scale wedding for more than thousands. As the best wedding planner in Chandigarh, we take pride in being the architects of your most momentous life event. Renowned for our exceptional craftsmanship, we have earned the esteemed title of the best wedding planner in Chandigarh. And the results are nothing less than MAGIC!
+           
+            Putting all the beautiful pieces together and crafting one-of-a-kind wedding experiences of all shapes and sizes, we at vicky events are known as the best wedding planners in Chandigarh. As the best wedding planner in Chandigarh, we have designed and produced events across the globe, ranging from an intimate wedding for fifty people to a grand-scale wedding for more than thousands. As the best wedding planner in Chandigarh, we take pride in being the architects of your most momentous life event. Renowned for our exceptional craftsmanship, we have earned the esteemed title of the best wedding planner in Chandigarh. And the results are nothing less than MAGIC!
 
-At Shaandaar Events, we take immense pride in our reputation as the best wedding planner in Chandigarh. With our meticulous diligence and unmatched creativity, we as the best wedding planner in Chandigarh continue to surpass expectations in wedding designs and production. From conceptualization to execution, we, as the best wedding planner in Chandigarh, strive to curate unforgettable wedding experiences that reflect the unique personalities and dreams of each couple. Our team of the best wedding planner in Chandigarh consists of dedicated professionals, who work tirelessly to ensure that every element, from venue selection to decor, catering, entertainment, and more can seamlessly come together to create a symphony of beauty and joy. We, as the best wedding planner in Chandigarh, understand the significance of this momentous occasion and aim to leave a lasting impression, turning dreams into reality. With Shaandaar Events, your wedding day becomes a magical celebration that will be cherished for a lifetime.
+At vicky events, we take immense pride in our reputation as the best wedding planner in Chandigarh. With our meticulous diligence and unmatched creativity, we as the best wedding planner in Chandigarh continue to surpass expectations in wedding designs and production. From conceptualization to execution, we, as the best wedding planner in Chandigarh, strive to curate unforgettable wedding experiences that reflect the unique personalities and dreams of each couple. Our team of the best wedding planner in Chandigarh consists of dedicated professionals, who work tirelessly to ensure that every element, from venue selection to decor, catering, entertainment, and more can seamlessly come together to create a symphony of beauty and joy. We, as the best wedding planner in Chandigarh, understand the significance of this momentous occasion and aim to leave a lasting impression, turning dreams into reality. With vicky events, your wedding day becomes a magical celebration that will be cherished for a lifetime.
            </p>
 
+           <div>
             <img src="{% static 'event.jpg' %}" class="r-image">
         </div>
+        </div>
+        
 
 <br>
-        <div class="shivam">
-            
-            <div class="text-image-container">
-                <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="l-image">
-               <div class="utkarsh">
-                <p>
-                    <br>
-                    At Grand Event Planners, we specialize in curating extraordinary and unforgettable experiences for our clients, offering a personalized approach to event planning that is second to none. From grand celebrations to intimate gatherings, we ensure that every event we organize is a reflection of our clients' unique style and vision. Whether it's a wedding, corporate function, or a milestone event, our team is dedicated to making every detail perfect, ensuring that your special occasion is nothing short of magical. With years of experience, we have built a reputation for excellence, consistently exceeding our clients' expectations.
-                
-                    Our expertise spans a wide range of services, including event design, venue selection, logistics management, catering, entertainment, and everything in between. As one of the leading event planners in the industry, we take pride in offering a comprehensive, all-inclusive service that removes the stress from your event planning process. We believe that no detail is too small to be overlooked, and we work tirelessly to ensure that everything is executed flawlessly. Whether you are planning an intimate gathering for a few close friends or a large-scale celebration for hundreds of guests, we have the expertise and resources to bring your vision to life.
-                
-                    Every event we plan is unique, and we tailor our services to fit the specific needs and desires of our clients. Our team works closely with you every step of the way, from the initial consultation to the final execution of your event. We take the time to get to know you and understand your goals, ensuring that we create an event that truly reflects your personality and tastes. Our goal is to make your event planning experience as enjoyable and stress-free as possible, so you can focus on what matters most – enjoying your celebration.
-                
-                    
-                </p>
-                
-               </div>
-            </div>
-           
-          
+        
 
-         </div>
-
-       
     </div>
 
     <br>
@@ -198,19 +198,19 @@ At Shaandaar Events, we take immense pride in our reputation as the best wedding
             <a href="/decor/">
                 <img src="https://media.istockphoto.com/id/1409447147/photo/creative-composition-at-living-room-interior-with-design-beige-sofa-black-coffee-table-plants.jpg?s=2048x2048&w=is&k=20&c=ZnV2CcG7lBA4ePAXgvLRjDMSjAcZKFd9nk1Z1Ury9bo=" alt="Decor Management">
             </a>
-            <h2>Decor Management</h2>
+            <h2>Decor</h2>
         </div>
         <div class="service-item">
             <a href="/vendor/">
                 <img src="https://media.istockphoto.com/id/1272683903/photo/handicraft-market-in-olinda-pernambuco.jpg?s=2048x2048&w=is&k=20&c=YFYJ9Ji7Rdfu7FviqB-m3JxjAwGRAebgnGla4TXKAwM=" alt="Vendor Management">
             </a>
-            <h2>Vendor Management</h2>
+            <h2>Vendor</h2>
         </div>
         <div class="service-item">
             <a href="/food/">
                 <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Food and beverage">
             </a>
-            <h2>Food and beverage</h2>
+            <h2>Food</h2>
         </div>
     </div>
 
@@ -218,14 +218,12 @@ At Shaandaar Events, we take immense pride in our reputation as the best wedding
     <h2 style="background-color: black; color: white; padding: 10px; text-align: center; border-radius: 5px;">
         Find Us Here
     </h2>
-    
-    
-    
-    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-top: 20px;">
-    
+
+
+    <div class="footer-container">
         <!-- Address Section (Left side) -->
-        <div style="flex: 1; padding-right: 20px;">
-            <p style="font-size: 25px; font-style: italic; margin-left: 80px; color: rgb(58, 56, 56);">
+        <div class="address">
+            <p>
                 Sunrise Enclave<br>
                 Sector 127<br>
                 PIN Code: 140301<br>
@@ -233,57 +231,57 @@ At Shaandaar Events, we take immense pride in our reputation as the best wedding
                 10:00 AM-7:00PM/Monday-Saturday<br>
                 vickyrajgupta2003@gmail.com
             </p>
-             
+            <div class="social">
+                <a href="https://www.instagram.com" target="_blank" style="margin-right: 10px;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr7A-iO0im7zectdU5ii8z3noYwBOFq4VC6A&s" alt="Instagram" width="40">
+                </a>
+                <a href="https://www.youtube.com" target="_blank">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQucwI6Jvs_U3R8wuKGgaGg9gvnvDCRA0xp5w&s" alt="YouTube" width="40">
+                </a>
+                &nbsp;
+                <a href="https://www.twitter.com" target="_blank" style="margin-right: 10px;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSimLbnT2Q8AfXMrhyUJpWg_z6omMi5FOW6qw&s">
+                </a>
+            </div>
+        </div>
+
         <!-- Social Media Links Section -->
-        <div style="margin-left: 80px; margin-top: 20px;">
-            <a href="https://www.instagram.com" target="_blank" style="margin-right: 10px;">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr7A-iO0im7zectdU5ii8z3noYwBOFq4VC6A&s" alt="Instagram" width="40">
-            </a>
-            <a href="https://www.youtube.com" target="_blank">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQucwI6Jvs_U3R8wuKGgaGg9gvnvDCRA0xp5w&s" alt="YouTube" width="40">
-            </a>
-            &nbsp; 
-            <a href="https://www.twitter.com" target="_blank" style="margin-right: 10px;">
-                <img src="data:image/png;base64,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" alt="Twitter" width="40">
-            </a>
-           
-        </div>
-    
-    
-        </div>
-    
-    
-    
-    
-    
-        
-    
+
+
         <!-- Map Section (Right side) -->
-        <div class="map" style="flex: 1; text-align: right; margin-right: 80px;">
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3429.7035714518997!2d76.64857697548267!3d30.72673278592267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fef21958930d7%3A0xe6719ee20b70108d!2sSunrise%20Enclave!5e0!3m2!1sen!2sin!4v1727096210377!5m2!1sen!2sin" 
-                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+        <div class="map">
+            <iframe src="https://maps.google.com/maps?q=Sunrise%20Enclave%2C%20Sector%20127%2C%20Mohali&t=&z=13&ie=UTF8&iwloc=&output=embed" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen></iframe>
         </div>
-    
     </div>
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <div class="content">
             <h1>Best Wedding Planner in Chandigarh</h1>
             <p>Putting all the beautiful pieces together and crafting one-of-a-kind experiences.</p><br>
             <a href="/contact" class="vicky">Contact us</a>
         </div>
-    
-    
+
+
         <div style="position: relative;">
             <a href="https://wa.me/8210224732" target="_blank" class="whatsapp-link">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
                      alt="WhatsApp" class="whatsapp-icon" width="100" height="100">
             </a>
 
-       
+
+
 
 
 
@@ -302,32 +300,32 @@ At Shaandaar Events, we take immense pride in our reputation as the best wedding
                     <svg xmlns="http://www.w3.org/2000/svg" width="60" height="120" viewBox="0 0 60 120">
                         <!-- Head -->
                         <rect x="10" y="5" width="40" height="40" rx="10" fill="#800000" stroke="white" stroke-width="2"/>
-                        
+
                         <!-- Eyes -->
                         <circle cx="25" cy="25" r="5" fill="white"/>
                         <circle cx="35" cy="25" r="5" fill="white"/>
                         <circle cx="25" cy="25" r="2" fill="#333"/>
                         <circle cx="35" cy="25" r="2" fill="#333"/>
-                        
+
                         <!-- Mouth -->
                         <path d="M25,35 Q30,40 35,35" stroke="white" stroke-width="2" fill="transparent" stroke-linecap="round"/>
-                        
+
                         <!-- Torso -->
                         <rect x="15" y="45" width="30" height="50" fill="#800000" stroke="white" stroke-width="2"/>
-                        
+
                         <!-- Arms -->
                         <rect x="5" y="45" width="10" height="30" fill="#800000" stroke="white" stroke-width="2"/>
                         <rect x="45" y="45" width="10" height="30" fill="#800000" stroke="white" stroke-width="2"/>
-                        
+
                         <!-- Legs -->
                         <rect x="15" y="95" width="10" height="20" fill="#800000" stroke="white" stroke-width="2"/>
                         <rect x="35" y="95" width="10" height="20" fill="#800000" stroke="white" stroke-width="2"/>
-                        
+
                         <!-- Hands -->
                         <circle cx="10" cy="75" r="5" fill="#800000" stroke="white" stroke-width="2"/>
                         <circle cx="50" cy="75" r="5" fill="#800000" stroke="white" stroke-width="2"/>
                     </svg>
-                    
+
                     <!-- Tooltip Message -->
                     <span class="tooltip-text">I am Viku, how can I assist you?</span>
                 </div>
@@ -348,32 +346,32 @@ At Shaandaar Events, we take immense pride in our reputation as the best wedding
                     </div>
                 </div>
             </div>
-            
-          
-            <script>
+
+
+<script>
                 function toggleChat() {
                     const chatWindow = document.getElementById("chat-window");
                     chatWindow.style.display = chatWindow.style.display === "none" ? "block" : "none";
                 }
-            
+
                 function closeChat() {
                     const chatWindow = document.getElementById("chat-window");
                     chatWindow.style.display = "none";
                 }
-            
+
                 function handleQuickReply(message) {
                     const messagesContainer = document.getElementById("messages");
-                    
+
                     // Add the user's message
                     const userMessage = document.createElement("div");
                     userMessage.classList.add("user-message");
                     userMessage.textContent = message;
                     messagesContainer.appendChild(userMessage);
-                    
+
                     // Add the bot's response based on the selected message
                     const botResponse = document.createElement("div");
                     botResponse.classList.add("bot-message");
-                    
+
                     if (message === "Support") {
                         botResponse.textContent = "For support, please call: 8210224732";
                     } else if (message === "Pricing") {
@@ -381,14 +379,19 @@ At Shaandaar Events, we take immense pride in our reputation as the best wedding
                     } else if (message === "Hours") {
                         botResponse.textContent = "We are open for 5 hours every day.";
                     }
-            
+
                     messagesContainer.appendChild(botResponse);
-                    
+
                     // Scroll to the bottom of the chat
                     messagesContainer.scrollTop = messagesContainer.scrollHeight;
                 }
+
+                function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+}
+
             </script>
-            
 
 
 
@@ -397,7 +400,8 @@ At Shaandaar Events, we take immense pride in our reputation as the best wedding
 
 
 
-            
+
+
 
 
 
@@ -445,7 +449,7 @@ At Shaandaar Events, we take immense pride in our reputation as the best wedding
                 Chat with us on WhatsApp!
             </div>
         </div>
-    
+
 
 
 
@@ -456,7 +460,7 @@ At Shaandaar Events, we take immense pride in our reputation as the best wedding
             <p>&copy;2024 Vicky Event planner. All rights reserved.</p>
         </div>
 
- 
+
 
 
 
@@ -482,23 +486,31 @@ At Shaandaar Events, we take immense pride in our reputation as the best wedding
 
 
 
+window.onscroll = function() {
+    var whatsappLink = document.querySelector('.whatsapp-link');
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        whatsappLink.style.display = "block"; // Show the icon when scrolled down
+    } else {
+        whatsappLink.style.display = "none"; // Hide the icon at the top
+    }
+};
 
 
             // JavaScript to handle popup message
             const whatsappIcon = document.querySelector('.whatsapp-icon');
             const popupMessage = document.getElementById('popupMessage');
             const whatsappLink = document.querySelector('.whatsapp-link');
-    
+
             // Show popup when mouse enters the WhatsApp icon
             whatsappLink.addEventListener('mouseenter', () => {
                 popupMessage.style.display = 'block';
             });
-    
+
             // Hide popup when mouse leaves the WhatsApp icon
             whatsappLink.addEventListener('mouseleave', () => {
                 popupMessage.style.display = 'none';
             });
-    
+
             // JavaScript to show the WhatsApp icon when scrolling
             window.onscroll = function () {
                 if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {

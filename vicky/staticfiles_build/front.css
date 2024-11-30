@@ -6,48 +6,221 @@ body {
     background-repeat: no-repeat;
 }
 
-/* Span Style */
-span {
-    color: rgb(142, 40, 12);
+
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+
+
+
+
+
+
+
+
+
 
 /* Navbar Styles */
 .navbar {
-    background-color: black;
-    padding: 1rem 0;
+    background-color: #5a0505;
 }
 
 .navbar ul {
-    display: flex;
-    justify-content: center;
     list-style: none;
-    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
     padding: 0;
 }
 
-.navbar li {
-    margin: 0 1rem;
+.navbar ul li {
+    padding: 0 15px;
 }
 
-.navbar a {
-    color: white;
+.navbar ul li a {
+    color: #fff;
     text-decoration: none;
-    font-size: 1.5rem;
-    padding: 0.5rem 1rem;
-    display: block;
-    transition: background-color 0.3s ease;
+    font-size: 16px;
+    transition: color 0.3s ease;
 }
 
-.navbar a:hover {
-    background-color: #333;
-    border-radius: 5px;
+.navbar ul li a:hover {
+    color: #f39c12;
 }
+
+/* Make sure the first item (logo) stays on the left, and others align right */
+.navbar ul li:first-child {
+    margin-right: auto; /* This pushes the rest of the items to the right */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Logo Styles */
+.logofront {
+    filter: brightness(2.3);
+}
+
+
+
+
+
+
+
+/* Carousel Styles */
+.carousel {
+    margin-top: 0px;
+    width: 110%;
+}
+
+.carousel-inner {
+    width: 100%;
+    height: 400px; /* Fixed height for carousel */
+    overflow: hidden;
+}
+
+.carousel-item {
+    width: 100%; /* Ensure the items take the full width */
+    transition: transform 0.3s ease-in-out; /* Set the slide transition duration to 0.4s */
+}
+
+.carousel-item img {
+    width: 100%; /* Ensure the images take full width */
+    height: 100%; /* Fill the height of the carousel item */
+    object-fit: cover; /* Ensure the images cover the full space without distortion */
+}
+
+/* Optional: Style carousel controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #680606;
+}
+
+/* Optional: Style carousel captions */
+.carousel-caption {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar ul li {
+        padding: 10px 0;
+    }
+
+    .logofront {
+        width: 150px;
+        height: 70px;
+    }
+
+    /* Adjust carousel on smaller screens */
+    .carousel-inner {
+        height: 300px;
+    }
+
+    .carousel-item img {
+        height: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Span Style */
+span {
+    color: rgba(57, 27, 19, 0.729);
+}
+
+
 
 /* Header Styles */
 .header {
     position: relative;
     text-align: center;
-    color: white;
+    color: rgb(52, 7, 7);
 }
 
 .header img {
@@ -59,7 +232,7 @@ span {
 .quotes {
     font-family: 'Arial, sans-serif';
     font-size: 1.8em;
-    color: white;
+    color: rgb(239, 230, 230);
     margin: 70px;
     padding: 20px;
     border-radius: 10px;
@@ -71,24 +244,55 @@ span {
     margin: 1px 0;
 }
 
-.overlay {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+
+
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Great+Vibes&display=swap');
+
+/* Logo Styling */
+.logo {
+    font-size: 2rem; /* Size adjustment for the tagline */
+    color: white; /* White color for the text */
+    font-weight: bold; /* Makes the text bold */
+    font-family: 'Playfair Display', serif; /* Elegant, italic font choice */
+    font-style: italic; /* Italicize the text */
+    text-align: center; /* Center the text */
+    letter-spacing: 1px; /* Slightly increase letter spacing */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
 }
 
+/* Optional alternative: Cursive style */
 .logo {
-    font-size: 3rem;
-    font-weight: bold;
-    white-space: nowrap;
-    text-align: left;
+    font-family: 'Great Vibes'; /* Use this if you prefer cursive */
 }
+
+
+
+
+
+
+
+
+
 
 /* Content Styles */
 .content {
     text-align: center;
     padding: 2rem;
+}
+
+
+
+
+dear {
+    background-color: rgb(214, 27, 27);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 /* Button Styles */
@@ -102,9 +306,9 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+/* button:hover {
     background-color: #333;
-}
+} */
 
 /* Heading Styles */
 h1 {
@@ -320,7 +524,7 @@ textarea {
     font-size: 2rem;
     font-weight: bold;
     white-space: nowrap;
-    text-align: left;
+    text-align: center;
 }
 
 /* Peader Style */
@@ -344,31 +548,128 @@ textarea {
 /* Text Image Container */
 .text-image-container {
     display: flex;
-    align-items: center;
-    margin-top: 1%;
-    justify-content: center;
+    align-items: flex-start;
+    gap: 20px; /* Space between text and image */
 }
 
-.right-image {
-    margin-left: 10px;
-    width: 400px;
-}
-
-.centered-text {
-    text-align: center;
-}
-
-.centered-text p {
-    max-width: 160ch;
-    margin: 100 auto;
-    text-align: left;
+.text-image-container p {
+    flex: 1; /* Allows text to take up available space */
+    text-align: justify;
+   
     line-height: 1.6;
+    font-size: 16px;
+    max-width: 600px;
+    margin-left: 0px;
 }
 
-.left-image {
-    margin-left: 10px;
-    width: 350px;
+.text-image-container .r-image {
+    width: 300px; /* Set image width */
+    height: auto;
+    object-fit: cover;
 }
+
+.text-image-container p::first-line {
+    text-indent: 50px; /* Indent the first line by 50px */
+}
+
+.text-image-container p::after {
+    content: "";
+    display: block;
+    width: 50px; /* Aligns each new line after 50 words */
+}
+
+
+.l-image {
+    /* Sets image width to 100% of its container */
+   max-width: 500px;  /* Maximum width of 300px */
+   height: 60px; 
+   display: flex;
+   justify-content: flex-start; /* Align image to the left */
+   width: 100%;
+   margin-left: 120px;
+   border-radius: 60px;
+    /* Maintain aspect ratio */
+}
+
+
+
+
+/* Shivam Text Image Container */
+.shivam {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; /* Space between text and image */
+}
+
+.shivam p {
+    flex: 1; /* Allows text to take up available space */
+    text-align: justify;
+    margin: 0;
+    line-height: 1.6;
+    font-size: 16px;
+    max-width: 600px;
+    margin-left: 50px;
+}
+
+/* Renu Text Image Container */
+.renu {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; /* Space between text and image */
+}
+
+.renu p {
+    flex: 1; /* Allows text to take up available space */
+    text-align: justify;
+    margin: 0;
+    line-height: 1.6;
+    font-size: 16px;
+    max-width: 800px;
+    margin-left: 100px;
+}
+
+.renu .r-image {
+    width: 500px; /* Set image width */
+    height: auto;
+    margin-right: 200px;
+    border-radius: 60px;
+    object-fit: cover;
+}
+
+.renu p::first-line {
+    text-indent: 50px; /* Indent the first line by 50px */
+}
+
+.renu p::after {
+    content: "";
+    display: block;
+    width: 50px; /* Aligns each new line after 50 words */
+}
+
+
+.shivam .r-image {
+    width: 300px; /* Set image width */
+    height: auto;
+    object-fit: cover;
+}
+
+.shivam p::first-line {
+    text-indent: 50px; /* Indent the first line by 50px */
+}
+
+.shivam p::after {
+    content: "";
+    display: block;
+    width: 50px; /* Aligns each new line after 50 words */
+}
+
+
+
+
+
+
+
+
 
 /* Utkarsh Style */
 .utkarsh {
@@ -387,6 +688,18 @@ textarea {
     margin: 10 auto;
     text-align: left;
     line-height: 1.6;
+}
+
+
+.r-image {
+    /* Sets image width to 100% of its container */
+   max-width: 500px;  /* Maximum width of 300px */
+   height: 600px; 
+   display: flex;
+   justify-content: flex-start; /* Align image to the left */
+   width: 100%;
+   margin-left: 110px;
+    /* Maintain aspect ratio */
 }
 
 /* Mobile Styles */
@@ -426,15 +739,8 @@ textarea {
         font-size: 1rem;
     }
 
-    .pogo {
-        font-size: 1.5rem; /* Adjust font size for mobile */
-    }
-
-    .logo {
-        font-size: 2rem;
-        text-align: center; /* Center the logo text for mobile */
-    }
-
+   
+  
     h1 {
         font-size: 1.5em;
     }
@@ -483,14 +789,15 @@ textarea {
     background-color: #333; /* Slightly lighter black for hover effect */
 }
 
-/* Footer Styles */
 .foot {
-    background-color: black; /* Black background color */
-    color: #fff; /* White text color */
-    padding: 10px; /* Add some padding around the text */
     text-align: center;
-    margin-bottom: 7px; /* Center the text */
+    background-color: #5a0505;
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
 }
+
 
 .foot p {
     margin: 0; /* Remove the default margin of the paragraph element */
@@ -540,16 +847,15 @@ textarea {
 }
 
 
-
 .whatsapp-button {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    left: 20px; /* Changed from right to left */
     background-color: #131414; /* WhatsApp green */
     color: white;
     border-radius: 50%;
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -565,16 +871,11 @@ textarea {
 .whatsapp-icon {
     position: fixed;
     bottom: 100px;  /* 20px from the bottom */
-    right: 80px;   /* 20px from the right */
+    left: 80px;    /* 20px from the left */
     z-index: 1000; /* Makes sure the icon appears on top of other elements */
     display: none; /* Initially hidden */
     cursor: pointer;
 }
-
-
-
-/* WhatsApp icon style */
-
 
 /* Popup message styling */
 .popup-message {
@@ -588,8 +889,8 @@ textarea {
     font-size: 14px;
     z-index: 1000;
     bottom: 120%; /* Position directly above the icon */
-    left: 90%;
-    transform: translateX(-50%); /* Center the popup horizontally */
+    left: 3%; /* Position it on the left side */
+    transform: translateX(0); /* No horizontal translation, keep aligned to the left */
     white-space: nowrap;
 }
 
@@ -598,11 +899,249 @@ textarea {
     content: "";
     position: absolute;
     top: 100%; /* Arrow at the bottom of the popup */
-    left: 50%;
-    transform: translateX(-50%);
+    left: 40%;
+    transform: translateX(-50%); /* Center the arrow horizontally */
     border-width: 5px;
     border-style: solid;
     border-color: black transparent transparent transparent;
 }
+
+
+
+.logofront{
+    margin-left: -250px;
+}
+
+
+
+
+
+/* Styling for the call-to-action box */
+.cta-box {
+    position: relative;
+    background-color: #fff;
+    text-align: center;
+    padding: 40px;
+    margin: 50px auto;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* CTA text styling */
+.cta-text {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: white;
+    margin: 20px 0;
+}
+
+/* Styling for the CTA links */
+.cta-link {
+    display: inline-block;
+    background-color: #ff6600;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for CTA links */
+.cta-link:hover {
+    background-color: #e65c00;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Spacing for the buttons */
+.cta-link + .cta-text {
+    margin-top: 30px;
+}
+
+
+/* Remove black overlay on carousel control icons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: transparent; /* Make the background transparent */
+    background-size: 20px 20px; /* Set the arrow icon size */
+    background-image: none; /* Remove the default background image */
+}
+
+/* Add a custom icon for the previous and next buttons */
+.carousel-control-prev-icon::after,
+.carousel-control-next-icon::after {
+    content: '<'; /* Left arrow for prev */
+    font-size: 24px;
+    color: #191616; /* Arrow color */
+}
+
+
+/* Services title styling */
+.services-title h1 {
+    font-family: 'Georgia', 'Times New Roman', serif; /* Elegant italic font */
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: bold;
+    color: #333; /* Dark gray color for a classic look */
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.services-title h1::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #aa803d; /* Underline color */
+    margin: 10px auto 0;
+    border-radius: 10px; /* Rounded edges for the underline */
+}
+
+
+.carousel-control-next-icon::after {
+    content: '>'; /* Right arrow for next */
+}
+
+/* Remove hover effect */
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    background-color: transparent;
+}
+
+
+
+/* Chatbot Container */
+.chatbot-container {
+    position: fixed;
+    right: 60px;
+    bottom: 70px;
+}
+
+/* Chatbot Icon */
+.chatbot-icon {
+    position: relative;
+    cursor: pointer;
+    background-color: #5a0505;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(102, 5, 5, 0.2);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.chatbot-icon:hover {
+    transform: scale(1.1);
+    background-color: #3e8e41;
+}
+
+/* Tooltip Text */
+.tooltip-text {
+    visibility: hidden;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 85px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 12px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+/* Show tooltip on hover */
+.chatbot-icon:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Chat Window */
+.chat-window {
+    position: fixed;
+    right: 20px;
+    bottom: 90px;
+    width: 400px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 1px;
+    display: flex;
+    flex-direction: column;
+    max-height: 400px;
+}
+
+.chat-header {
+    padding: 10px;
+    background-color: #5a0505;
+    color: white;
+    border-radius: 5px 5px 0 0;
+    position: relative;
+}
+
+/* Cancel Button (X) */
+.cancel-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.chat-body {
+    padding: 10px;
+    height: 250px;
+    overflow-y: auto;
+    color: white; /* Ensures text is white */
+    background-color: #333; /* Background color to contrast with white text */
+}
+
+/* Quick reply button styling */
+.quick-reply {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.quick-reply:hover {
+    background-color: #45a049;
+}
+
+/* Bot's message styling */
+.bot-message {
+    background-color: #444;
+    color: white;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+/* User's message styling */
+.user-message {
+    background-color: #5a0505;
+    color: white;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+
 
 

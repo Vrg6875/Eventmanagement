@@ -3,39 +3,55 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>our work</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'contact.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Include Font Awesome -->
+    <title>Home</title>
+
+    {% load static %}
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Main CSS -->
+<link rel="stylesheet" href="{% static 'ourwork.css' %}?v=1.0">
+
+
+    <!-- Bootstrap CSS (from official CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Font (Pacifico) -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-5oYO2uhC3V7m1TjR6LBha/NbXwnwJozp5BQTLWX59tnXJHFzHYNcbCt3mrXTVt4p" crossorigin="anonymous">
-    <style>
-        
-    </style>
+
+    <!-- Optional: Local Bootstrap CSS (ensure the file exists in your static directory) -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 </head>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <body>
-
-
-
-
- <!-- Navbar Section -->
- <div class="navbar">
-    <ul>
-        <li>
-            <img src="{% static 'logo.jpg' %}" width="180" height="80" alt="YouTube Logo" style="filter: brightness(2.3);">
-        </li>
-        <li><a href="/front/">Home</a></li>
+<!-- Navbar Section -->
+<div class="navbar">
+    <div class="menu-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <!-- Heading for mobile view -->
+    <div class="brand-heading">Vicky Event</div>
+    <ul class="nav-links">
+        <!-- <li class="neta">
+            <img src="{% static 'logo.jpg' %}" width="180" height="80" alt="Logo" style="filter: brightness(2.3); margin-right: 800px;">
+        </li> -->
+        <li><a href="">Home</a></li>
         <li><a href="/about/">About Us</a></li>
         <li><a href="/contact/">Contact Us</a></li>
         <li><a href="/ourwork/">Our Work</a></li>
         <li><a href="/auth/">Get Started / Sign In</a></li>
-        <li><a href="/auth/">Book Event</a></li>
+        <li><a href="/event/">Book Event</a></li>
     </ul>
+</div>
 
 
 
@@ -64,14 +80,14 @@
     </div>
  
 
-<div class="logo">
+<div class="first">
 
     
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;""Our work speaks for itself – each detail tells a unique story.""
 </div>
-</div>
+
 
     <div class="header">
         <img src="https://media.istockphoto.com/id/907912938/photo/colorful-themed-wedding-stage-and-chairs-hindu-traditional-wedding.jpg?s=2048x2048&w=is&k=20&c=ied5pHFpvRpEDpinufFrdl6UdduPAiUn09zGvLXchE0=" alt="Wedding" style="filter: brightness(0.6);">
@@ -95,10 +111,13 @@
                 </div>
         </div>
     </div>
+
+
+    
     <br>
     <h1 style="color: black;">"Captivating Moments"</h1>
     <p class="mehndi">
-        "Embark on a visual journey through our Shaandaar Events Gallery, where we unveil a collection
+        "Embark on a visual journey through our vicky Events Gallery, where we unveil a collection
         of captivating and unforgettable experiences as the best wedding planner.”</p>
 
     <div class="vicky-grid">   
@@ -148,11 +167,260 @@
       
     </div>   
 
-   <div class="services-container">
+  
     <br>
     <br>
+
+    <script>
+        function toggleChat() {
+            const chatWindow = document.getElementById("chat-window");
+            chatWindow.style.display = chatWindow.style.display === "none" ? "block" : "none";
+        }
+
+        function closeChat() {
+            const chatWindow = document.getElementById("chat-window");
+            chatWindow.style.display = "none";
+        }
+
+        function handleQuickReply(message) {
+            const messagesContainer = document.getElementById("messages");
+
+            // Add the user's message
+            const userMessage = document.createElement("div");
+            userMessage.classList.add("user-message");
+            userMessage.textContent = message;
+            messagesContainer.appendChild(userMessage);
+
+            // Add the bot's response based on the selected message
+            const botResponse = document.createElement("div");
+            botResponse.classList.add("bot-message");
+
+            if (message === "Support") {
+                botResponse.textContent = "For support, please call: 8210224732";
+            } else if (message === "Pricing") {
+                botResponse.textContent = "Our pricing starts from $1000. Please contact support for detailed pricing.";
+            } else if (message === "Hours") {
+                botResponse.textContent = "We are open for 5 hours every day.";
+            }
+
+            messagesContainer.appendChild(botResponse);
+
+            // Scroll to the bottom of the chat
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        function toggleMenu() {
+const navLinks = document.querySelector('.nav-links');
+navLinks.classList.toggle('active');
+}
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       
-    {% include 'footer.html' %}
+   
+<div class="services-title">
+    <h1>SERVICES WE PROVIDE</h1>
+</div>
+
+    <br>
+    <br>
+
+    <div class="services-grid">
+        <div class="vrg-item">
+            <a href="/destination/">
+                <img src="https://plus.unsplash.com/premium_photo-1661964149725-fbf14eabd38c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZGVzdGluYXRpb258ZW58MHx8MHx8fDA%3D" alt="Destination and Venues">
+            </a>
+            <h2>DESTINATION</h2>
+        </div>
+        <div class="vrg-item">
+            <a href="/meeting/">
+                <img src="https://plus.unsplash.com/premium_photo-1661778490723-371305b4fb06?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWVldGluZ3xlbnwwfHwwfHx8MA%3D%3D" alt="Vendor Management">
+            </a>
+            <h2>MEETING</h2>
+        </div>
+        <div class="vrg-item">
+            <a href="/festival/">
+                <img src="https://media.istockphoto.com/id/1415056757/photo/colorful-wedding-tents-at-night.jpg?s=2048x2048&w=is&k=20&c=cPPzyEfHvnKxZuh8nlAsCoK3mhSE-qTSe6MAnT-ecv0=" alt="Decor Management">
+            </a>
+            <h2>FESTIVAL</h2>
+        </div>
+        <div class="vrg-item">
+            <a href="/marriage/">
+                <img src="https://media.istockphoto.com/id/1399000012/photo/guests-throwing-confetti-over-bride-and-groom-as-they-walk-past-after-their-wedding-ceremony.jpg?s=2048x2048&w=is&k=20&c=G8zuGJUuEK9HXwx1xEYPYwrcajt8r3K8nSVFeEzLHFY=" alt="Logistics">
+            </a>
+            <h2>MARRIAGE</h2>
+        </div>
+        <div class="vrg-item">
+            <a href="/entertainment/">
+                <img src="https://images.unsplash.com/photo-1496337589254-7e19d01cec44?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGVudGVydGFpbm1lbnR8ZW58MHx8MHx8fDA%3D" alt="Entertainment">
+            </a>
+            <h2>ENTERTAINMENT</h2>
+        </div>
+        <div class="vrg-item">
+            <a href="/decor/">
+                <img src="https://media.istockphoto.com/id/1409447147/photo/creative-composition-at-living-room-interior-with-design-beige-sofa-black-coffee-table-plants.jpg?s=2048x2048&w=is&k=20&c=ZnV2CcG7lBA4ePAXgvLRjDMSjAcZKFd9nk1Z1Ury9bo=" alt="Decor Management">
+            </a>
+            <h2>Decor</h2>
+        </div>
+        <div class="vrg-item">
+            <a href="/vendor/">
+                <img src="https://media.istockphoto.com/id/1272683903/photo/handicraft-market-in-olinda-pernambuco.jpg?s=2048x2048&w=is&k=20&c=YFYJ9Ji7Rdfu7FviqB-m3JxjAwGRAebgnGla4TXKAwM=" alt="Vendor Management">
+            </a>
+            <h2>Vendor</h2>
+        </div>
+        <div class="vrg-item">
+            <a href="/food/">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Food and beverage">
+            </a>
+            <h2>Food</h2>
+        </div>
+    </div>
+
+    <br>
+    <h2 style="background-color: black; color: white; padding: 10px; text-align: center; border-radius: 5px;">
+        Find Us Here
+    </h2>
+
+
+    <div class="footer-container">
+        <!-- Address Section (Left side) -->
+        <div class="address">
+            <p>
+                Sunrise Enclave<br>
+                Sector 127<br>
+                PIN Code: 140301<br>
+                Mobile No: 8210224732<br>
+                10:00 AM-7:00PM/Monday-Saturday<br>
+                vickyrajgupta2003@gmail.com
+            </p>
+            <div class="social">
+                <a href="https://www.instagram.com" target="_blank" style="margin-right: 10px;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr7A-iO0im7zectdU5ii8z3noYwBOFq4VC6A&s" alt="Instagram" width="40">
+                </a>
+                <a href="https://www.youtube.com" target="_blank">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQucwI6Jvs_U3R8wuKGgaGg9gvnvDCRA0xp5w&s" alt="YouTube" width="40">
+                </a>
+                &nbsp;
+                <a href="https://www.twitter.com" target="_blank" style="margin-right: 10px;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSimLbnT2Q8AfXMrhyUJpWg_z6omMi5FOW6qw&s">
+                </a>
+            </div>
+        </div>
+
+        <!-- Social Media Links Section -->
+
+
+        <!-- Map Section (Right side) -->
+        <div class="map">
+            <iframe src="https://maps.google.com/maps?q=Sunrise%20Enclave%2C%20Sector%20127%2C%20Mohali&t=&z=13&ie=UTF8&iwloc=&output=embed" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen></iframe>
+        </div>
+    </div>
+
+
+
+
+    <div class="content">
+        <h1>Best Wedding Planner in Chandigarh</h1>
+        <p>Putting all the beautiful pieces together and crafting one-of-a-kind experiences.</p><br>
+        <a href="/contact" class="vicky">Contact us</a>
+    </div>
+
+
+    <div style="position: relative;">
+        <a href="https://wa.me/8210224732" target="_blank" class="whatsapp-link">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                 alt="WhatsApp" class="whatsapp-icon" width="100" height="100">
+        </a>
+
+    </div>   
+
+
+
+
+
+        <div class="popup-message" id="popupMessage">
+            Chat with us on WhatsApp!
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="foot">
+        <p>&copy;2024 Vicky Event planner. All rights reserved.</p>
+    </div>
+
+
+
+
+
+
+
+    <script>
+
+
+
+
+
+
+
+        window.onscroll = function() {
+            var whatsappLink = document.querySelector('.whatsapp-link');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                whatsappLink.style.display = "block"; // Show the icon when scrolled down
+            } else {
+                whatsappLink.style.display = "none"; // Hide the icon at the top
+            }
+        };
+        
+        
+                    // JavaScript to handle popup message
+                    const whatsappIcon = document.querySelector('.whatsapp-icon');
+                    const popupMessage = document.getElementById('popupMessage');
+                    const whatsappLink = document.querySelector('.whatsapp-link');
+        
+                    // Show popup when mouse enters the WhatsApp icon
+                    whatsappLink.addEventListener('mouseenter', () => {
+                        popupMessage.style.display = 'block';
+                    });
+        
+                    // Hide popup when mouse leaves the WhatsApp icon
+                    whatsappLink.addEventListener('mouseleave', () => {
+                        popupMessage.style.display = 'none';
+                    });
+        
+                    // JavaScript to show the WhatsApp icon when scrolling
+                    window.onscroll = function () {
+                        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                            whatsappIcon.style.display = 'block'; // Show the icon after scrolling 100px
+                        } else {
+                            whatsappIcon.style.display = 'none'; // Hide the icon when scrolled to the top
+                        }
+                    };
+                </script>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        
+        
+        
+        
+        
     
 </body>
 </html>

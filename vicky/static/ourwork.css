@@ -1,3 +1,576 @@
+
+/* Base Styling */
+.first {
+    font-family: 'Playfair Display', serif; /* Elegant font choice */
+    font-style: italic; /* Italicize the text */
+    color: #e8e1e1; /* Light gray text color */
+    font-size: 2rem; /* Adjust font size */
+    text-align: center; /* Center the text */
+   margin-bottom: -10px;
+  
+   margin-left: -310px;
+    background-color: #370303; /* Dark red background color */
+    width: 120%; /* Ensure the background spans the full width of the container */
+    padding: 30px; /* Add vertical padding for better spacing */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide any overflowing content */
+    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+    /* Include padding in width calculation */
+}
+
+
+/* Media Queries */
+
+/* For medium screens (tablets, 768px and below) */
+@media (max-width: 768px) {
+    .first {
+        font-family: 'Playfair Display', serif; /* Elegant font choice */
+        font-style: italic; /* Italicize the text */
+        color: #e8e1e1; /* Light gray text color */
+        font-size: 1.2rem; /* Adjust font size */
+        text-align: center; /* Center the text */
+       margin-bottom: -15px;
+       
+       margin-left: -316px;
+     
+        background-color: #370303; /* Dark red background color */
+        width: 180%; /* Ensure the background spans the full width of the container */
+        padding: 30px; /* Add vertical padding for better spacing */
+        
+    }
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .chatbot-icon {
+        width: 40px; /* Smaller width for mobile */
+        height: 80px;
+        margin-left:3000px ; /* Smaller height for mobile */
+    }
+
+    .chatbot-icon svg {
+        width: 40px; /* Adjust the SVG icon size */
+        height: 80px; /* Adjust the SVG icon height */
+    }
+
+    .tooltip-text {
+        font-size: 10px; /* Smaller tooltip font size for mobile */
+        top: 20px; /* Adjust the position of the tooltip */
+    }
+}
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+}
+/* Styling for the map section */
+.map {
+    margin-right: 90px; /* Add 90px margin to the right */
+}
+
+.address {
+    width: 40%; /* Adjust width as needed */
+}
+
+
+
+
+/* Styling for the address section */
+.address {
+    margin-bottom: 20px; /* Add space below address */
+}
+
+/* Styling for the social media section */
+.social {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    margin-top: 20px;
+    margin-left:80px ;
+
+}
+
+.social a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social img {
+    width: 40px; /* Adjust the size of the icons */
+    height: 40px;
+    object-fit: cover;
+}
+
+
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .address, .map {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .social img {
+        margin-right: 10px;
+    }
+}
+
+
+
+
+/* Optional: Add responsive behavior for small screens */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+    .map {
+        width: 100%;
+        height: 300px; /* Adjust height for small screens */
+    }
+}
+
+
+/* Mobile (below 768px) */
+@media (max-width: 768px) {
+    .social {
+        justify-content: left; /* Center the icons for mobile */
+        margin-left: 5px; /* Remove left margin on smaller screens */
+        margin-top: 1px;
+        margin-bottom: 10px; /* Adjust margin for better spacing */
+    }
+
+    .map{
+        margin-left: 70px;
+    }
+
+    .social img {
+        width: 50px;
+        object-fit: contain; /* Slightly smaller icons for mobile */
+    }
+}
+
+/* Address Container Styling */
+.address-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+/* Address Section Styling */
+.address {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.address p {
+    font-size: 25px;
+    font-style: italic;
+    margin-left: 80px;
+    color: rgb(58, 56, 56);
+}
+
+/* Mobile (below 768px) */
+@media (max-width: 768px) {
+    .address p {
+        text-align: left; /* Align text to the left on mobile */
+        margin-left: 10px; /* Remove the left margin */
+        padding-right: 0; /* Optional: reset padding if needed */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-items: center;
+}
+
+.service-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+
+
+
+
+.service-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* Mobile Styles (below 768px) */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row for mobile */
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .service-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .service-item h2 {
+        position: absolute;
+        text-align: left;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+        color: white; /* White text color */
+        font-size: 0.6em; /* Reduced font size */
+        text-transform: uppercase;
+    }
+}
+
+/* Extra Small Devices (phones in portrait mode) */
+
+
+@media (max-width: 768px) {
+    .chatbot-icon {
+        width: 40px; /* Smaller width for mobile */
+        height: 80px;
+        margin-left:3000px ; /* Smaller height for mobile */
+    }
+
+    .chatbot-icon svg {
+        width: 40px; /* Adjust the SVG icon size */
+        height: 80px; /* Adjust the SVG icon height */
+    }
+
+    .tooltip-text {
+        font-size: 10px; /* Smaller tooltip font size for mobile */
+        top: 20px; /* Adjust the position of the tooltip */
+    }
+}
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+}
+/* Styling for the map section */
+.map {
+    margin-right: 90px; /* Add 90px margin to the right */
+}
+
+.address {
+    width: 40%; /* Adjust width as needed */
+}
+
+
+
+
+/* Styling for the address section */
+.address {
+    margin-bottom: 20px; /* Add space below address */
+}
+
+/* Styling for the social media section */
+.social {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    margin-top: 20px;
+    margin-left:80px ;
+
+}
+
+.social a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social img {
+    width: 40px; /* Adjust the size of the icons */
+    height: 40px;
+    object-fit: cover;
+}
+
+
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .address, .map {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .social img {
+        margin-right: 10px;
+    }
+}
+
+
+
+
+/* Optional: Add responsive behavior for small screens */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+    .map {
+        width: 100%;
+        height: 300px; /* Adjust height for small screens */
+    }
+}
+
+
+/* Mobile (below 768px) */
+@media (max-width: 768px) {
+    .social {
+        justify-content: left; /* Center the icons for mobile */
+        margin-left: 5px; /* Remove left margin on smaller screens */
+        margin-top: 1px;
+        margin-bottom: 10px; /* Adjust margin for better spacing */
+    }
+
+    .map{
+        margin-left: 70px;
+    }
+
+    .social img {
+        width: 50px;
+        object-fit: contain; /* Slightly smaller icons for mobile */
+    }
+}
+
+/* Address Container Styling */
+.address-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+/* Address Section Styling */
+.address {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.address p {
+    font-size: 25px;
+    font-style: italic;
+    margin-left: 80px;
+    color: rgb(58, 56, 56);
+}
+
+/* Mobile (below 768px) */
+@media (max-width: 768px) {
+    .address p {
+        text-align: left; /* Align text to the left on mobile */
+        margin-left: 10px; /* Remove the left margin */
+        padding-right: 0; /* Optional: reset padding if needed */
+    }
+}
+
+
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.header img {
+    width: 100%;
+    height: auto;
+    filter: brightness(0.5);
+    object-fit: cover;
+}
+
+.overourwork {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+   
+    align-items: center;
+    text-align: justify;
+    overflow-y: auto;
+    width: 100%;
+}
+
+
+    .quotes p {
+        font-size: 3rem;
+        line-height: 1.4; /* Adjust line height for better readability */
+        width: 95%; /* Increase the paragraph width */
+        margin: 0 auto;
+        margin-bottom: 200px; /* Center the paragraph within the container */
+    }
+
+
+#readMoreBtn {
+    display: none; /* Hidden by default, visible only on mobile */
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#readMoreBtn:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    transition: 0.3s ease;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    #readMoreBtn {
+        display: inline-block; /* Show button on mobile */
+    }
+
+    .overourwork {
+       
+        font-size: 1rem;
+        width: 150%; /* Increase the width of the content container */
+         /* Center the content horizontally */
+    }
+
+    .quotes p {
+        font-size: 1rem;
+        line-height: 1.4; /* Adjust line height for better readability */
+        width: 100%; /* Increase the paragraph width */
+        margin: 0 auto; /* Center the paragraph within the container */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Great+Vibes&display=swap');
+
+.logo {
+    font-size: 2.7rem; 
+    color: #490606 ;/* Reduce font size for better readability on smaller screens */
+     /* Remove excessive right margin */
+     /* Center align on mobile */
+    margin-right: 270px; 
+    text-align: left; /* Ensure text stays centered */
+    letter-spacing: 0.5px; /* Slightly tighter letter spacing */
+    display: flex; /* Use Flexbox to align text horizontally */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    white-space: nowrap;
+    
+    font-family: 'Great Vibes'; /* Prevent line breaks within the text */
+}
+
+
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Great+Vibes&display=swap');
+
+/* Logo Styling */
+.kogo {
+    font-size: 2rem; /* Size adjustment for the tagline */
+    color: rgb(82, 12, 12); /* White color for the text */
+    font-weight: bold; /* Makes the text bold */
+    font-family: 'Playfair Display', serif; /* Elegant, italic font choice */
+    font-style: italic; /* Italicize the text */
+    text-align: center; /* Center the text */
+    letter-spacing: 1px; /* Slightly increase letter spacing */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-right: 200px; /* Subtle shadow for depth */
+}
+
+/* Optional alternative: Cursive style */
+.logo {
+    font-family: 'Great Vibes'; /* Use this if you prefer cursive */
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .kogo {
+        font-size: 1rem; /* Reduce font size for better readability on smaller screens */
+         /* Remove excessive right margin */
+        margin-left: 10px; /* Center align on mobile */
+        text-align: center; /* Ensure text stays centered */
+        letter-spacing: 0.5px; /* Slightly tighter letter spacing */
+        display: flex; /* Use Flexbox to align text horizontally */
+        justify-content: center; /* Center content horizontally */
+        align-items: center; /* Center content vertically */
+        white-space: nowrap;  /* Decrease letter spacing */
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Lighter shadow for mobile */
+    }
+    
+    /* Optional alternative: Cursive style for mobile */
+    .logo {
+        font-size: 1.4rem; /* Adjust font size for mobile */
+        font-family: 'Great Vibes', cursive; /* Cursive font for logo */
+    }
+}
+
+
+
 /* General Styles */
 body {
     margin: 0;
@@ -6,131 +579,24 @@ body {
     background-repeat: no-repeat;
 }
 
-/* General Header Styles */
-.header {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
 
-/* Image Styling */
-.header img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.6);
-}
-
-/* Overlay Styling */
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    /* Dark overlay */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-@media screen and (max-width: 768px) {
-    form {
-        max-width: 90%;
-        font-size: 0.9rem;
-    }
-    .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 70%;
-        /* Dark overlay */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    .header {
-        position: relative;
-        width: 100%;
-        height: 100vh;
-        overflow: hidden;
-    }
-    
-    /* Image Styling */
-    .header img {
-        width: 230%;
-        height: 10%;
-        object-fit:contain;
-        filter: brightness(0.6);
-    }
-
-    form h2 {
-        font-size: 1.5rem;
-    }
-
-    form input, form .vicky {
-        font-size: 0.9rem;
-    }
-}
-/* Form Styling */
-.overlay form {
-    /* Slightly darker background for the form */
-    padding: 30px;
-    border-radius: 8px;
-    width: 90%;
-    max-width: 400px;
-   
-    text-align: center;
-}
-
-/* Heading Styling */
-.overlay h2 {
-    color: white;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-/* Input Styling */
-.overlay input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
-/* Submit Button Styling */
-.vicky {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s;
-}
-
-.vicky:hover {
-    background-color: #45a049;
-}
-
-/* Link Styling for Signup */
-.overlay p a {
-    color: #4CAF50;
-    text-decoration: none;
-}
-
-.overlay p a:hover {
-    text-decoration: underline;
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 
+.neta {
+    margin-left: 80px; /* Add left margin */
+}
 
+.neta img {
+    width: 180px; /* Set the width of the logo */
+    height: 80px; /* Set the height of the logo */
+    filter: brightness(2.3); /* Apply the brightness filter */
+}
 
 
 .navbar ul li:first-child img {
@@ -208,8 +674,6 @@ body {
 .nav-links li a:hover {
     color: #f39c12;
 }
-
-
 
 /* Importing a stylish and unique Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Lora:wght@400;700&display=swap');
@@ -298,12 +762,122 @@ body {
 
 
 
+
 /* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Logo Styles */
+.logofront {
+    filter: brightness(2.3);
+}
+
+
+
+
+
+
+
+/* Carousel Styles */
+.carousel {
+    margin-top: 0px;
+    width: 110%;
+}
+
+.carousel-inner {
+    width: 100%;
+    height: 400px; /* Fixed height for carousel */
+    overflow: hidden;
+}
+
+.carousel-item {
+    width: 100%; /* Ensure the items take the full width */
+    transition: transform 0.3s ease-in-out; /* Set the slide transition duration to 0.4s */
+}
+
+.carousel-item img {
+    width: 100%; /* Ensure the images take full width */
+    height: 100%; /* Fill the height of the carousel item */
+    object-fit: cover; /* Ensure the images cover the full space without distortion */
+}
+
+/* Optional: Style carousel controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #680606;
+}
+
+/* Optional: Style carousel captions */
+.carousel-caption {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    
+    .logofront {
+        width: 150px;
+        height: 70px;
+    }
+
+    /* Adjust carousel on smaller screens */
+    .carousel-inner {
+        height: 300px;
+    }
+
+    .carousel-item img {
+        height: 100%;
+    }
+}
+
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-repeat: no-repeat;
+}
+
+
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
 
 
 
@@ -353,6 +927,7 @@ body {
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
+   
 
     .logofront {
         width: 150px;
@@ -440,6 +1015,17 @@ span {
 
 
 
+/* Header Styles */
+.header {
+    position: relative;
+    text-align: center;
+    color: rgb(52, 7, 7);
+}
+
+.header img {
+    width: 100%;
+    height: auto;
+}
 
 /* Quotes Styles */
 .quotes {
@@ -457,28 +1043,6 @@ span {
     margin: 1px 0;
 }
 
-
-
-
-/* Importing Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Great+Vibes&display=swap');
-
-/* Logo Styling */
-.logo {
-    font-size: 2rem; /* Size adjustment for the tagline */
-    color: white; /* White color for the text */
-    font-weight: bold; /* Makes the text bold */
-    font-family: 'Playfair Display', serif; /* Elegant, italic font choice */
-    font-style: italic; /* Italicize the text */
-    text-align: center; /* Center the text */
-    letter-spacing: 1px; /* Slightly increase letter spacing */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
-}
-
-/* Optional alternative: Cursive style */
-.logo {
-    font-family: 'Great Vibes'; /* Use this if you prefer cursive */
-}
 
 
 
@@ -537,15 +1101,11 @@ h2 {
     width: 300px;
 }
 
-/* Services Grid */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    justify-items: center;
-}
 
-.service-item {
+
+
+
+.vrg-item {
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -554,13 +1114,13 @@ h2 {
     text-align: center;
 }
 
-.service-item img {
+.vrg-item img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-.service-item h2 {
+.vrg-item h2 {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -572,6 +1132,18 @@ h2 {
     font-size: 1.2em;
     text-transform: uppercase;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* VRG Style */
 .vrg {
@@ -647,17 +1219,16 @@ a:hover {
 label {
     display: block;
     text-align: left;
-    margin-right: 290px;
-    
+    margin-bottom: 0px;
     margin-top: 0px;
     font-weight: bold;
-    color: white;
 }
 
 /* Input Styles */
 input {
     width: 100%;
-    
+    padding: 8px;
+    margin-bottom: 8px;
     box-sizing: border-box;
 }
 
@@ -918,12 +1489,10 @@ textarea {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-    
-    .services-grid, .vicky-grid {
-        grid-template-columns: 1fr; /* Single column for services and vicky-grid on mobile */
+  
+    .header img {
+        height: auto; /* Ensure header image is responsive */
     }
-
-    
 
     .right-image, .left-image {
         width: 100%; /* Ensure images are responsive */
@@ -993,49 +1562,20 @@ textarea {
     background-color: #333; /* Slightly lighter black for hover effect */
 }
 
-/* General Body and Layout */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensure the body spans the full viewport height */
-    margin: 0; /* Remove default margin */
-}
-
-.header {
-    flex: 1; /* Allow the header to take up the remaining space */
-}
-
-/* Footer Styling */
 .foot {
-    background-color: #3d0101; /* Dark background color */
-    color: #fff; /* White text color */
-    text-align: center; /* Center the text */
-    padding: 20px 0; /* Adjust padding */
-    font-size: 1.2rem; /* Font size */
-    width: 100%; /* Full width */
-    margin-top: auto; /* Push the footer to the bottom */
-    position: relative; /* Default position */
-}
-
-/* Media Queries */
-
-/* For tablets and medium devices */
-@media screen and (max-width: 768px) {
-    .foot {
-        font-size: 1rem; /* Adjust font size for medium screens */
-        padding: 15px 0; /* Adjust padding */
-    }
-}
-
-/* For phones and small devices */
-@media screen and (max-width: 480px) {
-    .foot {
-        font-size: 0.9rem; /* Smaller font size for small screens */
-        padding: 10px 0; /* Further reduce padding */
-    }
+    text-align: center;
+    background-color: #5a0505;
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
 }
 
 
+.foot p {
+    margin: 0; /* Remove the default margin of the paragraph element */
+    font-size: 20px; /* Set the font size of the text */
+}
 
 /* Event Styles */
 .overevent {
@@ -1060,7 +1600,7 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.overaboutus {
+.overourwork {
     position: absolute;
     top: 55%;
     left: 50%;
@@ -1374,6 +1914,35 @@ body {
     margin: 5px 0;
     border-radius: 5px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

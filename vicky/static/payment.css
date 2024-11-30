@@ -1375,6 +1375,40 @@ body {
     border-radius: 5px;
 }
 
+/* Base Styling for Inline Label */
+div label {
+    display: inline-block; /* Keeps the label inline */
+    width: 150px; /* Fixed width for alignment */
+    font-weight: bold; /* Make the label text bold */
+    font-size: 1rem; /* Adjust font size */
+    color:white; /* Dark text color */
+    text-align: left; /* Align text to the right */
+     /* Add spacing between label and input */
+}
+
+/* Input Field Styling */
+div input {
+    padding: 8px; /* Add padding inside the input */
+    font-size: 1rem; /* Adjust font size */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    width: calc(100% - 170px); /* Responsive width minus label space */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    div label {
+        width: auto; /* Remove fixed width for smaller screens */
+        text-align: left; /* Align text to the left */
+        display: block; /* Stack the label above the input */
+        text-wrap: nowrap; /* Add spacing below the label */
+    }
+
+    div input {
+        width: 100%; /* Full width for input field */
+    }
+}
 
 
 

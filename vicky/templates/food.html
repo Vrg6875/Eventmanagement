@@ -1,77 +1,207 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaandaar Events - Redefining Class</title>
+
+    <title>Home</title>
 
     {% load static %}
-    <link rel="stylesheet" href="{% static 'decor.css' %}">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Main CSS -->
+<link rel="stylesheet" href="{% static 'login.css' %}?v=1.0">
+
+
+    <!-- Bootstrap CSS (from official CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Font (Pacifico) -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Optional: Local Bootstrap CSS (ensure the file exists in your static directory) -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 </head>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <body>
-    <nav class="navbar">
-        <ul>
-            <li>
-                <img src="{% static 'logo.jpg' %}" width="180" height="80" alt="Logo" style="filter: brightness(2.3);">
-            </li>
-            <li><a href="/front/">Home</a></li>
-            <li><a href="/about/">About Us</a></li>
-            <li><a href="/contact/">Contact Us</a></li>
-            <li><a href="/ourwork/">Our Work</a></li>
-            <li><a href="/auth/">Get Started / Sign In</a></li>
-            <li><a href="/auth/">Book Event</a></li>
-        </ul>
-    </nav>
-    
+<!-- Navbar Section -->
+<div class="navbar">
+    <div class="menu-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <!-- Heading for mobile view -->
+    <div class="brand-heading">Vicky Event</div>
+    <ul class="nav-links">
+        <!-- <li class="neta">
+            <img src="{% static 'logo.jpg' %}" width="180" height="80" alt="Logo" style="filter: brightness(2.3); margin-right: 800px;">
+        </li> -->
+        <li><a href="/front/">Home</a></li>
+        <li><a href="/about/">About Us</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+        <li><a href="/ourwork/">Our Work</a></li>
+        <li><a href="/auth/">Get Started / Sign In</a></li>
+        <li><a href="/event/">Book Event</a></li>
+    </ul>
+</div>
+
   
-    <br>
-    <div class="peader">
-        <div class="pverlay">
-            <div class="pogo">
-                "Indulge in Culinary Excellence: Unmatched Food and Beverage <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Management by the Best Wedding Planner"
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </div>
-    
-            <div class="text-image-container">
-                <p>As the best wedding planner in the industry, we pride ourselves on providing an exceptional food and beverage experience that will surpass your expectations. We as the best wedding planner understand that the culinary aspect plays a crucial role in creating a memorable wedding celebration, and we leave no stone unturned in ensuring an exquisite dining experience for you and your guests which makes us the best wedding planner.
-                    <br><br>
-                    With our expertise and meticulous attention to detail as the best wedding planner, we curate a delectable menu that caters to diverse tastes and dietary preferences. From mouthwatering appetizers to tantalizing main courses and irresistible desserts, our team of culinary experts and we have the the best caterers that crafts a culinary journey that will leave your taste buds craving for more and this proves that we are the best wedding planner.</p>
-            </div>
-
-            <div class="text-image-container">
-                <p>As the best wedding planner in the industry, we pride ourselves on providing an exceptional food and beverage experience that will surpass your expectations.
-                    <img src="https://shaandaarevents.com/wp-content/uploads/2022/04/event-day-768x432.jpg" class="inline-image">
-                    We as the best wedding planner understand that the culinary aspect plays a crucial role in creating a memorable wedding celebration...
-                </p>
-            </div>
-            >
-
-            <div>
-              <p class="king">As the Best  Wedding Planners in Chandigarh, we provide end-to-end wedding management services to our clients. We believe as the best wedding planner that quality ingredients are the foundation of exceptional cuisine. That’s why we as the best wedding planner partner with the finest and the best local vendors, with the best caterers and suppliers to source the freshest and highest quality ingredients for your wedding feast. Our skilled chefs then transform these ingredients into culinary masterpieces, blending flavors, and textures to create a harmonious symphony of tastes that makes us the best wedding planner.
-
-                In addition to the scrumptious food, we understand the importance of well-paired beverages to enhance the overall dining experience as the best wedding planner. Our knowledgeable sommeliers and mixologists work closely with you to curate a beverage selection that perfectly complements your menu and preferences which is why we are termed as the best wedding planner.
-                
-                Moreover, our commitment to service excellence extends beyond the kitchen as the best wedding planner. Our well-trained and courteous staff as the best wedding planner will ensure that your guests are attended to with utmost care and hospitality. We strive to create a seamless and enjoyable dining experience as the best wedding planner leaving you and your loved ones free to enjoy every moment of your special day.
-                
-                When it comes to food and beverage management, our reputation as the best wedding planner speaks for itself. We have earned this title the best wedding planner through our unwavering dedication to culinary excellence, impeccable service, and the ability to create a truly unforgettable dining experience that will be cherished by all. Experience the difference of working with the best wedding planner as we transform your wedding feast into a gastronomic delight, leaving a lasting impression on your guests and making your wedding celebration truly extraordinary will prove us as the best wedding planner.</p>
-                </div>
-    
+<br>
+<div class="header-section">
+    <div class="header-overlay">
+        <div class="pogo">
+            "Indulge in Culinary Excellence: Unmatched Food and Beverage <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Management by the Best Wedding Planner"
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </div>
+
+        <div class="text-image-container">
+            <p>As the best wedding planner in the industry, we pride ourselves on providing an exceptional food and beverage experience that will surpass your expectations. We as the best wedding planner understand that the culinary aspect plays a crucial role in creating a memorable wedding celebration, and we leave no stone unturned in ensuring an exquisite dining experience for you and your guests which makes us the best wedding planner.
+                <br><br>
+                With our expertise and meticulous attention to detail as the best wedding planner, we curate a delectable menu that caters to diverse tastes and dietary preferences. From mouthwatering appetizers to tantalizing main courses and irresistible desserts, our team of culinary experts and we have the the best caterers that crafts a culinary journey that will leave your taste buds craving for more and this proves that we are the best wedding planner.</p>
+        </div>
+
+        <div class="text-image-container">
+            <p>As the best wedding planner in the industry, we pride ourselves on providing an exceptional food and beverage experience that will surpass your expectations.
+                <img src="https://shaandaarevents.com/wp-content/uploads/2022/04/event-day-768x432.jpg" class="inline-image">
+                We as the best wedding planner understand that the culinary aspect plays a crucial role in creating a memorable wedding celebration...
+            </p>
+        </div>
+        >
+
+        <div>
+          <p class="king">As the Best  Wedding Planners in Chandigarh, we provide end-to-end wedding management services to our clients. We believe as the best wedding planner that quality ingredients are the foundation of exceptional cuisine. That’s why we as the best wedding planner partner with the finest and the best local vendors, with the best caterers and suppliers to source the freshest and highest quality ingredients for your wedding feast. Our skilled chefs then transform these ingredients into culinary masterpieces, blending flavors, and textures to create a harmonious symphony of tastes that makes us the best wedding planner.
+
+            In addition to the scrumptious food, we understand the importance of well-paired beverages to enhance the overall dining experience as the best wedding planner. Our knowledgeable sommeliers and mixologists work closely with you to curate a beverage selection that perfectly complements your menu and preferences which is why we are termed as the best wedding planner.
+            
+            Moreover, our commitment to service excellence extends beyond the kitchen as the best wedding planner. Our well-trained and courteous staff as the best wedding planner will ensure that your guests are attended to with utmost care and hospitality. We strive to create a seamless and enjoyable dining experience as the best wedding planner leaving you and your loved ones free to enjoy every moment of your special day.
+            
+            When it comes to food and beverage management, our reputation as the best wedding planner speaks for itself. We have earned this title the best wedding planner through our unwavering dedication to culinary excellence, impeccable service, and the ability to create a truly unforgettable dining experience that will be cherished by all. Experience the difference of working with the best wedding planner as we transform your wedding feast into a gastronomic delight, leaving a lasting impression on your guests and making your wedding celebration truly extraordinary will prove us as the best wedding planner.</p>
+            </div>
+
     </div>
-    
+</div>
 
 
 
-    
-    
 
 
-    <div class="content">
-        <h1>Best Wedding Planner in Chandigarh</h1>
-        <p>Putting all the beautiful pieces together and crafting one-of-a-kind experiences.</p>
-        <br>
-        <a href="/contact" class="vicky">Contact us</a>
-    </div>
-    <div class="foot">
-        <p>&copy;2024 Vicky Event planner. All rights reserved.</p>
-    </div>
+
+
+
+<div class="content">
+    <h1>Best Wedding Planner in Chandigarh</h1>
+    <p>Putting all the beautiful pieces together and crafting one-of-a-kind experiences.</p>
+    <br>
+    <a href="/contact" class="vicky">Contact us</a>
+</div>
+<div class="foot">
+    <p>&copy;2024 Vicky Event planner. All rights reserved.</p>
+</div>
+
+
+
+
+
+ 
+<script>
+    function toggleChat() {
+        const chatWindow = document.getElementById("chat-window");
+        chatWindow.style.display = chatWindow.style.display === "none" ? "block" : "none";
+    }
+
+    function closeChat() {
+        const chatWindow = document.getElementById("chat-window");
+        chatWindow.style.display = "none";
+    }
+
+    function handleQuickReply(message) {
+        const messagesContainer = document.getElementById("messages");
+
+        // Add the user's message
+        const userMessage = document.createElement("div");
+        userMessage.classList.add("user-message");
+        userMessage.textContent = message;
+        messagesContainer.appendChild(userMessage);
+
+        // Add the bot's response based on the selected message
+        const botResponse = document.createElement("div");
+        botResponse.classList.add("bot-message");
+
+        if (message === "Support") {
+            botResponse.textContent = "For support, please call: 8210224732";
+        } else if (message === "Pricing") {
+            botResponse.textContent = "Our pricing starts from $1000. Please contact support for detailed pricing.";
+        } else if (message === "Hours") {
+            botResponse.textContent = "We are open for 5 hours every day.";
+        }
+
+        messagesContainer.appendChild(botResponse);
+
+        // Scroll to the bottom of the chat
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+
+    function toggleMenu() {
+const navLinks = document.querySelector('.nav-links');
+navLinks.classList.toggle('active');
+}
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

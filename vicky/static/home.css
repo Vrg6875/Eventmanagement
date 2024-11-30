@@ -1,0 +1,2103 @@
+
+
+
+
+
+/* Base Styling */
+.first {
+    font-family: 'Playfair Display', serif; /* Elegant font choice */
+    font-style: italic; /* Italicize the text */
+    color: #e8e1e1; /* Light gray text color */
+    font-size: 2rem; /* Adjust font size */
+    text-align: center; /* Center the text */
+   margin-bottom: -10px;
+  
+   margin-left: -310px;
+    background-color: #370303; /* Dark red background color */
+    width: 120%; /* Ensure the background spans the full width of the container */
+    padding: 30px; /* Add vertical padding for better spacing */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide any overflowing content */
+    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+    /* Include padding in width calculation */
+}
+
+
+/* Media Queries */
+
+/* For medium screens (tablets, 768px and below) */
+@media (max-width: 768px) {
+    .first {
+        font-family: 'Playfair Display', serif; /* Elegant font choice */
+        font-style: italic; /* Italicize the text */
+        color: #e8e1e1; /* Light gray text color */
+        font-size: 1.3rem; /* Adjust font size */
+        text-align: center; /* Center the text */
+       margin-bottom: -15px;
+       
+       margin-left: -210px;
+     
+        background-color: #370303; /* Dark red background color */
+        width: 180%; /* Ensure the background spans the full width of the container */
+        padding: 30px; /* Add vertical padding for better spacing */
+        
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .chatbot-icon {
+        width: 40px; /* Smaller width for mobile */
+        height: 80px;
+        margin-left:3000px ; /* Smaller height for mobile */
+    }
+
+    .chatbot-icon svg {
+        width: 40px; /* Adjust the SVG icon size */
+        height: 80px; /* Adjust the SVG icon height */
+    }
+
+    .tooltip-text {
+        font-size: 10px; /* Smaller tooltip font size for mobile */
+        top: 20px; /* Adjust the position of the tooltip */
+    }
+}
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+}
+/* Styling for the map section */
+.map {
+    margin-right: 90px; /* Add 90px margin to the right */
+}
+
+.address {
+    width: 40%; /* Adjust width as needed */
+}
+
+
+
+
+/* Styling for the address section */
+.address {
+    margin-bottom: 20px; /* Add space below address */
+}
+
+/* Styling for the social media section */
+.social {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    margin-top: 20px;
+    margin-left:80px ;
+
+}
+
+.social a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social img {
+    width: 40px; /* Adjust the size of the icons */
+    height: 40px;
+    object-fit: cover;
+}
+
+
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .address, .map {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .social img {
+        margin-right: 10px;
+    }
+}
+
+
+
+
+/* Optional: Add responsive behavior for small screens */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+    .map {
+        width: 100%;
+        height: 300px; /* Adjust height for small screens */
+    }
+}
+
+
+/* Mobile (below 768px) */
+@media (max-width: 768px) {
+    .social {
+        justify-content: left; /* Center the icons for mobile */
+        margin-left: 5px; /* Remove left margin on smaller screens */
+        margin-top: 1px;
+        margin-bottom: 10px; /* Adjust margin for better spacing */
+    }
+
+    .map{
+        margin-left: 70px;
+    }
+
+    .social img {
+        width: 50px;
+        object-fit: contain; /* Slightly smaller icons for mobile */
+    }
+}
+
+/* Address Container Styling */
+.address-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+/* Address Section Styling */
+.address {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.address p {
+    font-size: 25px;
+    font-style: italic;
+    margin-left: 80px;
+    color: rgb(58, 56, 56);
+}
+
+/* Mobile (below 768px) */
+@media (max-width: 768px) {
+    .address p {
+        text-align: left; /* Align text to the left on mobile */
+        margin-left: 10px; /* Remove the left margin */
+        padding-right: 0; /* Optional: reset padding if needed */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-items: center;
+}
+
+.service-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+
+
+.service-item h2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+
+.service-item img {
+    width: 100%; /* Ensure image spans the entire width of the item */
+    height: 200px; /* Fixed height for uniformity across all images */
+    object-fit: cover; /* Ensure the image covers the whole area without distortion */
+    object-position: center; /* Center the image */
+}
+
+.service-item h2 {
+    position: absolute;
+    text-align:left;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    color: white; /* White text color */
+    font-size: 0.8em; /* Larger text for service name */
+    text-transform: uppercase;
+}
+
+/* Mobile Styles (below 768px) */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row for mobile */
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .service-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .service-item h2 {
+        position: absolute;
+        text-align: left;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+        color: white; /* White text color */
+        font-size: 0.6em; /* Reduced font size */
+        text-transform: uppercase;
+    }
+}
+
+/* Extra Small Devices (phones in portrait mode) */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Carousel Styles */
+.carousel {
+    margin-top: 0px;
+    width: 110%;
+}
+
+.carousel-inner {
+    width: 100%;
+    height: 500px; /* Fixed height for carousel */
+    overflow: hidden;
+}
+
+.carousel-item {
+    width: 100%; /* Ensure the items take the full width */
+    transition: transform 0.3s ease-in-out; /* Set the slide transition duration to 0.4s */
+}
+
+.carousel-item img {
+    width: 100%; /* Ensure the images take full width */
+    height: 100%; /* Fill the height of the carousel item */
+    object-fit: cover; /* Ensure the images cover the full space without distortion */
+}
+
+/* Optional: Style carousel controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #680606;
+}
+
+/* Optional: Style carousel captions */
+.carousel-caption {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+
+/* Remove black overlay on carousel control icons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: transparent; /* Make the background transparent */
+    background-size: 20px 20px; /* Set the arrow icon size */
+    background-image: none; /* Remove the default background image */
+}
+
+/* Add a custom icon for the previous and next buttons */
+.carousel-control-prev-icon::after,
+.carousel-control-next-icon::after {
+    
+    font-size: 24px;
+    color: #191616; /* Arrow color */
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        width: 100%; /* Ensure carousel takes the full width */
+        margin-top: 0; /* Adjust margin for mobile */
+    }
+
+    .carousel-inner {
+        height: 30vh; /* Set the carousel height */
+        overflow: hidden; /* Prevent overflow */
+    }
+
+    .carousel-item {
+        width: 100%; /* Ensure the item takes up full width */
+        height: 100%; /* Ensure the item takes the full height of its container */
+        display: flex; /* Flexbox to center the image */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .carousel-item img {
+        max-width: 100%; /* Make sure the image doesn’t exceed the width */
+        max-height: 100%; /* Ensure the image fits within the height */
+        object-fit: contain; /* Maintain aspect ratio without cropping */
+    }
+
+    /* Adjust carousel controls for mobile */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        
+        background-size: 30px 30px; /* Adjust icon size for better visibility */
+    }
+
+    .carousel-control-prev-icon::after,
+    .carousel-control-next-icon::after {
+        content: ''; /* Use CSS for proper icons instead of text arrows */
+        font-size: 28px; /* Adjust arrow size */
+        color: #191616; /* Arrow color */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Header Styles */
+.header {
+    position: relative;
+    text-align: center;
+    color: rgb(52, 7, 7);
+}
+
+.header img {
+    width: 100%;
+    height: auto; /* Ensure header image is responsive */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.pogo {
+    font-family: 'Playfair Display', serif; 
+    font-size: 3rem;
+    font-weight: bold;
+    white-space: nowrap;
+    text-align: center;
+
+}
+
+
+.renu {
+    font-family: 'Arial, sans-serif';
+    font-size: larger;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 8px rgba(224, 8, 8, 0.1);
+    text-align: justify;
+    width: 1300px;
+    margin: 0 auto; /* Centers the quotes container */
+}
+
+.r-image {
+    /* Sets image width to 100% of its container */
+    max-width: 500px;  /* Maximum width of 500px */
+    height: 400px;
+    display: flex;
+    justify-content: flex-start; /* Align image to the left */
+    width: 100%;
+    margin-left: 400px;
+    border-radius: 8%;
+}
+
+@media (max-width: 768px) {
+    .renu {
+        font-family: 'Arial, sans-serif';
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 8px 8px rgba(224, 8, 8, 0.1);
+        text-align: justify;
+        width: 100%; /* Make width 100% on mobile */
+        margin: 0 auto; /* Centers the quotes container */
+    }
+    .pogo {
+        font-family: 'Playfair Display', serif; 
+        font-size: 2rem;
+        font-weight: bold;
+        white-space: nowrap;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    .r-image {
+        width: 60%; /* Adjust the width to 60% of the container on mobile */
+        max-width: 60%; /* Prevent image from getting too large */
+        height: auto; /* Adjust height automatically to maintain aspect ratio */
+        margin: 0 auto; /* Center image horizontally */
+        margin-left: 90px; /* Remove left margin for better alignment on mobile */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Button Styles */
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 2em;
+    text-align: center;
+    display: block;
+}
+
+h2 {
+    color: rgb(248, 250, 248);
+    text-align: center;
+    margin: auto;
+    width: 300px;
+}
+
+
+
+.service-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+.service-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.service-item h2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer Styles */
+.foot {
+    text-align: center;
+    background-color: #5a0505;
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.foot p {
+    margin: 0; /* Remove the default margin of the paragraph element */
+    font-size: 20px; /* Set the font size of the text */
+}
+
+/* Chatbot Container */
+.chatbot-container {
+    position: fixed;
+    right: 60px;
+    bottom: 70px;
+}
+
+/* Chatbot Icon */
+.chatbot-icon {
+    position: relative;
+    cursor: pointer;
+    background-color: #5a0505;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(102, 5, 5, 0.2);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+
+
+/* Tooltip Text */
+.tooltip-text {
+    visibility: hidden;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 85px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 12px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+/* Show tooltip on hover */
+.chatbot-icon:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Chat Window */
+.chat-window {
+    position: fixed;
+    right: 20px;
+    bottom: 90px;
+    width: 400px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 1px;
+    display: flex;
+    flex-direction: column;
+    max-height: 400px;
+}
+
+.chat-header {
+    padding: 10px;
+    background-color: #5a0505;
+    color: white;
+    border-radius: 5px 5px 0 0;
+}
+
+/* Cancel Button (X) */
+.cancel-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.chat-body {
+    padding: 10px;
+    height: 250px;
+    overflow-y: auto;
+    color: white; /* Ensures text is white */
+    background-color: #333; /* Background color to contrast with white text */
+}
+
+/* Quick reply button styling */
+.quick-reply {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.quick-reply:hover {
+    background-color: #45a049;
+}
+
+/* Bot's message styling */
+.bot-message {
+    background-color: #444;
+    color: white;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+/* User's message styling */
+.user-message {
+    background-color: #5a0505;
+    color: white;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+
+
+
+    .header img {
+        height: auto; /* Ensure header image is responsive */
+    }
+
+    
+
+    .foot {
+        padding: 10px; /* Adjust footer padding */
+    }
+
+    .chat-window {
+        width: 90%; /* Make chat window responsive */
+        right: 5%; /* Center chat window */
+    }
+
+    .chat-header {
+        font-size: 1.2em; /* Adjust font size for mobile */
+    }
+
+    .chat-body {
+        height: 200px; /* Adjust chat body height */
+    }
+}
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Logo Styles */
+.logofront {
+    filter: brightness(2.3);
+}
+
+
+
+/* Header Styles */
+.header {
+    position: relative;
+    text-align: center;
+    color: rgb(52, 7, 7);
+}
+
+.header img {
+    width: 100%;
+    height: auto; /* Ensure header image is responsive */
+}
+
+/* Content Styles */
+.content {
+    text-align: center;
+  
+}
+
+/* Button Styles */
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 2em;
+    text-align: center;
+    display: block;
+}
+
+h2 {
+    color: rgb(248, 250, 248);
+    text-align: center;
+    margin: auto;
+    width: 300px;
+}
+
+
+/* Footer Styles */
+.foot {
+    text-align: center;
+    background-color: #5a0505;
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.foot p {
+    margin: 0; /* Remove the default margin of the paragraph element */
+    font-size: 20px; /* Set the font size of the text */
+}
+
+/* Chatbot Container */
+.chatbot-container {
+    position: fixed;
+    right: 60px;
+    bottom: 70px;
+}
+
+/* Chatbot Icon */
+.chatbot-icon {
+    position: relative;
+    cursor: pointer;
+    background-color: #5a0505;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(102, 5, 5, 0.2);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.chatbot-icon:hover {
+    transform: scale(1.1);
+    background-color: #3e8e41;
+}
+
+
+/* Tooltip Text */
+.tooltip-text {
+    visibility: hidden;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 85px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 12px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+/* Show tooltip on hover */
+.chatbot-icon:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Chat Window */
+.chat-window {
+    position: fixed;
+    right: 20px;
+    bottom: 90px;
+    width: 400px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 1px;
+    display: flex;
+    flex-direction: column;
+    max-height: 400px;
+}
+
+.chat-header {
+    padding: 10px;
+    background-color: #5a0505;
+    color: white;
+    border-radius: 5px 5px 0 0;
+}
+
+/* Cancel Button (X) */
+.cancel-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.chat-body {
+    padding: 10px;
+    height: 250px;
+    overflow-y: auto;
+    color: white; /* Ensures text is white */
+    background-color: #333; /* Background color to contrast with white text */
+}
+
+/* Quick reply button styling */
+.quick-reply {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.quick-reply:hover {
+    background-color: #45a049;
+}
+
+/* Bot's message styling */
+.bot-message {
+    background-color: #444;
+    color: white;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+/* User's message styling */
+.user-message {
+    background-color: #5a0505;
+    color: white;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+
+    .header img {
+        height: auto; /* Ensure header image is responsive */
+    }
+
+
+    .foot {
+        padding: 10px; /* Adjust footer padding */
+    }
+
+    .chat-window {
+        width: 90%; /* Make chat window responsive */
+        right: 5%; /* Center chat window */
+    }
+
+    .chat-header {
+        font-size: 1.2em; /* Adjust font size for mobile */
+    }
+
+    .chat-body {
+        height: 200px; /* Adjust chat body height */
+    }
+}
+``` ```css
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Logo Styles */
+.logofront {
+    filter: brightness(2.3);
+}
+
+
+
+
+/* Header Styles */
+.header {
+    position: relative;
+    text-align: center;
+    color: rgb(52, 7, 7);
+}
+
+.header img {
+    width: 100%;
+    height: auto; /* Ensure header image is responsive */
+}
+
+
+
+/* Button Styles */
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 2em;
+    text-align: center;
+    display: block;
+}
+
+h2 {
+    color: rgb(248, 250, 248);
+    text-align: center;
+    margin: auto;
+    width: 300px;
+}
+
+
+/* Footer Styles */
+.foot {
+    text-align: center;
+    background-color: #5a0505;
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.foot p {
+    margin: 0; /* Remove the default margin of the paragraph element */
+    font-size: 20px; /* Set the font size of the text */
+}
+
+/* Chatbot Container */
+.chatbot-container {
+    position: fixed;
+    right: 60px;
+    bottom: 70px;
+}
+
+/* Chatbot Icon */
+.chatbot-icon {
+    position: relative;
+    cursor: pointer;
+    background-color: #5a0505;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(102, 5, 5, 0.2);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.chatbot-icon:hover {
+    transform: scale(1.1);
+    background-color: #3e8e41;
+}
+
+
+/* Tooltip Text */
+.tooltip-text {
+    visibility: hidden;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 85px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 12px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+/* Show tooltip on hover */
+.chatbot-icon:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Chat Window */
+.chat-window {
+    position: fixed;
+    right: 20px;
+    bottom: 90px;
+    width: 400px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 1px;
+    display: flex;
+    flex-direction: column;
+    max-height: 400px;
+}
+
+.chat-header {
+    padding: 10px;
+    background-color: #5a0505;
+    color: white;
+    border-radius: 5px 5px 0 0;
+}
+
+/* Cancel Button (X) */
+.cancel-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.chat-body {
+    padding: 10px;
+    height: 250px;
+    overflow-y: auto;
+    color: white; /* Ensures text is white */
+    background-color: #333; /* Background color to contrast with white text */
+}
+
+/* Quick reply button styling */
+.quick-reply {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.quick-reply:hover {
+    background-color: #45a049;
+}
+
+/* Bot's message styling */
+.bot-message {
+    background-color: #444;
+    color: white;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+/* User's message styling */
+.user-message {
+    background-color: #5a0505;
+    color: white;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Logo Styles */
+.logofront {
+    filter: brightness(2.3);
+}
+
+
+
+
+/* Mobile responsiveness */
+
+
+/* Header Styles */
+.header {
+    position: relative;
+    text-align: center;
+    color: rgb(52, 7, 7);
+}
+
+.header img {
+    width: 100%;
+    height: auto; /* Ensure header image is responsive */
+}
+
+
+
+/* Button Styles */
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 2em;
+    text-align: center;
+    display: block;
+}
+
+h2 {
+    color: rgb(248, 250, 248);
+    text-align: center;
+    margin: auto;
+    width: 300px;
+}
+
+/* Footer Styles */
+.foot {
+    text-align: center;
+    background-color: #5a0505;
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.foot p {
+    margin: 0; /* Remove the default margin of the paragraph element */
+    font-size: 20px; /* Set the font size of the text */
+}
+
+/* Chatbot Container */
+.chatbot-container {
+    position: fixed;
+    right: 60px;
+    bottom: 70px;
+}
+
+/* Chatbot Icon */
+.chatbot-icon {
+    position: relative;
+    cursor: pointer;
+    background-color: #5a0505;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(102, 5, 5, 0.2);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.chatbot-icon:hover {
+    transform: scale(1.1);
+    background-color: #3e8e41;
+}
+
+
+/* Tooltip Text */
+.tooltip-text {
+    visibility: hidden;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 85px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 12px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+/* Show tooltip on hover */
+.chatbot-icon:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Chat Window */
+.chat-window {
+    position: fixed;
+    right: 20px;
+    bottom: 90px;
+    width: 400px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 1px;
+    display: flex;
+    flex-direction: column;
+    max-height: 400px;
+}
+
+.chat-header {
+    padding: 10px;
+    background-color: #5a0505;
+    color: white;
+    border-radius: 5px 5px 0 0;
+}
+
+/* Cancel Button (X) */
+.cancel-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.chat-body {
+    padding: 10px;
+    height: 250px;
+    overflow-y: auto;
+    color: white; /* Ensures text is white */
+    background-color: #333; /* Background color to contrast with white text */
+}
+
+/* Quick reply button styling */
+.quick-reply {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.quick-reply:hover {
+    background-color: #45a049;
+}
+
+/* Bot's message styling */
+.bot-message {
+    background-color: #444;
+    color: white;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+/* User's message styling */
+.user-message {
+    background-color: #5a0505;
+    color: white;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+
+
+
+    .header img {
+        height: auto; /* Ensure header image is responsive */
+    }
+
+   
+    .foot {
+        padding: 10px; /* Adjust footer padding */
+    }
+
+    .chat-window {
+        width: 90%; /* Make chat window responsive */
+        right: 5%; /* Center chat window */
+    }
+
+    .chat-header {
+        font-size: 1.2em; /* Adjust font size for mobile */
+    }
+
+    .chat-body {
+        height: 200px; /* Adjust chat body height */
+    }
+}
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Logo Styles */
+.logofront {
+    filter: brightness(2.3);
+}
+
+
+
+
+/* Header Styles */
+.header {
+    position: relative;
+    text-align: center;
+    color: rgb(52, 7, 7);
+}
+
+.header img {
+    width: 100%;
+    height: auto; /* Ensure header image is responsive */
+}
+
+
+
+/* Button Styles */
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 2em;
+    text-align: center;
+    display: block;
+}
+
+h2 {
+    color: rgb(248, 250, 248);
+    text-align: center;
+    margin: auto;
+    width: 300px;
+}
+
+
+
+/* Footer Styles */
+.foot {
+    text-align: center;
+    background-color: #5a0505;
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.foot p {
+    margin: 0; /* Remove the default margin of the paragraph element */
+    font-size: 20px; /* Set the font size of the text */
+}
+
+/* Chatbot Container */
+.chatbot-container {
+    position: fixed;
+    right: 60px;
+    bottom: 70px;
+}
+
+/* Chatbot Icon */
+.chatbot-icon {
+    position: relative;
+    cursor: pointer;
+    background-color: #5a0505;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(102, 5, 5, 0.2);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.chatbot-icon:hover {
+    transform: scale(1.1);
+    background-color: #3e8e41;
+}
+
+
+/* Tooltip Text */
+.tooltip-text {
+    visibility: hidden;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 85px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 12px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+/* Show tooltip on hover */
+.chatbot-icon:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Chat Window */
+.chat-window {
+    position: fixed;
+    right: 20px;
+    bottom: 90px;
+    width: 400px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 1px;
+    display: flex;
+    flex-direction: column;
+    max-height: 400px;
+}
+
+.chat-header {
+    padding: 10px;
+    background-color: #5a0505;
+    color: white;
+    border-radius: 5px 5px 0 0;
+}
+
+/* Cancel Button (X) */
+.cancel-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.chat-body {
+    padding: 10px;
+    height: 250px;
+    overflow-y: auto;
+    color: white; /* Ensures text is white */
+    background-color: #333; /* Background color to contrast with white text */
+}
+
+/* Quick reply button styling */
+.quick-reply {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.quick-reply:hover {
+    background-color: #45a049;
+}
+
+/* Bot's message styling */
+.bot-message {
+    background-color: #444;
+    color: white;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+/* User's message styling */
+.user-message {
+    background-color: #5a0505;
+    color: white;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+
+
+
+    .header img {
+        height: auto; /* Ensure header image is responsive */
+    }
+
+    
+
+    .foot {
+        padding: 10px; /* Adjust footer padding */
+    }
+
+    .chat-window {
+        width: 90%; /* Make chat window responsive */
+        right: 5%; /* Center chat window */
+    }
+
+    .chat-header {
+        font-size: 1.2em; /* Adjust font size for mobile */
+    }
+
+    .chat-body {
+        height: 200px; /* Adjust chat body height */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.neta {
+    margin-left: 80px; /* Add left margin */
+}
+
+.neta img {
+    width: 180px; /* Set the width of the logo */
+    height: 80px; /* Set the height of the logo */
+    filter: brightness(2.3); /* Apply the brightness filter */
+}
+
+
+.navbar ul li:first-child img {
+    display: block; /* Ensure the image is visible */
+    max-width: 100%; /* Ensure it adjusts to fit its container */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center it horizontally if needed */
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #5a0505;
+    position: relative;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Hamburger Menu Icon */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 4px;
+    margin-left: 10px;
+}
+
+.menu-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+}
+
+/* Navbar Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+}
+
+
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+     /* Align all the links to the right */
+    padding: 0; /* Remove any padding */
+    margin-bottom:20px; /* Remove any margin */
+}
+
+.nav-links li {
+    list-style: none; /* Remove bullet points */
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px; /* Padding inside the link */
+    margin-bottom: 40px; /* Adjusted margin to create space between links */
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #f39c12; /* Hover effect */
+}
+
+
+.nav-links li a:hover {
+    color: #f39c12;
+}
+
+
+
+/* Importing a stylish and unique Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Lora:wght@400;700&display=swap');
+
+/* Default: Hidden */
+.brand-heading {
+    display: none; /* Hidden by default */
+    color: #fff;
+    font-size: 36px; /* Larger font size for more impact */
+    font-family: 'Pacifico', cursive, serif; font-family: 'Pacifico', cursive, serif; /* Unique combination of Pacifico and Lora */
+    font-weight: bold;
+    text-align: center;
+    margin-right: 150px;
+    margin-left: 20px;
+    margin-top: 10px;
+    opacity: 0; /* Initially invisible */
+    transform: translateY(-30px) scale(0.8); /* Start from above and smaller */
+    animation: slideIn 1.5s ease-out forwards; /* Apply animation */
+}
+
+/* Animation for showing the heading with scaling and fading */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.8); /* Start smaller and above */
+    }
+    50% {
+        opacity: 0.6;
+        transform: translateY(0) scale(1.05); /* Midway scale up slightly */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1); /* End at normal size */
+    }
+}
+
+/* Media Query for Laptop and Larger Screens */
+
+
+
+
+
+@media (min-width: 1024px) {
+    .brand-heading {
+        display: block; /* Show the heading on laptop and larger screens */
+    }
+}
+
+/* Responsive for Mobile and Tablet */
+@media (max-width: 1024px) {
+    /* Show the menu icon */
+    .menu-icon {
+        display: flex;
+    }
+    .brand-heading {
+        display: block;
+
+    }
+
+    /* Hide the nav links initially */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 75px; /* Adjust based on your navbar height */
+        left: 0;
+        width: 100%;
+        background-color: #5a0505;
+        z-index: 1;
+    }
+
+    /* Show the nav links when the menu is open */
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+
+        margin-bottom: 21px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Logo Styles */
+.logofront {
+    filter: brightness(2.3);
+}
+
+
+
+/* Mobile responsiveness */
+
+
+/* Header Styles */
+.header {
+    position: relative;
+    text-align: center;
+    color: rgb(52, 7, 7);
+}
+
+.header img {
+    width: 100%;
+    height: auto; /* Ensure header image is responsive */
+}
+
+
+
+
+
+
+
+/* Button Styles */
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 2em;
+    text-align: center;
+    display: block;
+}
+
+h2 {
+    color: rgb(248, 250, 248);
+    text-align: center;
+    margin: auto;
+    width: 300px;
+}
+
+
+/* Footer Styles */
+.foot {
+    text-align: center;
+    background-color: #5a0505;
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.foot p {
+    margin: 0; /* Remove the default margin of the paragraph element */
+    font-size: 20px; /* Set the font size of the text */
+}
+
+/* Chatbot Container */
+.chatbot-container {
+    position: fixed;
+    right: 60px;
+    bottom: 70px;
+}
+
+/* Chatbot Icon */
+.chatbot-icon {
+    position: relative;
+    cursor: pointer;
+    background-color: #5a0505;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(102, 5, 5, 0.2);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.chatbot-icon:hover {
+    transform: scale(1.1);
+    background-color: #3e8e41;
+}
+
+.vicky {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.vicky:hover {
+    background-color: #333; /* Slightly lighter black for hover effect */
+}
+
+
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Great+Vibes&display=swap');
+
+/* Logo Styling */
+.logo {
+    font-size: 2rem; /* Size adjustment for the tagline */
+    color: #5a0505; /* White color for the text */
+    font-weight: bold; /* Makes the text bold */
+    font-family: 'Playfair Display', serif; /* Elegant, italic font choice */
+    font-style: italic; /* Italicize the text */
+    text-align: center; /* Center the text */
+    letter-spacing: 1px; /* Slightly increase letter spacing */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+/* Optional alternative: Cursive style */
+.logo {
+    font-family: 'Great Vibes'; /* Use this if you prefer cursive */
+}

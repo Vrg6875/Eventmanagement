@@ -1,44 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaandaar Events - Redefining Class</title>
+
+    <title>Home</title>
 
     {% load static %}
-    <link rel="stylesheet" href="{% static 'front.css' %}">
-</head>
-<body>
-    <div class="navbar">
-        <ul>
-            <li>
-                <img src="{% static 'logo.jpg' %}" width="180" height="80" alt="YouTube Logo" class="logofront" style="filter: brightness(2.3);">
-            </li>
-            <li><a href="/front/">Home</a></li>
-            <li><a href="/about/">About Us</a></li>
-            <li><a href="/contact/">Contact Us</a></li>
-            <li><a href="/ourwork/">Our Work</a></li>
-           
 
-        </ul>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Main CSS -->
+<link rel="stylesheet" href="{% static 'getting.css' %}?v=1.0">
+
+
+    <!-- Bootstrap CSS (from official CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Font (Pacifico) -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Optional: Local Bootstrap CSS (ensure the file exists in your static directory) -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<body>
+<!-- Navbar Section -->
+<div class="navbar">
+    <div class="menu-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
+    <!-- Heading for mobile view -->
+    <div class="brand-heading">Vicky Event</div>
+    <ul class="nav-links">
+        <!-- <li class="neta">
+            <img src="{% static 'logo.jpg' %}" width="180" height="80" alt="Logo" style="filter: brightness(2.3); margin-right: 800px;">
+        </li> -->
+        <li><a href="">Home</a></li>
+        <li><a href="/about/">About Us</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+        <li><a href="/ourwork/">Our Work</a></li>
+        <li><a href="/auth/">Get Started / Sign In</a></li>
+        <li><a href="/event/">Book Event</a></li>
+    </ul>
+</div>
+
     
-    <div class="header">
-        <img src="https://images.unsplash.com/photo-1425421598808-4a22ce59cc97?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Wedding" style="filter: brightness(0.6);">
-        <div class="overlogin">
-           
-            
-                    <p class="cta-text">Already a member?</p> 
-                    <a class="cta-link" href="/login/">Log in here</a>
-        
-                    <p class="cta-text">New to vicky Events?</p> 
-                    <a class="cta-link" href="/register/">Join us today</a>
-                
-            </div>
-        </div>
   
-    <div class="foot">
-        <p>&copy;2024 Vicky Event planner. All rights reserved.</p>
+<div class="header">
+    <img src="https://images.unsplash.com/photo-1425421598808-4a22ce59cc97?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Wedding" style="filter: brightness(0.5);">
+    <div class="overlay">
+       
+        
+                <p class="cta-text">Already a member?</p> 
+                <a class="cta-link" href="/login/">Log in here</a>
+    
+                <p class="cta-text">New to vicky Events?</p> 
+                <a class="cta-link" href="/register/">Join us today</a>
+            
+        </div>
     </div>
+
+<div class="foot">
+    <p>&copy;2024 Vicky Event planner. All rights reserved.</p>
+</div>
+
+
+
 
  
+<script>
+    function toggleChat() {
+        const chatWindow = document.getElementById("chat-window");
+        chatWindow.style.display = chatWindow.style.display === "none" ? "block" : "none";
+    }
+
+    function closeChat() {
+        const chatWindow = document.getElementById("chat-window");
+        chatWindow.style.display = "none";
+    }
+
+    function handleQuickReply(message) {
+        const messagesContainer = document.getElementById("messages");
+
+        // Add the user's message
+        const userMessage = document.createElement("div");
+        userMessage.classList.add("user-message");
+        userMessage.textContent = message;
+        messagesContainer.appendChild(userMessage);
+
+        // Add the bot's response based on the selected message
+        const botResponse = document.createElement("div");
+        botResponse.classList.add("bot-message");
+
+        if (message === "Support") {
+            botResponse.textContent = "For support, please call: 8210224732";
+        } else if (message === "Pricing") {
+            botResponse.textContent = "Our pricing starts from $1000. Please contact support for detailed pricing.";
+        } else if (message === "Hours") {
+            botResponse.textContent = "We are open for 5 hours every day.";
+        }
+
+        messagesContainer.appendChild(botResponse);
+
+        // Scroll to the bottom of the chat
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+
+    function toggleMenu() {
+const navLinks = document.querySelector('.nav-links');
+navLinks.classList.toggle('active');
+}
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

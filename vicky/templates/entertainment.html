@@ -4,127 +4,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaandaar Events - Redefining Class</title>
+
+    <title>Home</title>
 
     {% load static %}
-    <link rel="stylesheet" href="{% static 'front.css' %}">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Main CSS -->
+<link rel="stylesheet" href="{% static 'login.css' %}?v=1.0">
+
+
+    <!-- Bootstrap CSS (from official CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Font (Pacifico) -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Optional: Local Bootstrap CSS (ensure the file exists in your static directory) -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 </head>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <body>
-    <nav class="navbar">
-        <ul>
-            <li>
-                <img src="{% static 'logo.jpg' %}" width="180" height="80" alt="Logo" style="filter: brightness(2.3);">
-            </li>
-            <li><a href="/front/">Home</a></li>
-            <li><a href="/about/">About Us</a></li>
-            <li><a href="/contact/">Contact Us</a></li>
-            <li><a href="/ourwork/">Our Work</a></li>
-            <li><a href="/auth/">Get Started / Sign In</a></li>
-            <li><a href="/auth/">Book Event</a></li>
-        </ul>
-    </nav>
-    <br>
-    <br>
-    <br><br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="peader">
-        <div class="pverlay">
-            <div class="pogo">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Unparalleled Entertainment: Elevating Wedding Experiences <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;with
-                the Best Wedding Planner"
+<!-- Navbar Section -->
+<div class="navbar">
+    <div class="menu-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <!-- Heading for mobile view -->
+    <div class="brand-heading">Vicky Event</div>
+    <ul class="nav-links">
+        <!-- <li class="neta">
+            <img src="{% static 'logo.jpg' %}" width="180" height="80" alt="Logo" style="filter: brightness(2.3); margin-right: 800px;">
+        </li> -->
+        <li><a href="/front/">Home</a></li>
+        <li><a href="/about/">About Us</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+        <li><a href="/ourwork/">Our Work</a></li>
+        <li><a href="/auth/">Get Started / Sign In</a></li>
+        <li><a href="/event/">Book Event</a></li>
+    </ul>
+</div>
 
-            </div>
-
-            <div class="text-image-container">
-                <p>As the best wedding planner in the industry, we understand that entertainment is a vital aspect of
-                    creating a memorable wedding experience. At Shaandaar Events the best wedding planner, we specialize
-                    in curating exceptional entertainment that will leave a lasting impression on you and your guests.
-
-                    With our expertise and attention to detail as the best wedding planner, we ensure that your wedding
-                    entertainment is nothing short of extraordinary.</p>
-                <img src="https://images.unsplash.com/photo-1496337589254-7e19d01cec44?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGVudGVydGFpbm1lbnR8ZW58MHx8MHx8fDA%3D"
-                    class="right-image">
-            </div>
-            <br>
-
-            <div class="pogo">
-                Why choose us as the Best Wedding Planner for entertainment?
-            </div>
-
-            <div class="centered-text">
-                <p>As the best wedding planner, we have built an extensive network of talented and professional
-                    entertainers, ensuring that you have access to the best in the industry. From live bands and DJs to
-                    magicians, dancers, and specialty performers, we have the resources to cater to any style or theme
-                    of wedding which prove us to be the best wedding planner.
-
-                    As the best wedding planner, we collaborate with talented musicians, bands, and DJs who will create
-                    a captivating and seamless musical journey throughout your celebration. As the best wedding planner,
-                    Our team works with a range of interactive performers, such as magicians, illusionists, and roaming
-                    entertainers, who will mingle with your guests and leave them amazed. Our technical experts ensure
-                    crystal-clear sound, stunning visual effects, and professional-grade lighting that elevates the
-                    ambiance and complements the performances, which proves us to be the best wedding planner .
-
-                    As the best wedding planner, we take care of every aspect of entertainment coordination, allowing
-                    you to relax and enjoy your special day. We as the best wedding planner works closely with your
-                    wedding timeline to ensure that the entertainment flows seamlessly throughout the event, creating a
-                    magical experience for all.</p>
-            </div>
+   
+<div class="header-section">
+    <div class="header-overlay">
+        <div class="pogo">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Unparalleled Entertainment: Elevating Wedding Experiences <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;with
+            the Best Wedding Planner"
 
         </div>
-    </div>
 
-    <br>
-    <br>
+        <div class="text-image-container">
+            <p>As the best wedding planner in the industry, we understand that entertainment is a vital aspect of
+                creating a memorable wedding experience. At Shaandaar Events the best wedding planner, we specialize
+                in curating exceptional entertainment that will leave a lasting impression on you and your guests.
 
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br><br>
-    <br>
-    <br>
-    <br><br><br><br><br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-
-
-
-
-
-
-
-    <div class="content">
-        <h1>Best Wedding Planner in Chandigarh</h1>
-        <p>Putting all the beautiful pieces together and crafting one-of-a-kind experiences.</p>
+                With our expertise and attention to detail as the best wedding planner, we ensure that your wedding
+                entertainment is nothing short of extraordinary.</p>
+            <img src="https://images.unsplash.com/photo-1496337589254-7e19d01cec44?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGVudGVydGFpbm1lbnR8ZW58MHx8MHx8fDA%3D"
+                class="right-image">
+        </div>
         <br>
-        <a href="/contact" class="vicky">Contact us</a>
+
+        <div class="pogo">
+            Why choose us as the Best Wedding Planner for entertainment?
+        </div>
+
+        <div class="centered-text">
+            <p>As the best wedding planner, we have built an extensive network of talented and professional
+                entertainers, ensuring that you have access to the best in the industry. From live bands and DJs to
+                magicians, dancers, and specialty performers, we have the resources to cater to any style or theme
+                of wedding which prove us to be the best wedding planner.
+
+                As the best wedding planner, we collaborate with talented musicians, bands, and DJs who will create
+                a captivating and seamless musical journey throughout your celebration. As the best wedding planner,
+                Our team works with a range of interactive performers, such as magicians, illusionists, and roaming
+                entertainers, who will mingle with your guests and leave them amazed. Our technical experts ensure
+                crystal-clear sound, stunning visual effects, and professional-grade lighting that elevates the
+                ambiance and complements the performances, which proves us to be the best wedding planner .
+
+                As the best wedding planner, we take care of every aspect of entertainment coordination, allowing
+                you to relax and enjoy your special day. We as the best wedding planner works closely with your
+                wedding timeline to ensure that the entertainment flows seamlessly throughout the event, creating a
+                magical experience for all.</p>
+        </div>
+
     </div>
-    <div class="foot">
-        <p>&copy;2024 Vicky Event planner. All rights reserved.</p>
-    </div>
+</div>
+
+<br>
+<br>
+
+
+
+
+
+
+<div class="content">
+    <h1>Best Wedding Planner in Chandigarh</h1>
+    <p>Putting all the beautiful pieces together and crafting one-of-a-kind experiences.</p>
+    <br>
+    <a href="/contact" class="vicky">Contact us</a>
+</div>
+
+
+<div class="foot">
+    <p>&copy;2024 Vicky Event planner. All rights reserved.</p>
+</div>
+
+
+
+
+ 
+<script>
+    function toggleChat() {
+        const chatWindow = document.getElementById("chat-window");
+        chatWindow.style.display = chatWindow.style.display === "none" ? "block" : "none";
+    }
+
+    function closeChat() {
+        const chatWindow = document.getElementById("chat-window");
+        chatWindow.style.display = "none";
+    }
+
+    function handleQuickReply(message) {
+        const messagesContainer = document.getElementById("messages");
+
+        // Add the user's message
+        const userMessage = document.createElement("div");
+        userMessage.classList.add("user-message");
+        userMessage.textContent = message;
+        messagesContainer.appendChild(userMessage);
+
+        // Add the bot's response based on the selected message
+        const botResponse = document.createElement("div");
+        botResponse.classList.add("bot-message");
+
+        if (message === "Support") {
+            botResponse.textContent = "For support, please call: 8210224732";
+        } else if (message === "Pricing") {
+            botResponse.textContent = "Our pricing starts from $1000. Please contact support for detailed pricing.";
+        } else if (message === "Hours") {
+            botResponse.textContent = "We are open for 5 hours every day.";
+        }
+
+        messagesContainer.appendChild(botResponse);
+
+        // Scroll to the bottom of the chat
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+
+    function toggleMenu() {
+const navLinks = document.querySelector('.nav-links');
+navLinks.classList.toggle('active');
+}
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

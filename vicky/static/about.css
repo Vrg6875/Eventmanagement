@@ -1,3 +1,435 @@
+
+
+
+
+
+/* Base Styling */
+.first {
+    font-family: 'Playfair Display', serif; /* Elegant font choice */
+    font-style: italic; /* Italicize the text */
+    color: #e8e1e1; /* Light gray text color */
+    font-size: 2rem; /* Adjust font size */
+    text-align: center; /* Center the text */
+   margin-bottom: -10px;
+  
+   margin-left: -310px;
+    background-color: #370303; /* Dark red background color */
+    width: 120%; /* Ensure the background spans the full width of the container */
+    padding: 30px; /* Add vertical padding for better spacing */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide any overflowing content */
+    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+    /* Include padding in width calculation */
+}
+
+
+/* Media Queries */
+
+/* For medium screens (tablets, 768px and below) */
+@media (max-width: 768px) {
+    .first {
+        font-family: 'Playfair Display', serif; /* Elegant font choice */
+        font-style: italic; /* Italicize the text */
+        color: #e8e1e1; /* Light gray text color */
+        font-size: 1.2rem; /* Adjust font size */
+        text-align: center; /* Center the text */
+       margin-bottom: -15px;
+       
+       margin-left: -316px;
+     
+        background-color: #370303; /* Dark red background color */
+        width: 180%; /* Ensure the background spans the full width of the container */
+        padding: 30px; /* Add vertical padding for better spacing */
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .chatbot-icon {
+        width: 40px; /* Smaller width for mobile */
+        height: 80px;
+        margin-left:3000px ; /* Smaller height for mobile */
+    }
+
+    .chatbot-icon svg {
+        width: 40px; /* Adjust the SVG icon size */
+        height: 80px; /* Adjust the SVG icon height */
+    }
+
+    .tooltip-text {
+        font-size: 10px; /* Smaller tooltip font size for mobile */
+        top: 20px; /* Adjust the position of the tooltip */
+    }
+}
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+}
+/* Styling for the map section */
+.map {
+    margin-right: 90px; /* Add 90px margin to the right */
+}
+
+.address {
+    width: 40%; /* Adjust width as needed */
+}
+
+
+
+
+/* Styling for the address section */
+.address {
+    margin-bottom: 20px; /* Add space below address */
+}
+
+/* Styling for the social media section */
+.social {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    margin-top: 20px;
+    margin-left:80px ;
+
+}
+
+.social a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social img {
+    width: 40px; /* Adjust the size of the icons */
+    height: 40px;
+    object-fit: cover;
+}
+
+
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .address, .map {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .social img {
+        margin-right: 10px;
+    }
+}
+
+
+
+
+/* Optional: Add responsive behavior for small screens */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+    .map {
+        width: 100%;
+        height: 300px; /* Adjust height for small screens */
+    }
+}
+
+
+/* Mobile (below 768px) */
+@media (max-width: 768px) {
+    .social {
+        justify-content: left; /* Center the icons for mobile */
+        margin-left: 5px; /* Remove left margin on smaller screens */
+        margin-top: 1px;
+        margin-bottom: 10px; /* Adjust margin for better spacing */
+    }
+
+    .map{
+        margin-left: 70px;
+    }
+
+    .social img {
+        width: 50px;
+        object-fit: contain; /* Slightly smaller icons for mobile */
+    }
+}
+
+/* Address Container Styling */
+.address-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+/* Address Section Styling */
+.address {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.address p {
+    font-size: 25px;
+    font-style: italic;
+    margin-left: 80px;
+    color: rgb(58, 56, 56);
+}
+
+/* Mobile (below 768px) */
+@media (max-width: 768px) {
+    .address p {
+        text-align: left; /* Align text to the left on mobile */
+        margin-left: 10px; /* Remove the left margin */
+        padding-right: 0; /* Optional: reset padding if needed */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-items: center;
+}
+
+.service-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+
+
+.service-item h2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+
+.service-item img {
+    width: 100%; /* Ensure image spans the entire width of the item */
+    height: 200px; /* Fixed height for uniformity across all images */
+    object-fit: cover; /* Ensure the image covers the whole area without distortion */
+    object-position: center; /* Center the image */
+}
+
+.service-item h2 {
+    position: absolute;
+    text-align:left;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    color: white; /* White text color */
+    font-size: 0.8em; /* Larger text for service name */
+    text-transform: uppercase;
+}
+/* Mobile Styles (below 768px) */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row for mobile */
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .service-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .service-item h2 {
+        position: absolute;
+        text-align: left;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+        color: white; /* White text color */
+        font-size: 0.6em; /* Reduced font size */
+        text-transform: uppercase;
+    }
+}
+
+
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.header img {
+    width: 100%;
+    height: auto;
+    filter: brightness(0.5);
+    object-fit: cover;
+}
+
+.overaboutus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: justify;
+    overflow-y: auto;
+}
+
+
+    .quotes p {
+        font-size: 2rem;
+        line-height: 1.4; /* Adjust line height for better readability */
+        width: 95%; /* Increase the paragraph width */
+        margin: 0 auto;
+        margin-bottom: 200px; /* Center the paragraph within the container */
+    }
+
+
+#readMoreBtn {
+    display: none; /* Hidden by default, visible only on mobile */
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#readMoreBtn:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    transition: 0.3s ease;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    #readMoreBtn {
+        display: inline-block; /* Show button on mobile */
+    }
+
+    .overaboutus {
+        padding: 10px;
+        font-size: 0.9rem;
+        width: 90%; /* Increase the width of the content container */
+        margin: 0 auto; /* Center the content horizontally */
+    }
+
+    .quotes p {
+        font-size: 0.8rem;
+        line-height: 1.4; /* Adjust line height for better readability */
+        width: 95%; /* Increase the paragraph width */
+        margin: 0 auto; /* Center the paragraph within the container */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Great+Vibes&display=swap');
+
+.logo {
+    font-size: 2.7rem; 
+    color: #490606 ;/* Reduce font size for better readability on smaller screens */
+     /* Remove excessive right margin */
+     /* Center align on mobile */
+    margin-right: 270px; 
+    text-align: left; /* Ensure text stays centered */
+    letter-spacing: 0.5px; /* Slightly tighter letter spacing */
+    display: flex; /* Use Flexbox to align text horizontally */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    white-space: nowrap;
+    
+    font-family: 'Great Vibes'; /* Prevent line breaks within the text */
+}
+
+
+
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 1rem; /* Reduce font size for better readability on smaller screens */
+         /* Remove excessive right margin */
+        margin-left: 100px; /* Center align on mobile */
+        text-align: center; /* Ensure text stays centered */
+        letter-spacing: 0.5px; /* Slightly tighter letter spacing */
+        display: flex; /* Use Flexbox to align text horizontally */
+        justify-content: center; /* Center content horizontally */
+        align-items: center; /* Center content vertically */
+        white-space: nowrap; /* Prevent line breaks within the text */
+    }
+}
+
+
 /* General Styles */
 body {
     margin: 0;
@@ -6,131 +438,24 @@ body {
     background-repeat: no-repeat;
 }
 
-/* General Header Styles */
-.header {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
 
-/* Image Styling */
-.header img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.6);
-}
-
-/* Overlay Styling */
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    /* Dark overlay */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-@media screen and (max-width: 768px) {
-    form {
-        max-width: 90%;
-        font-size: 0.9rem;
-    }
-    .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 70%;
-        /* Dark overlay */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    .header {
-        position: relative;
-        width: 100%;
-        height: 100vh;
-        overflow: hidden;
-    }
-    
-    /* Image Styling */
-    .header img {
-        width: 230%;
-        height: 10%;
-        object-fit:contain;
-        filter: brightness(0.6);
-    }
-
-    form h2 {
-        font-size: 1.5rem;
-    }
-
-    form input, form .vicky {
-        font-size: 0.9rem;
-    }
-}
-/* Form Styling */
-.overlay form {
-    /* Slightly darker background for the form */
-    padding: 30px;
-    border-radius: 8px;
-    width: 90%;
-    max-width: 400px;
-   
-    text-align: center;
-}
-
-/* Heading Styling */
-.overlay h2 {
-    color: white;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-/* Input Styling */
-.overlay input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
-/* Submit Button Styling */
-.vicky {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s;
-}
-
-.vicky:hover {
-    background-color: #45a049;
-}
-
-/* Link Styling for Signup */
-.overlay p a {
-    color: #4CAF50;
-    text-decoration: none;
-}
-
-.overlay p a:hover {
-    text-decoration: underline;
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 
+.neta {
+    margin-left: 80px; /* Add left margin */
+}
 
+.neta img {
+    width: 180px; /* Set the width of the logo */
+    height: 80px; /* Set the height of the logo */
+    filter: brightness(2.3); /* Apply the brightness filter */
+}
 
 
 .navbar ul li:first-child img {
@@ -208,8 +533,6 @@ body {
 .nav-links li a:hover {
     color: #f39c12;
 }
-
-
 
 /* Importing a stylish and unique Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Lora:wght@400;700&display=swap');
@@ -298,6 +621,7 @@ body {
 
 
 
+
 /* General Reset */
 * {
     margin: 0;
@@ -308,6 +632,28 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Logo Styles */
+.logofront {
+    filter: brightness(2.3);
+}
 
 
 
@@ -353,7 +699,7 @@ body {
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
-
+    
     .logofront {
         width: 150px;
         height: 70px;
@@ -441,45 +787,6 @@ span {
 
 
 
-/* Quotes Styles */
-.quotes {
-    font-family: 'Arial, sans-serif';
-    font-size: 1.8em;
-    color: rgb(239, 230, 230);
-    margin: 70px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.quotes p {
-    margin: 1px 0;
-}
-
-
-
-
-/* Importing Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Great+Vibes&display=swap');
-
-/* Logo Styling */
-.logo {
-    font-size: 2rem; /* Size adjustment for the tagline */
-    color: white; /* White color for the text */
-    font-weight: bold; /* Makes the text bold */
-    font-family: 'Playfair Display', serif; /* Elegant, italic font choice */
-    font-style: italic; /* Italicize the text */
-    text-align: center; /* Center the text */
-    letter-spacing: 1px; /* Slightly increase letter spacing */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
-}
-
-/* Optional alternative: Cursive style */
-.logo {
-    font-family: 'Great Vibes'; /* Use this if you prefer cursive */
-}
-
 
 
 
@@ -493,19 +800,6 @@ span {
 .content {
     text-align: center;
     padding: 2rem;
-}
-
-
-
-
-dear {
-    background-color: rgb(214, 27, 27);
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 /* Button Styles */
@@ -537,42 +831,6 @@ h2 {
     width: 300px;
 }
 
-/* Services Grid */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    justify-items: center;
-}
-
-.service-item {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-    position: relative;
-    text-align: center;
-}
-
-.service-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.service-item h2 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    font-size: 1.2em;
-    text-transform: uppercase;
-}
-
 /* VRG Style */
 .vrg {
     background-color: white;
@@ -582,8 +840,9 @@ h2 {
     font-size: 1.2em;
     line-height: 2;
     border-radius: 10px;
-    max-width: 800px;
+    max-width: 1300px;
     margin: 0 auto;
+    text-align: justify;
 }
 
 /* Main Style */
@@ -635,6 +894,57 @@ a:hover {
     padding: 0;
 }
 
+
+/* Container to align the table to the right */
+.contact-table-container {
+    display: flex;
+    justify-content: flex-end; /* Aligns the table to the right */
+    padding: 20px; /* Optional: Adjust padding as needed */
+}
+
+/* Table styling */
+table {
+    width: auto; /* Allows the table to fit its content */
+    color: white; /* Text color */
+  
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+thead th {
+    font-size: 1.5em;
+    padding-bottom: 5px;
+}
+
+tbody td {
+    font-size: 1.1em;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .messages li {
     margin-bottom: 10px;
 }
@@ -647,17 +957,17 @@ a:hover {
 label {
     display: block;
     text-align: left;
-    margin-right: 290px;
-    
+    margin-bottom: 0px;
     margin-top: 0px;
     font-weight: bold;
-    color: white;
+    color: #ddd;
 }
 
 /* Input Styles */
 input {
     width: 100%;
-    
+    padding: 8px;
+    margin-bottom: 8px;
     box-sizing: border-box;
 }
 
@@ -769,11 +1079,11 @@ textarea {
 .text-image-container p {
     flex: 1; /* Allows text to take up available space */
     text-align: justify;
-   
+    margin: 0;
     line-height: 1.6;
     font-size: 16px;
     max-width: 600px;
-    margin-left: 0px;
+    margin-left: 50px;
 }
 
 .text-image-container .r-image {
@@ -795,13 +1105,12 @@ textarea {
 
 .l-image {
     /* Sets image width to 100% of its container */
-   max-width: 500px;  /* Maximum width of 300px */
+   max-width: 400px;  /* Maximum width of 300px */
    height: 60px; 
    display: flex;
    justify-content: flex-start; /* Align image to the left */
    width: 100%;
-   margin-left: 120px;
-   border-radius: 60px;
+   margin-left: 140px;
     /* Maintain aspect ratio */
 }
 
@@ -838,15 +1147,13 @@ textarea {
     margin: 0;
     line-height: 1.6;
     font-size: 16px;
-    max-width: 800px;
+    max-width: 600px;
     margin-left: 100px;
 }
 
 .renu .r-image {
-    width: 500px; /* Set image width */
+    width: 300px; /* Set image width */
     height: auto;
-    margin-right: 200px;
-    border-radius: 60px;
     object-fit: cover;
 }
 
@@ -907,7 +1214,7 @@ textarea {
 
 .r-image {
     /* Sets image width to 100% of its container */
-   max-width: 500px;  /* Maximum width of 300px */
+   max-width: 400px;  /* Maximum width of 300px */
    height: 600px; 
    display: flex;
    justify-content: flex-start; /* Align image to the left */
@@ -918,12 +1225,9 @@ textarea {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-    
-    .services-grid, .vicky-grid {
-        grid-template-columns: 1fr; /* Single column for services and vicky-grid on mobile */
-    }
-
-    
+   
+  
+  
 
     .right-image, .left-image {
         width: 100%; /* Ensure images are responsive */
@@ -993,49 +1297,20 @@ textarea {
     background-color: #333; /* Slightly lighter black for hover effect */
 }
 
-/* General Body and Layout */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensure the body spans the full viewport height */
-    margin: 0; /* Remove default margin */
-}
-
-.header {
-    flex: 1; /* Allow the header to take up the remaining space */
-}
-
-/* Footer Styling */
 .foot {
-    background-color: #3d0101; /* Dark background color */
-    color: #fff; /* White text color */
-    text-align: center; /* Center the text */
-    padding: 20px 0; /* Adjust padding */
-    font-size: 1.2rem; /* Font size */
-    width: 100%; /* Full width */
-    margin-top: auto; /* Push the footer to the bottom */
-    position: relative; /* Default position */
-}
-
-/* Media Queries */
-
-/* For tablets and medium devices */
-@media screen and (max-width: 768px) {
-    .foot {
-        font-size: 1rem; /* Adjust font size for medium screens */
-        padding: 15px 0; /* Adjust padding */
-    }
-}
-
-/* For phones and small devices */
-@media screen and (max-width: 480px) {
-    .foot {
-        font-size: 0.9rem; /* Smaller font size for small screens */
-        padding: 10px 0; /* Further reduce padding */
-    }
+    text-align: center;
+    background-color: #5a0505;
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
 }
 
 
+.foot p {
+    margin: 0; /* Remove the default margin of the paragraph element */
+    font-size: 20px; /* Set the font size of the text */
+}
 
 /* Event Styles */
 .overevent {
@@ -1080,15 +1355,16 @@ body {
 }
 
 
+
 .whatsapp-button {
     position: fixed;
     bottom: 20px;
-    left: 20px; /* Changed from right to left */
+    right: 20px;
     background-color: #131414; /* WhatsApp green */
     color: white;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 80px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1104,11 +1380,16 @@ body {
 .whatsapp-icon {
     position: fixed;
     bottom: 100px;  /* 20px from the bottom */
-    left: 80px;    /* 20px from the left */
+    right: 80px;   /* 20px from the right */
     z-index: 1000; /* Makes sure the icon appears on top of other elements */
     display: none; /* Initially hidden */
     cursor: pointer;
 }
+
+
+
+/* WhatsApp icon style */
+
 
 /* Popup message styling */
 .popup-message {
@@ -1122,8 +1403,8 @@ body {
     font-size: 14px;
     z-index: 1000;
     bottom: 120%; /* Position directly above the icon */
-    left: 3%; /* Position it on the left side */
-    transform: translateX(0); /* No horizontal translation, keep aligned to the left */
+    left: 90%;
+    transform: translateX(-50%); /* Center the popup horizontally */
     white-space: nowrap;
 }
 
@@ -1132,8 +1413,8 @@ body {
     content: "";
     position: absolute;
     top: 100%; /* Arrow at the bottom of the popup */
-    left: 40%;
-    transform: translateX(-50%); /* Center the arrow horizontally */
+    left: 50%;
+    transform: translateX(-50%);
     border-width: 5px;
     border-style: solid;
     border-color: black transparent transparent transparent;
@@ -1245,136 +1526,3 @@ body {
 .carousel-control-next:hover .carousel-control-next-icon {
     background-color: transparent;
 }
-
-
-
-/* Chatbot Container */
-.chatbot-container {
-    position: fixed;
-    right: 60px;
-    bottom: 70px;
-}
-
-/* Chatbot Icon */
-.chatbot-icon {
-    position: relative;
-    cursor: pointer;
-    background-color: #5a0505;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 15px rgba(102, 5, 5, 0.2);
-    transition: transform 0.2s, background-color 0.2s;
-}
-
-.chatbot-icon:hover {
-    transform: scale(1.1);
-    background-color: #3e8e41;
-}
-
-/* Tooltip Text */
-.tooltip-text {
-    visibility: hidden;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 5px 10px;
-    border-radius: 5px;
-    position: absolute;
-    bottom: 85px;
-    left: 50%;
-    transform: translateX(-50%);
-    white-space: nowrap;
-    font-size: 12px;
-    z-index: 1;
-    opacity: 0;
-    transition: opacity 0.2s;
-}
-
-/* Show tooltip on hover */
-.chatbot-icon:hover .tooltip-text {
-    visibility: visible;
-    opacity: 1;
-}
-
-/* Chat Window */
-.chat-window {
-    position: fixed;
-    right: 20px;
-    bottom: 90px;
-    width: 400px;
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 1px;
-    display: flex;
-    flex-direction: column;
-    max-height: 400px;
-}
-
-.chat-header {
-    padding: 10px;
-    background-color: #5a0505;
-    color: white;
-    border-radius: 5px 5px 0 0;
-    position: relative;
-}
-
-/* Cancel Button (X) */
-.cancel-button {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.chat-body {
-    padding: 10px;
-    height: 250px;
-    overflow-y: auto;
-    color: white; /* Ensures text is white */
-    background-color: #333; /* Background color to contrast with white text */
-}
-
-/* Quick reply button styling */
-.quick-reply {
-    background-color: #4CAF50;
-    color: white;
-    padding: 8px;
-    margin: 5px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.quick-reply:hover {
-    background-color: #45a049;
-}
-
-/* Bot's message styling */
-.bot-message {
-    background-color: #444;
-    color: white;
-    padding: 8px;
-    margin: 5px 0;
-    border-radius: 5px;
-}
-
-/* User's message styling */
-.user-message {
-    background-color: #5a0505;
-    color: white;
-    padding: 8px;
-    margin: 5px 0;
-    border-radius: 5px;
-}
-
-
-
-
