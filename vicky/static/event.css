@@ -1,3 +1,64 @@
+
+.messages {
+    list-style-type: none;
+    padding: 0;
+}
+
+.messages li {
+    padding: 10px;
+    margin: 5px 0;
+   
+}
+
+.messages li.success {
+ 
+    color: #84f81f;
+}
+
+.messages li.error {
+   
+    color: #721c24;
+}
+
+.messages li.info {
+    
+    color:red;
+    font-size: 1.4rem;
+    text-wrap: nowrap;
+    
+}
+
+.brand-heading a {
+    text-decoration: none; /* Removes underline */
+    color: #fff; /* White text color */
+    font-family: inherit; /* Inherits the font-family from parent */
+    font-weight: inherit; /* Inherits the font-weight from parent */
+    font-size: inherit; /* Inherits the font size from parent */
+}
+
+/* Optional: Add hover effect for better interactivity */
+.brand-heading a:hover {
+    color: #e75e45; /* Change to a gold/yellow color on hover */
+   /* Add underline on hover */
+}
+
+@media (max-width: 768px) {
+    .brand-heading a {
+        text-decoration: none; /* Removes underline */
+        color: #fff; /* White text color */
+        font-family: inherit; /* Inherits the font-family from parent */
+        font-weight: inherit; /* Inherits the font-weight from parent */
+        font-size: inherit; /* Inherits the font size from parent */
+    }
+
+    /* Optional: Add hover effect for better interactivity on mobile */
+    .brand-heading a:hover {
+        color: #e0743a; /* Change to a gold/yellow color on hover */
+        /* Add underline on hover */
+    }
+}
+
+
 /* General Styles */
 body {
     margin: 0;
@@ -15,13 +76,16 @@ body {
     padding: 20px;
 
 }
+
 /* Styling for the map section */
 .map {
-    margin-right: 90px; /* Add 90px margin to the right */
+    margin-right: 90px;
+    /* Add 90px margin to the right */
 }
 
 .address {
-    width: 40%; /* Adjust width as needed */
+    width: 40%;
+    /* Adjust width as needed */
 }
 
 
@@ -29,7 +93,8 @@ body {
 
 /* Styling for the address section */
 .address {
-    margin-bottom: 20px; /* Add space below address */
+    margin-bottom: 20px;
+    /* Add space below address */
 }
 
 /* Styling for the social media section */
@@ -38,7 +103,7 @@ body {
     justify-content: left;
     align-items: left;
     margin-top: 20px;
-    margin-left:80px ;
+    margin-left: 80px;
 
 }
 
@@ -48,7 +113,8 @@ body {
 }
 
 .social img {
-    width: 40px; /* Adjust the size of the icons */
+    width: 40px;
+    /* Adjust the size of the icons */
     height: 40px;
     object-fit: cover;
 }
@@ -60,7 +126,8 @@ body {
         text-align: center;
     }
 
-    .address, .map {
+    .address,
+    .map {
         width: 100%;
         margin-bottom: 20px;
     }
@@ -78,9 +145,11 @@ body {
     .footer-container {
         flex-direction: column;
     }
+
     .map {
         width: 100%;
-        height: 300px; /* Adjust height for small screens */
+        height: 300px;
+        /* Adjust height for small screens */
     }
 }
 
@@ -88,19 +157,23 @@ body {
 /* Mobile (below 768px) */
 @media (max-width: 768px) {
     .social {
-        justify-content: left; /* Center the icons for mobile */
-        margin-left: 5px; /* Remove left margin on smaller screens */
+        justify-content: left;
+        /* Center the icons for mobile */
+        margin-left: 5px;
+        /* Remove left margin on smaller screens */
         margin-top: 1px;
-        margin-bottom: 10px; /* Adjust margin for better spacing */
+        margin-bottom: 10px;
+        /* Adjust margin for better spacing */
     }
 
-    .map{
+    .map {
         margin-left: 70px;
     }
 
     .social img {
         width: 50px;
-        object-fit: contain; /* Slightly smaller icons for mobile */
+        object-fit: contain;
+        /* Slightly smaller icons for mobile */
     }
 }
 
@@ -128,9 +201,12 @@ body {
 /* Mobile (below 768px) */
 @media (max-width: 768px) {
     .address p {
-        text-align: left; /* Align text to the left on mobile */
-        margin-left: 10px; /* Remove the left margin */
-        padding-right: 0; /* Optional: reset padding if needed */
+        text-align: left;
+        /* Align text to the left on mobile */
+        margin-left: 10px;
+        /* Remove the left margin */
+        padding-right: 0;
+        /* Optional: reset padding if needed */
     }
 }
 
@@ -138,7 +214,7 @@ body {
 
 
 
-.tenali{
+.tenali {
     color: white;
 }
 
@@ -176,9 +252,10 @@ body {
 
 @media screen and (max-width: 768px) {
     form {
-        max-width: 90%;
+        max-width: 140%;
         font-size: 0.9rem;
     }
+
     /* Label Style */
     .overlay h2 {
         color: white;
@@ -186,40 +263,43 @@ body {
         margin-top: 90px;
         text-align: left;
     }
-label {
-    display: block;
-    text-align: left;
-    margin-right: 260px;
-    
-    margin-top: 0px;
-    font-weight: bold;
-    color: white;
-}
+
+    label {
+        display: block;
+        text-align: left;
+        margin-right: 260px;
+
+        margin-top: 0px;
+        font-weight: bold;
+        color: white;
+        text-wrap: nowrap;
+    }
 
     .overlay {
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
+        width: 80%;
+        height: 110%;
         /* Dark overlay */
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
     }
+
     .header {
         position: relative;
-        width: 140%;
-        height: 90vh;
+        width: 160%;
+        height: 70vh;
         overflow: hidden;
     }
-    
+
     /* Image Styling */
     .header img {
-        width: 287%;
-        height: 50%;
-        object-fit:contain;
+        width: 300%;
+        height: 70%;
+        object-fit: contain;
         filter: brightness(0.6);
     }
 
@@ -227,7 +307,8 @@ label {
         font-size: 1.5rem;
     }
 
-    form input, form .vicky {
+    form input,
+    form .vicky {
         font-size: 0.9rem;
     }
 
@@ -236,15 +317,15 @@ label {
         /* Slightly darker background for the form */
         padding: 2px;
         border-radius: 8px;
-        width: 50%;
+        width: 60%;
         max-width: 500px;
-        margin-left: 100px;
-       margin-bottom: 400px;
+        margin-left: 70px;
+        margin-bottom: 600px;
         text-align: left;
-      
-        
+
+
     }
-    
+
 }
 
 
@@ -258,20 +339,24 @@ label {
     width: 50%;
     max-width: 400px;
     margin-top: 200px;
-   
+
     text-align: left;
-  
-    
+
+
 }
 
 /* Heading Styling */
 .overlay h2 {
     color: white;
     font-size: 2rem;
-    margin: 0; /* Remove extra margins */
-    display: inline-block; /* Allow it to sit on the same line as other elements */
-    vertical-align: middle; /* Aligns it with other inline elements */
-    margin-top: 100px; /* Remove extra spacing */
+    margin: 0;
+    /* Remove extra margins */
+    display: inline-block;
+    /* Allow it to sit on the same line as other elements */
+    vertical-align: middle;
+    /* Aligns it with other inline elements */
+    margin-top: 100px;
+    /* Remove extra spacing */
 }
 
 
@@ -307,19 +392,20 @@ label {
     text-decoration: none;
 }
 
-.overlay p a:hover {
-    text-decoration: underline;
-}
 
 
 
 
 
 .navbar ul li:first-child img {
-    display: block; /* Ensure the image is visible */
-    max-width: 100%; /* Ensure it adjusts to fit its container */
-    height: auto; /* Maintain aspect ratio */
-    margin: 0 auto; /* Center it horizontally if needed */
+    display: block;
+    /* Ensure the image is visible */
+    max-width: 100%;
+    /* Ensure it adjusts to fit its container */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin: 0 auto;
+    /* Center it horizontally if needed */
 }
 
 /* Navbar Styles */
@@ -337,14 +423,16 @@ label {
     display: none;
     cursor: pointer;
     flex-direction: column;
-    gap: 4px;
-    margin-left: 10px;
+    gap: 5px;
+    margin-top: 35px;
+    margin-bottom: -30px;
+    margin-left: 1px;
 }
 
 .menu-icon span {
     display: block;
     width: 25px;
-    height: 3px;
+    height: 4px;
     background-color: #fff;
     transition: transform 0.3s ease;
 }
@@ -364,26 +452,32 @@ label {
 .nav-links {
     display: flex;
     justify-content: flex-end;
-     /* Align all the links to the right */
-    padding: 0; /* Remove any padding */
-    margin-bottom:20px; /* Remove any margin */
+    /* Align all the links to the right */
+    padding: 0;
+    /* Remove any padding */
+    margin-bottom: 20px;
+    /* Remove any margin */
 }
 
 .nav-links li {
-    list-style: none; /* Remove bullet points */
+    list-style: none;
+    /* Remove bullet points */
 }
 
 .nav-links li a {
     color: #fff;
     text-decoration: none;
     font-size: 16px;
-    padding: 10px 15px; /* Padding inside the link */
-    margin-bottom: 40px; /* Adjusted margin to create space between links */
+    padding: 10px 15px;
+    /* Padding inside the link */
+    margin-bottom: 40px;
+    /* Adjusted margin to create space between links */
     transition: color 0.3s ease;
 }
 
 .nav-links li a:hover {
-    color: #f39c12; /* Hover effect */
+    color: #f39c12;
+    /* Hover effect */
 }
 
 
@@ -398,33 +492,46 @@ label {
 
 /* Default: Hidden */
 .brand-heading {
-    display: none; /* Hidden by default */
+    display: none;
+    /* Hidden by default */
     color: #fff;
-    font-size: 36px; /* Larger font size for more impact */
-    font-family: 'Pacifico', cursive, serif; font-family: 'Pacifico', cursive, serif; /* Unique combination of Pacifico and Lora */
+    font-size: 36px;
+    /* Larger font size for more impact */
+    font-family: 'Pacifico', cursive, serif;
+    font-family: 'Pacifico', cursive, serif;
+    /* Unique combination of Pacifico and Lora */
     font-weight: bold;
     text-align: center;
     margin-right: 150px;
-    margin-left: 20px;
+    margin-left: 40px;
+    text-wrap: nowrap;
     margin-top: 10px;
-    opacity: 0; /* Initially invisible */
-    transform: translateY(-30px) scale(0.8); /* Start from above and smaller */
-    animation: slideIn 1.5s ease-out forwards; /* Apply animation */
+    opacity: 0;
+    /* Initially invisible */
+    transform: translateY(-30px) scale(0.8);
+    /* Start from above and smaller */
+    animation: slideIn 1.5s ease-out forwards;
+    /* Apply animation */
 }
 
 /* Animation for showing the heading with scaling and fading */
 @keyframes slideIn {
     0% {
         opacity: 0;
-        transform: translateY(-30px) scale(0.8); /* Start smaller and above */
+        transform: translateY(-30px) scale(0.8);
+        /* Start smaller and above */
     }
+
     50% {
         opacity: 0.6;
-        transform: translateY(0) scale(1.05); /* Midway scale up slightly */
+        transform: translateY(0) scale(1.05);
+        /* Midway scale up slightly */
     }
+
     100% {
         opacity: 1;
-        transform: translateY(0) scale(1); /* End at normal size */
+        transform: translateY(0) scale(1);
+        /* End at normal size */
     }
 }
 
@@ -436,16 +543,19 @@ label {
 
 @media (min-width: 1024px) {
     .brand-heading {
-        display: block; /* Show the heading on laptop and larger screens */
+        display: block;
+        /* Show the heading on laptop and larger screens */
     }
 }
 
 /* Responsive for Mobile and Tablet */
 @media (max-width: 1024px) {
+
     /* Show the menu icon */
     .menu-icon {
         display: flex;
     }
+
     .brand-heading {
         display: block;
 
@@ -456,10 +566,12 @@ label {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 75px; /* Adjust based on your navbar height */
+        top: 75px;
+        /* Adjust based on your navbar height */
         left: 0;
         width: 100%;
-        background-color: #5a0505;
+        background-color: #520707;
+        margin-top: 36px;
         z-index: 1;
     }
 
@@ -471,7 +583,8 @@ label {
     .nav-links li {
         text-align: center;
 
-        margin-bottom: 21px;
+        margin-bottom: 15px;
+        margin-top: 30px;
     }
 }
 
@@ -505,19 +618,25 @@ label {
 
 .carousel-inner {
     width: 100%;
-    height: 400px; /* Fixed height for carousel */
+    height: 400px;
+    /* Fixed height for carousel */
     overflow: hidden;
 }
 
 .carousel-item {
-    width: 100%; /* Ensure the items take the full width */
-    transition: transform 0.3s ease-in-out; /* Set the slide transition duration to 0.4s */
+    width: 100%;
+    /* Ensure the items take the full width */
+    transition: transform 0.3s ease-in-out;
+    /* Set the slide transition duration to 0.4s */
 }
 
 .carousel-item img {
-    width: 100%; /* Ensure the images take full width */
-    height: 100%; /* Fill the height of the carousel item */
-    object-fit: cover; /* Ensure the images cover the full space without distortion */
+    width: 100%;
+    /* Ensure the images take full width */
+    height: 100%;
+    /* Fill the height of the carousel item */
+    object-fit: cover;
+    /* Ensure the images cover the full space without distortion */
 }
 
 /* Optional: Style carousel controls */
@@ -647,19 +766,28 @@ span {
 
 /* Logo Styling */
 .logo {
-    font-size: 2rem; /* Size adjustment for the tagline */
-    color: white; /* White color for the text */
-    font-weight: bold; /* Makes the text bold */
-    font-family: 'Playfair Display', serif; /* Elegant, italic font choice */
-    font-style: italic; /* Italicize the text */
-    text-align: center; /* Center the text */
-    letter-spacing: 1px; /* Slightly increase letter spacing */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    font-size: 2rem;
+    /* Size adjustment for the tagline */
+    color: white;
+    /* White color for the text */
+    font-weight: bold;
+    /* Makes the text bold */
+    font-family: 'Playfair Display', serif;
+    /* Elegant, italic font choice */
+    font-style: italic;
+    /* Italicize the text */
+    text-align: center;
+    /* Center the text */
+    letter-spacing: 1px;
+    /* Slightly increase letter spacing */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Subtle shadow for depth */
 }
 
 /* Optional alternative: Cursive style */
 .logo {
-    font-family: 'Great Vibes'; /* Use this if you prefer cursive */
+    font-family: 'Great Vibes';
+    /* Use this if you prefer cursive */
 }
 
 
@@ -802,35 +930,16 @@ form {
 }
 
 /* Link Styles */
-a {
-    text-decoration: none;
-    color: #007bff;
-}
 
-a:hover {
-    text-decoration: underline;
-}
 
-/* Error Message Styles */
-.messages {
-    list-style-type: none;
-    padding: 0;
-}
 
-.messages li {
-    margin-bottom: 10px;
-}
-
-.error {
-    color: red;
-}
 
 /* Label Style */
 label {
     display: block;
     text-align: left;
     margin-right: 240px;
-    
+
     margin-top: 0px;
     font-weight: bold;
     color: white;
@@ -839,7 +948,7 @@ label {
 /* Input Styles */
 input {
     width: 100%;
-    
+
     box-sizing: border-box;
 }
 
@@ -886,7 +995,7 @@ input[type="submit"]:hover {
 textarea {
     color: rgb(16, 16, 16);
     border: none;
-    padding: 5px 50px;
+    padding: 5px 90px;
     font-size: 1rem;
     cursor: pointer;
     margin-top: 20px;
@@ -945,13 +1054,15 @@ textarea {
 .text-image-container {
     display: flex;
     align-items: flex-start;
-    gap: 20px; /* Space between text and image */
+    gap: 20px;
+    /* Space between text and image */
 }
 
 .text-image-container p {
-    flex: 1; /* Allows text to take up available space */
+    flex: 1;
+    /* Allows text to take up available space */
     text-align: justify;
-   
+
     line-height: 1.6;
     font-size: 16px;
     max-width: 600px;
@@ -959,31 +1070,36 @@ textarea {
 }
 
 .text-image-container .r-image {
-    width: 300px; /* Set image width */
+    width: 300px;
+    /* Set image width */
     height: auto;
     object-fit: cover;
 }
 
 .text-image-container p::first-line {
-    text-indent: 50px; /* Indent the first line by 50px */
+    text-indent: 50px;
+    /* Indent the first line by 50px */
 }
 
 .text-image-container p::after {
     content: "";
     display: block;
-    width: 50px; /* Aligns each new line after 50 words */
+    width: 50px;
+    /* Aligns each new line after 50 words */
 }
 
 
 .l-image {
     /* Sets image width to 100% of its container */
-   max-width: 500px;  /* Maximum width of 300px */
-   height: 60px; 
-   display: flex;
-   justify-content: flex-start; /* Align image to the left */
-   width: 100%;
-   margin-left: 120px;
-   border-radius: 60px;
+    max-width: 500px;
+    /* Maximum width of 300px */
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    /* Align image to the left */
+    width: 100%;
+    margin-left: 120px;
+    border-radius: 60px;
     /* Maintain aspect ratio */
 }
 
@@ -994,11 +1110,13 @@ textarea {
 .shivam {
     display: flex;
     align-items: flex-start;
-    gap: 20px; /* Space between text and image */
+    gap: 20px;
+    /* Space between text and image */
 }
 
 .shivam p {
-    flex: 1; /* Allows text to take up available space */
+    flex: 1;
+    /* Allows text to take up available space */
     text-align: justify;
     margin: 0;
     line-height: 1.6;
@@ -1011,11 +1129,13 @@ textarea {
 .renu {
     display: flex;
     align-items: flex-start;
-    gap: 20px; /* Space between text and image */
+    gap: 20px;
+    /* Space between text and image */
 }
 
 .renu p {
-    flex: 1; /* Allows text to take up available space */
+    flex: 1;
+    /* Allows text to take up available space */
     text-align: justify;
     margin: 0;
     line-height: 1.6;
@@ -1025,7 +1145,8 @@ textarea {
 }
 
 .renu .r-image {
-    width: 500px; /* Set image width */
+    width: 500px;
+    /* Set image width */
     height: auto;
     margin-right: 200px;
     border-radius: 60px;
@@ -1033,30 +1154,35 @@ textarea {
 }
 
 .renu p::first-line {
-    text-indent: 50px; /* Indent the first line by 50px */
+    text-indent: 50px;
+    /* Indent the first line by 50px */
 }
 
 .renu p::after {
     content: "";
     display: block;
-    width: 50px; /* Aligns each new line after 50 words */
+    width: 50px;
+    /* Aligns each new line after 50 words */
 }
 
 
 .shivam .r-image {
-    width: 300px; /* Set image width */
+    width: 300px;
+    /* Set image width */
     height: auto;
     object-fit: cover;
 }
 
 .shivam p::first-line {
-    text-indent: 50px; /* Indent the first line by 50px */
+    text-indent: 50px;
+    /* Indent the first line by 50px */
 }
 
 .shivam p::after {
     content: "";
     display: block;
-    width: 50px; /* Aligns each new line after 50 words */
+    width: 50px;
+    /* Aligns each new line after 50 words */
 }
 
 
@@ -1089,35 +1215,44 @@ textarea {
 
 .r-image {
     /* Sets image width to 100% of its container */
-   max-width: 500px;  /* Maximum width of 300px */
-   height: 600px; 
-   display: flex;
-   justify-content: flex-start; /* Align image to the left */
-   width: 100%;
-   margin-left: 110px;
+    max-width: 500px;
+    /* Maximum width of 300px */
+    height: 600px;
+    display: flex;
+    justify-content: flex-start;
+    /* Align image to the left */
+    width: 100%;
+    margin-left: 110px;
     /* Maintain aspect ratio */
 }
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-    
-    .services-grid, .vicky-grid {
-        grid-template-columns: 1fr; /* Single column for services and vicky-grid on mobile */
+
+    .services-grid,
+    .vicky-grid {
+        grid-template-columns: 1fr;
+        /* Single column for services and vicky-grid on mobile */
     }
 
-    
 
-    .right-image, .left-image {
-        width: 100%; /* Ensure images are responsive */
-        margin-left: 0; /* Remove left margin for mobile */
+
+    .right-image,
+    .left-image {
+        width: 100%;
+        /* Ensure images are responsive */
+        margin-left: 0;
+        /* Remove left margin for mobile */
     }
 
     .text-image-container {
-        flex-direction: column; /* Stack text and images vertically */
+        flex-direction: column;
+        /* Stack text and images vertically */
     }
 
     .content {
-        padding: 1rem; /* Adjust padding for smaller screens */
+        padding: 1rem;
+        /* Adjust padding for smaller screens */
     }
 
     .vrg {
@@ -1125,8 +1260,8 @@ textarea {
         font-size: 1rem;
     }
 
-   
-  
+
+
     h1 {
         font-size: 1.5em;
     }
@@ -1148,14 +1283,21 @@ textarea {
         align-items: center;
     }
 
-    .peader, .raj, .centered-text p {
+    .peader,
+    .raj,
+    .centered-text p {
         margin: 0.5rem;
         padding: 1rem;
         max-width: 100%;
     }
 
-    .form-control, #event-category, #small-textarea, form, textarea {
-        width: 100%; /* Ensure form elements are responsive */
+    .form-control,
+    #event-category,
+    #small-textarea,
+    form,
+    textarea {
+        width: 100%;
+        /* Ensure form elements are responsive */
     }
 }
 
@@ -1172,31 +1314,43 @@ textarea {
 }
 
 .vicky:hover {
-    background-color: #333; /* Slightly lighter black for hover effect */
+    background-color: #333;
+    /* Slightly lighter black for hover effect */
 }
 
 /* General Body and Layout */
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensure the body spans the full viewport height */
-    margin: 0; /* Remove default margin */
+    min-height: 100vh;
+    /* Ensure the body spans the full viewport height */
+    margin: 0;
+    /* Remove default margin */
 }
 
 .header {
-    flex: 1; /* Allow the header to take up the remaining space */
+    flex: 1;
+    /* Allow the header to take up the remaining space */
 }
 
 /* Footer Styling */
 .foot {
-    background-color: #3d0101; /* Dark background color */
-    color: #fff; /* White text color */
-    text-align: center; /* Center the text */
-    padding: 20px 0; /* Adjust padding */
-    font-size: 1.2rem; /* Font size */
-    width: 100%; /* Full width */
-    margin-top: auto; /* Push the footer to the bottom */
-    position: relative; /* Default position */
+    background-color: #3d0101;
+    /* Dark background color */
+    color: #fff;
+    /* White text color */
+    text-align: center;
+    /* Center the text */
+    padding: 20px 0;
+    /* Adjust padding */
+    font-size: 1.2rem;
+    /* Font size */
+    width: 100%;
+    /* Full width */
+    margin-top: auto;
+    /* Push the footer to the bottom */
+    position: relative;
+    /* Default position */
 }
 
 /* Media Queries */
@@ -1204,16 +1358,20 @@ body {
 /* For tablets and medium devices */
 @media screen and (max-width: 768px) {
     .foot {
-        font-size: 1rem; /* Adjust font size for medium screens */
-        padding: 15px 0; /* Adjust padding */
+        font-size: 1rem;
+        /* Adjust font size for medium screens */
+        padding: 15px 0;
+        /* Adjust padding */
     }
 }
 
 /* For phones and small devices */
 @media screen and (max-width: 480px) {
     .foot {
-        font-size: 0.9rem; /* Smaller font size for small screens */
-        padding: 10px 0; /* Further reduce padding */
+        font-size: 0.9rem;
+        /* Smaller font size for small screens */
+        padding: 10px 0;
+        /* Further reduce padding */
     }
 }
 
@@ -1255,6 +1413,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 .white {
     color: rgb(247, 244, 244);
     text-align: center;
@@ -1265,8 +1424,10 @@ body {
 .whatsapp-button {
     position: fixed;
     bottom: 20px;
-    left: 20px; /* Changed from right to left */
-    background-color: #131414; /* WhatsApp green */
+    left: 20px;
+    /* Changed from right to left */
+    background-color: #131414;
+    /* WhatsApp green */
     color: white;
     border-radius: 50%;
     width: 40px;
@@ -1285,10 +1446,14 @@ body {
 
 .whatsapp-icon {
     position: fixed;
-    bottom: 100px;  /* 20px from the bottom */
-    left: 80px;    /* 20px from the left */
-    z-index: 1000; /* Makes sure the icon appears on top of other elements */
-    display: none; /* Initially hidden */
+    bottom: 100px;
+    /* 20px from the bottom */
+    left: 80px;
+    /* 20px from the left */
+    z-index: 1000;
+    /* Makes sure the icon appears on top of other elements */
+    display: none;
+    /* Initially hidden */
     cursor: pointer;
 }
 
@@ -1303,9 +1468,12 @@ body {
     margin-bottom: 150px;
     font-size: 14px;
     z-index: 1000;
-    bottom: 120%; /* Position directly above the icon */
-    left: 3%; /* Position it on the left side */
-    transform: translateX(0); /* No horizontal translation, keep aligned to the left */
+    bottom: 120%;
+    /* Position directly above the icon */
+    left: 3%;
+    /* Position it on the left side */
+    transform: translateX(0);
+    /* No horizontal translation, keep aligned to the left */
     white-space: nowrap;
 }
 
@@ -1313,9 +1481,11 @@ body {
 .popup-message::after {
     content: "";
     position: absolute;
-    top: 100%; /* Arrow at the bottom of the popup */
+    top: 100%;
+    /* Arrow at the bottom of the popup */
     left: 40%;
-    transform: translateX(-50%); /* Center the arrow horizontally */
+    transform: translateX(-50%);
+    /* Center the arrow horizontally */
     border-width: 5px;
     border-style: solid;
     border-color: black transparent transparent transparent;
@@ -1323,7 +1493,7 @@ body {
 
 
 
-.logofront{
+.logofront {
     margin-left: -250px;
 }
 
@@ -1372,7 +1542,7 @@ body {
 }
 
 /* Spacing for the buttons */
-.cta-link + .cta-text {
+.cta-link+.cta-text {
     margin-top: 30px;
 }
 
@@ -1380,27 +1550,34 @@ body {
 /* Remove black overlay on carousel control icons */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color: transparent; /* Make the background transparent */
-    background-size: 20px 20px; /* Set the arrow icon size */
-    background-image: none; /* Remove the default background image */
+    background-color: transparent;
+    /* Make the background transparent */
+    background-size: 20px 20px;
+    /* Set the arrow icon size */
+    background-image: none;
+    /* Remove the default background image */
 }
 
 /* Add a custom icon for the previous and next buttons */
 .carousel-control-prev-icon::after,
 .carousel-control-next-icon::after {
-    content: '<'; /* Left arrow for prev */
+    content: '<';
+    /* Left arrow for prev */
     font-size: 24px;
-    color: #191616; /* Arrow color */
+    color: #191616;
+    /* Arrow color */
 }
 
 
 /* Services title styling */
 .services-title h1 {
-    font-family: 'Georgia', 'Times New Roman', serif; /* Elegant italic font */
+    font-family: 'Georgia', 'Times New Roman', serif;
+    /* Elegant italic font */
     font-size: 2.5rem;
     font-style: italic;
     font-weight: bold;
-    color: #333; /* Dark gray color for a classic look */
+    color: #333;
+    /* Dark gray color for a classic look */
     text-align: center;
     position: relative;
     margin-bottom: 20px;
@@ -1412,14 +1589,17 @@ body {
     display: block;
     width: 80px;
     height: 3px;
-    background-color: #aa803d; /* Underline color */
+    background-color: #aa803d;
+    /* Underline color */
     margin: 10px auto 0;
-    border-radius: 10px; /* Rounded edges for the underline */
+    border-radius: 10px;
+    /* Rounded edges for the underline */
 }
 
 
 .carousel-control-next-icon::after {
-    content: '>'; /* Right arrow for next */
+    content: '>';
+    /* Right arrow for next */
 }
 
 /* Remove hover effect */
@@ -1427,20 +1607,3 @@ body {
 .carousel-control-next:hover .carousel-control-next-icon {
     background-color: transparent;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

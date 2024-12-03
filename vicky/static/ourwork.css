@@ -1,4 +1,39 @@
 
+
+.brand-heading a {
+    text-decoration: none; /* Removes underline */
+    color: #fff; /* White text color */
+    font-family: inherit; /* Inherits the font-family from parent */
+    font-weight: inherit; /* Inherits the font-weight from parent */
+    font-size: inherit; /* Inherits the font size from parent */
+}
+
+/* Optional: Add hover effect for better interactivity */
+.brand-heading a:hover {
+    color: #e75e45; /* Change to a gold/yellow color on hover */
+   /* Add underline on hover */
+}
+
+@media (max-width: 768px) {
+    .brand-heading a {
+        text-decoration: none; /* Removes underline */
+        color: #fff; /* White text color */
+        font-family: inherit; /* Inherits the font-family from parent */
+        font-weight: inherit; /* Inherits the font-weight from parent */
+        font-size: inherit; /* Inherits the font size from parent */
+    }
+
+    /* Optional: Add hover effect for better interactivity on mobile */
+    .brand-heading a:hover {
+        color: #e0743a; /* Change to a gold/yellow color on hover */
+        /* Add underline on hover */
+    }
+}
+
+
+
+
+
 /* Base Styling */
 .first {
     font-family: 'Playfair Display', serif; /* Elegant font choice */
@@ -7,7 +42,7 @@
     font-size: 2rem; /* Adjust font size */
     text-align: center; /* Center the text */
    margin-bottom: -10px;
-  
+
    margin-left: -310px;
     background-color: #370303; /* Dark red background color */
     width: 120%; /* Ensure the background spans the full width of the container */
@@ -27,16 +62,16 @@
         font-family: 'Playfair Display', serif; /* Elegant font choice */
         font-style: italic; /* Italicize the text */
         color: #e8e1e1; /* Light gray text color */
-        font-size: 1.2rem; /* Adjust font size */
+        font-size: 0.8rem; /* Adjust font size */
         text-align: center; /* Center the text */
-       margin-bottom: -15px;
-       
-       margin-left: -316px;
-     
+        margin-bottom: -15px;
+
+        margin-left: -241px;
+
         background-color: #370303; /* Dark red background color */
-        width: 180%; /* Ensure the background spans the full width of the container */
+        width: 152%; /* Ensure the background spans the full width of the container */
         padding: 30px; /* Add vertical padding for better spacing */
-        
+
     }
 }
 
@@ -438,7 +473,7 @@ body {
     color: white;
     display: flex;
     flex-direction: column;
-   
+
     align-items: center;
     text-align: justify;
     overflow-y: auto;
@@ -480,7 +515,7 @@ body {
     }
 
     .overourwork {
-       
+
         font-size: 1rem;
         width: 150%; /* Increase the width of the content container */
          /* Center the content horizontally */
@@ -510,18 +545,18 @@ body {
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Great+Vibes&display=swap');
 
 .logo {
-    font-size: 2.7rem; 
+    font-size: 2.7rem;
     color: #490606 ;/* Reduce font size for better readability on smaller screens */
      /* Remove excessive right margin */
      /* Center align on mobile */
-    margin-right: 270px; 
+    margin-right: 270px;
     text-align: left; /* Ensure text stays centered */
     letter-spacing: 0.5px; /* Slightly tighter letter spacing */
     display: flex; /* Use Flexbox to align text horizontally */
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
     white-space: nowrap;
-    
+
     font-family: 'Great Vibes'; /* Prevent line breaks within the text */
 }
 
@@ -561,7 +596,7 @@ body {
         white-space: nowrap;  /* Decrease letter spacing */
         text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Lighter shadow for mobile */
     }
-    
+
     /* Optional alternative: Cursive style for mobile */
     .logo {
         font-size: 1.4rem; /* Adjust font size for mobile */
@@ -840,7 +875,7 @@ body {
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
-    
+
     .logofront {
         width: 150px;
         height: 70px;
@@ -927,7 +962,7 @@ body {
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
-   
+
 
     .logofront {
         width: 150px;
@@ -1197,9 +1232,7 @@ a {
     color: #007bff;
 }
 
-a:hover {
-    text-decoration: underline;
-}
+
 
 /* Error Message Styles */
 .messages {
@@ -1340,7 +1373,7 @@ textarea {
 .text-image-container p {
     flex: 1; /* Allows text to take up available space */
     text-align: justify;
-   
+
     line-height: 1.6;
     font-size: 16px;
     max-width: 600px;
@@ -1367,7 +1400,7 @@ textarea {
 .l-image {
     /* Sets image width to 100% of its container */
    max-width: 500px;  /* Maximum width of 300px */
-   height: 60px; 
+   height: 60px;
    display: flex;
    justify-content: flex-start; /* Align image to the left */
    width: 100%;
@@ -1479,7 +1512,7 @@ textarea {
 .r-image {
     /* Sets image width to 100% of its container */
    max-width: 500px;  /* Maximum width of 300px */
-   height: 600px; 
+   height: 600px;
    display: flex;
    justify-content: flex-start; /* Align image to the left */
    width: 100%;
@@ -1489,7 +1522,7 @@ textarea {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-  
+
     .header img {
         height: auto; /* Ensure header image is responsive */
     }
@@ -1512,8 +1545,8 @@ textarea {
         font-size: 1rem;
     }
 
-   
-  
+
+
     h1 {
         font-size: 1.5em;
     }
@@ -1574,7 +1607,7 @@ textarea {
 
 .foot p {
     margin: 0; /* Remove the default margin of the paragraph element */
-    font-size: 20px; /* Set the font size of the text */
+    font-size: 15px; /* Set the font size of the text */
 }
 
 /* Event Styles */

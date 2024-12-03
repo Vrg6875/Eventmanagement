@@ -4,17 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Home</title>
-
     {% load static %}
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-
     <!-- Main CSS -->
-<link rel="stylesheet" href="{% static 'signup.css' %}?v=1.0">
-
+    <link rel="stylesheet" href="{% static 'signup.css' %}?v=1.0">
 
     <!-- Bootstrap CSS (from official CDN) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -25,11 +20,14 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <!-- Optional: Local Bootstrap CSS (ensure the file exists in your static directory) -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+     
+    </style>
 </head>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <body>
 <!-- Navbar Section -->
 <div class="navbar">
@@ -41,9 +39,6 @@
     <!-- Heading for mobile view -->
     <div class="brand-heading">Vicky Event</div>
     <ul class="nav-links">
-        <!-- <li class="neta">
-            <img src="{% static 'logo.jpg' %}" width="180" height="80" alt="Logo" style="filter: brightness(2.3); margin-right: 800px;">
-        </li> -->
         <li><a href="">Home</a></li>
         <li><a href="/about/">About Us</a></li>
         <li><a href="/contact/">Contact Us</a></li>
@@ -53,105 +48,145 @@
     </ul>
 </div>
 
-    <div class="header">
-        <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Wedding Background" class="background-image">
-        
-        <!-- Overlay Form Container -->
-        <div class="overlay">
-            <h2>CREATE NEW ACCOUNT</h2>
-            <form method="post" action="{% url 'register' %}">
-                {% csrf_token %}
+<div class="header">
+    <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Wedding Background" class="background-image">
+    
+    <!-- Overlay Form Container -->
+    <div class="overlay">
+        <h2>CREATE NEW ACCOUNT</h2>
+        <form method="post" action="{% url 'register' %}" id="signupForm">
+            {% csrf_token %}
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            <div class="form-group">
+                <label for="firstName"><b>First Name</b></label>
+                <input type="text" name="first_name" class="form-control" id="firstName"
+                       value="{{ form_data.first_name|default:'' }}" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName"><b>Last Name</b></label>
+                <input type="text" name="last_name" class="form-control" id="lastName"
+                       value="{{ form_data.last_name|default:'' }}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" class="form-control" id="username" value="{{ form_data.username|default:'' }}" required>
+                <span id="usernameError" style="color: red; display: none;">This username is already taken.</span>
+                <span id="usernameSuccess" style="color: rgb(8, 242, 8); display: none;">This username is available.</span>
+            </div>
+            
+                       
+            
+
+            <div class="form-group">
+                <label for="password1"><b>Password</b></label>
+                <input type="password" name="password1" class="form-control" id="password1" required>
+            </div>
+            <div class="form-group">
+                <label for="password2"><b>Confirm Password</b></label>
+                <input type="password" name="password2" class="form-control" id="password2" required>
+                <span id="passwordError" style="display:none; color: rgb(174, 18, 18);">Password must be at least 5 characters long and contain at least one special character.</span>
+            </div> 
+
+            
 
 
 
 
-                {% if messages %}
-                <ul class="messages">
-                    {% for message in messages %}
-                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-                    {% endfor %}
-                </ul>
-                {% endif %}
 
-
-
-
-                <div class="form-group">
-                    <label for="firstName"><b>First Name</b></label>
-                    <input type="text" name="first_name" class="form-control" id="firstName">
-                </div>
-                <div class="form-group">
-                    <label for="lastName"><b>Last Name</b></label>
-                    <input type="text" name="last_name" class="form-control" id="lastName">
-                </div>
-                <div class="form-group">
-                    <label for="username"><b>Username</b></label>
-                    <input type="text" name="username" class="form-control" id="username">
-                </div>
-                <div class="form-group">
-                    <label for="password1"><b>Password</b></label>
-                    <input type="password" name="password1" class="form-control" id="password1">
-                </div>
-                <div class="form-group">
-                    <label for="password2"><b>Confirm Password</b></label>
-                    <input type="password" name="password2" class="form-control" id="password2">
-                </div>
-                <p class="tenali">Already have an account? <a href="/login/">Login</a></p>
-                <br>
-                <button type="submit" class="submit-button">Submit</button>
-                <br>
-            </form>
-        </div>
+            
+            <p class="tenali">Already have an account? <a href="/login/">Login</a></p>
+            <br>
+            <button type="submit" class="submit-button">Submit</button>
+            <br>
+        </form>
     </div>
+</div>
 
-    <div class="foot">
-        <p>&copy; 2024 Vicky Event Planner. All rights reserved.</p>
-    </div>
+<div class="content">
+    <h1>Best Wedding Planner in Chandigarh</h1>
+    <p>Putting all the beautiful pieces together and crafting one-of-a-kind experiences.</p><br>
+    <a href="/contact" class="vicky">Contact us</a>
+</div>
 
-     
+<div class="foot">
+    <p>&copy; 2024 Vicky Event Planner. All rights reserved.</p>
+</div>
+
 <script>
-    function toggleChat() {
-        const chatWindow = document.getElementById("chat-window");
-        chatWindow.style.display = chatWindow.style.display === "none" ? "block" : "none";
+  
+  $("#signupForm").submit(function (event) {
+    var password = $("#password1").val();
+    var passwordPattern = /^(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{5,}$/;
+
+    if (!passwordPattern.test(password)) {
+        event.preventDefault(); // Prevent form submission
+        $("#passwordError").show(); // Show error message
+        $("#password1").css("border", "2px solid red");
+    } else {
+        $("#passwordError").hide(); // Hide error message when valid
+        $("#password1").css("border", "");
     }
+});
 
-    function closeChat() {
-        const chatWindow = document.getElementById("chat-window");
-        chatWindow.style.display = "none";
+// Live validation to hide error when the user fixes the input
+$("#password1").on("input", function () {
+    var password = $(this).val();
+    var passwordPattern = /^(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{5,}$/;
+
+    if (passwordPattern.test(password)) {
+        $("#passwordError").hide(); // Hide error when password becomes valid
+        $(this).css("border", ""); // Reset border style
+    } else {
+        $("#passwordError").show(); // Show error if invalid
+        $(this).css("border", "2px solid red");
     }
+});
 
-    function handleQuickReply(message) {
-        const messagesContainer = document.getElementById("messages");
 
-        // Add the user's message
-        const userMessage = document.createElement("div");
-        userMessage.classList.add("user-message");
-        userMessage.textContent = message;
-        messagesContainer.appendChild(userMessage);
 
-        // Add the bot's response based on the selected message
-        const botResponse = document.createElement("div");
-        botResponse.classList.add("bot-message");
+    $("#username").on("input", function () {
+        var username = $(this).val();
 
-        if (message === "Support") {
-            botResponse.textContent = "For support, please call: 8210224732";
-        } else if (message === "Pricing") {
-            botResponse.textContent = "Our pricing starts from $1000. Please contact support for detailed pricing.";
-        } else if (message === "Hours") {
-            botResponse.textContent = "We are open for 5 hours every day.";
+        if (username.length > 0) {
+            $.ajax({
+                url: "{% url 'check_username' %}",
+                data: {
+                    'username': username
+                },
+                success: function (data) {
+                    if (data.is_taken) {
+                        $("#usernameError").show();
+                        $("#usernameSuccess").hide();
+                        $("#username").css("border", "2px solid red");
+                    } else {
+                        $("#usernameError").hide();
+                        $("#usernameSuccess").show();
+                        $("#username").css("border", "2px solid green");
+                    }
+                }
+            });
+        } else {
+            $("#usernameError").hide();
+            $("#usernameSuccess").hide();
+            $("#username").css("border", "");
         }
+    });
 
-        messagesContainer.appendChild(botResponse);
 
-        // Scroll to the bottom of the chat
-        messagesContainer.scrollTop = messagesContainer.scrollHeight;
-    }
+
 
     function toggleMenu() {
-const navLinks = document.querySelector('.nav-links');
-navLinks.classList.toggle('active');
-}
-
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('active');
+    }
 </script>
+
 </body>
 </html>

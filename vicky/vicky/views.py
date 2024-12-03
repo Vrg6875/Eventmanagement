@@ -872,10 +872,6 @@ def success(request):
 
 
 
-def vacant(request):
-     eventdata=vic_event.objects.all()
-     data={'eventdata':eventdata}
-     return render(request,"vacant.html",data)
 
 
 
@@ -947,43 +943,61 @@ def front(request):
 
 
 
-
-#signup
+from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
+from django.contrib import messages
+
 def register(request):
     if request.method == 'POST':
         # Retrieve form data
-        first_namee = request.POST.get('first_name')
-        last_namee = request.POST.get('last_name')
-        usernamee = request.POST.get('username')
-        password11 = request.POST.get('password1')
-        password22 = request.POST.get('password2')
+        first_name = request.POST.get('first_name')
+        last_name = request.POST.get('last_name')
+        username = request.POST.get('username')
+        password1 = request.POST.get('password1')
+        password2 = request.POST.get('password2')
 
-
-        # Check if all fields are filled
-        if not all([first_namee, last_namee, usernamee, password11, password22]):
+        # Validation checks
+        if not all([first_name, last_name, username, password1, password2]):
             messages.error(request, "All fields are required.")
-            return HttpResponseRedirect('/register')
+            return render(request, 'register.html', {
+                'form_data': request.POST
+            })
 
-        # Check if passwords match
-        if password11 == password22:
-            # Check if the username already exists
-            if User.objects.filter(username=usernamee).exists():
-                messages.error(request, 'Username already taken')
-            else:
-                # Create user
-                user = User.objects.create_user(username=usernamee,
-                                                password=password11,
-                                                first_name=first_namee,
-                                                last_name=last_namee)
-                messages.success(request, 'Account created successfully')
-        else:
-            messages.error(request, 'Passwords do not match')
+        if password1 != password2:
+            messages.error(request, "Passwords do not match.")
+            return render(request, 'register.html', {
+                'form_data': request.POST
+            })
 
-        # Redirect to the registration page
-        return HttpResponseRedirect('/register')
+        if User.objects.filter(username=username).exists():
+            messages.error(request, "Username already taken.")
+            return render(request, 'register.html', {
+                'form_data': request.POST
+            })
 
-    return render(request, "register.html")
+        # Create user if validation passes
+        User.objects.create_user(username=username, password=password1, first_name=first_name, last_name=last_name)
+        messages.success(request, "Account created successfully.")
+        return redirect('/login')
+
+    return render(request, 'register.html')
+
+
+
+from django.http import JsonResponse
+from django.contrib.auth.models import User
+
+def check_username(request):
+    username = request.GET.get('username', None)
+    data = {
+        'is_taken': User.objects.filter(username__iexact=username).exists()
+    }
+    return JsonResponse(data)
+
+
+
+
+
 
 
 
@@ -1022,6 +1036,8 @@ def logout_view(request):
 
 from event.models import vic_contact
 def contact(request):
+    data = {}
+    contactdetails = vic_contact.objects.all()
 
     if request.method == 'POST':
         try:    
@@ -1043,7 +1059,8 @@ def contact(request):
         except Exception as e:
             print(e) 
             pass 
-    return render(request,"contact.html")
+    data = {'contactdetails': contactdetails}        
+    return render(request,"contact.html",data)
 
 def about(request):
      
@@ -1087,4 +1104,159 @@ def entertainment(request):
 def meeting(request):
      
      return render(request,"meeting.html")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+from event.models import VicAdminLogin
+
+# Create admin user
+admin_user = VicAdminLogin.objects.filter(username="admin").first()
+if not admin_user:
+    admin_user = VicAdminLogin(username="admin")
+    admin_user.set_password("admin")
+    admin_user.save()
+    print("Admin user created successfully.")
+else:
+    print("Admin user already exists.")
+
+
+
+from django.shortcuts import render, redirect
+from event.models import VicAdminLogin
+
+def adminlogin(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        
+        # Authenticate using VicAdminLogin model
+        admin_user = VicAdminLogin.objects.filter(username=username).first()
+        if admin_user and admin_user.check_password(password):  # Check the hashed password
+            # Use session to log in the custom admin user
+            request.session['admin_user_id'] = admin_user.id
+            return redirect('showdetails')  # Replace 'showdetails' with your target URL name
+        else:
+            return render(request, 'adminlogin.html', {'error': 'Invalid username or password'})
+    
+    return render(request, 'adminlogin.html')
+
+
+
+
+
+from django.shortcuts import render, redirect
+from event.models import vic_event
+
+# Custom login check for the admin user
+def check_admin_login(request):
+    if 'admin_user_id' not in request.session:
+        return False
+    return True
+
+def vacant(request):
+    if not check_admin_login(request):
+        return redirect('adminlogin')  # Redirect to login if not logged in
+    
+    eventdata = vic_event.objects.all()
+    data = {'eventdata': eventdata}
+    return render(request, "vacant.html", data)
+
+
+def showdetails(request):
+    if not check_admin_login(request):
+        return redirect('adminlogin')  # Redirect to login if not logged in
+    
+    eventdata = vic_event.objects.all()
+    data = {'eventdata': eventdata}
+    return render(request, "showdetails.html", data)
+
+
+def adminlogout(request):
+    if 'admin_user_id' in request.session:
+        del request.session['admin_user_id']  # Clear the session
+    return redirect('adminlogin')  # Redirect to login page after logout
+
+def contactdetails(request):
+    if not check_admin_login(request):
+        return redirect('adminlogin')  # Redirect to login if not logged in
+    
+    contactdetails = vic_contact.objects.all()
+    data = {'contactdetails': contactdetails}
+    return render(request, "contactdetails.html", data)
+
+
+
+
+
+
+
+
+
+
+from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate
+from event.models import VicAdminLogin
+from event.forms import ChangeUsernamePasswordForm
+
+def change_username_password(request):
+    if request.method == 'POST':
+        form = ChangeUsernamePasswordForm(request.POST)
+        
+        if form.is_valid():
+            old_password = form.cleaned_data['old_password']
+            new_username = form.cleaned_data['new_username']
+            new_password = form.cleaned_data['new_password']
+            confirm_password = form.cleaned_data['confirm_password']
+
+            # Get the current logged-in admin user
+            admin_user = VicAdminLogin.objects.filter(username="admin").first()
+
+            if admin_user and admin_user.check_password(old_password):
+                if new_password == confirm_password:
+                    # Update the username and password
+                    admin_user.username = new_username
+                    admin_user.set_password(new_password)
+                    admin_user.save()
+                    return redirect('success')  # Redirect to a success page after changing the username and password
+                else:
+                    form.add_error('confirm_password', 'New passwords do not match.')
+            else:
+                form.add_error('old_password', 'Old password is incorrect.')
+        else:
+            form.add_error('old_password', 'Form is not valid')
+
+    else:
+        form = ChangeUsernamePasswordForm()
+
+    return render(request, 'change_username_password.html', {'form': form})
+
 

@@ -1,38 +1,26 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Home</title>
 
     {% load static %}
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-
-
-    <!-- Main CSS -->
-<link rel="stylesheet" href="{% static 'event.css' %}?v=1.0">
-
-
     <!-- Bootstrap CSS (from official CDN) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Main Custom CSS -->
+    <link rel="stylesheet" href="{% static 'event.css' %}?v=1.0">
 
     <!-- Google Font (Pacifico) -->
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-    <!-- Optional: Local Bootstrap CSS (ensure the file exists in your static directory) -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 </head>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <body>
 <!-- Navbar Section -->
 <div class="navbar">
@@ -41,285 +29,170 @@
         <span></span>
         <span></span>
     </div>
-    <!-- Heading for mobile view -->
-    <div class="brand-heading">Vicky Event</div>
+    <div class="brand-heading"><a href="/front/">Vicky Event</a></div>
     <ul class="nav-links">
-        <!-- <li class="neta">
-            <img src="{% static 'logo.jpg' %}" width="180" height="80" alt="Logo" style="filter: brightness(2.3); margin-right: 800px;">
-        </li> -->
         <li><a href="/front/">Home</a></li>
         <li><a href="/about/">About Us</a></li>
         <li><a href="/contact/">Contact Us</a></li>
         <li><a href="/ourwork/">Our Work</a></li>
         <li><a href="/auth/">Get Started / Sign In</a></li>
-        
     </ul>
 </div>
 
-    <div class="header">
-        <img src="https://media.istockphoto.com/id/471906412/photo/beautiful-table-setting-for-an-wedding-reception-or-an-event.jpg?s=2048x2048&w=is&k=20&c=_eAWgEvA_hOaeJ4kQLJWR7rwFcmIm6h9_Z83B59t_fk=" alt="Wedding" style="filter: brightness(0.5);">
-        
-        <!-- Overlay Form Container -->
-        <div class="overlay">
-            
-            <form method="post" action="{% url 'event' %}">
-                {% csrf_token %}
-
-
-
-
-                {% if messages %}
-                <ul class="messages">
-                    {% for message in messages %}
-                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-                    {% endfor %}
-                </ul>
-                {% endif %}
-
-                <h2>Book <span style="color: rgba(237, 47, 18, 0.866);">Now!</span></h2>
-                <br>
-                <br>
-
-                <!-- Form Fields -->
-                <div>
-                    <label>Your name:</label>
-                    <input type="text" id="your-name" name="your_name" required>
-                </div>
-
-                <br>
-                <div>
-                    <label>Event Name:</label>
-                    <input type="text" id="event-name" name="event-name" required>
-                </div>
-
-                <br>
-                <div>
-                    <label>Event Date:</label>
-                    <input type="date" id="event-date" name="event-date" required>
-                </div>
-
-                <br>
-                <div>
-                    <label>Your Mail:</label>
-                    <input type="email" id="event-mail" name="mail" required>
-                </div>
-
-                <br>
-                <div>
-                    <label>Select City:</label>
-                    <select class="form-control" id="inputState" name="state" required>
-                        <option value="">Select City</option>
-                        <option value="Chandigarh">Chandigarh</option>
-                        <option value="Panchkula">Panchkula</option>
-                        <option value="Mohali">Mohali</option>
-                    </select>
-                </div>
-
-                <br>
-                <div>
-                    <label>Event Description:</label>
-                    <textarea id="event-description" name="event-description" rows="4" cols="27" required></textarea>
-                </div>
-
-                <br>
-                <div>
-                    <label>Total No of Guests:</label>
-                    <input type="number" id="guests" name="guests" min="0" required>
-                </div>
-
-                <br>
-                <div>
-                    <label>Event Category:</label>
-                    <select id="event-category" name="event-category" required>
-                        <option value="meeting">Meeting</option>
-                        <option value="party">Party</option>
-                        <option value="appointment">Appointment</option>
-                        <option value="festival">Festival</option>
-                    </select>
-                </div>
-
-                <br>
-                <div>
-                    <input type="submit" value="BOOK EVENT">
-                </div>
-            </form>
-
-
-               
-        </div>
-    </div>
-  
-    <br>
-    <h2 style="background-color: black; color: white; padding: 10px; text-align: center; border-radius: 5px;">
-        Find Us Here
-    </h2>
-
-
-    <div class="footer-container">
-        <!-- Address Section (Left side) -->
-        <div class="address">
-            <p>
-                Sunrise Enclave<br>
-                Sector 127<br>
-                PIN Code: 140301<br>
-                Mobile No: 8210224732<br>
-                10:00 AM-7:00PM/Monday-Saturday<br>
-                vickyrajgupta2003@gmail.com
-            </p>
-            <div class="social">
-                <a href="https://www.instagram.com" target="_blank" style="margin-right: 10px;">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr7A-iO0im7zectdU5ii8z3noYwBOFq4VC6A&s" alt="Instagram" width="40">
-                </a>
-                <a href="https://www.youtube.com" target="_blank">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQucwI6Jvs_U3R8wuKGgaGg9gvnvDCRA0xp5w&s" alt="YouTube" width="40">
-                </a>
-                &nbsp;
-                <a href="https://www.twitter.com" target="_blank" style="margin-right: 10px;">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSimLbnT2Q8AfXMrhyUJpWg_z6omMi5FOW6qw&s">
-                </a>
-            </div>
-        </div>
-
-        <!-- Social Media Links Section -->
-
-
-        <!-- Map Section (Right side) -->
-        <div class="map">
-            <iframe src="https://maps.google.com/maps?q=Sunrise%20Enclave%2C%20Sector%20127%2C%20Mohali&t=&z=13&ie=UTF8&iwloc=&output=embed" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen></iframe>
-        </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <div class="content">
-            <h1>Best Wedding Planner in Chandigarh</h1>
-            <p>Putting all the beautiful pieces together and crafting one-of-a-kind experiences.</p><br>
-            <a href="/contact" class="vicky">Contact us</a>
-        </div>
-
-
-
-
-
-
-
-
-        <div class="foot">
-            <p>&copy;2024 Vicky Event planner. All rights reserved.</p>
-        </div>
-
-   
-
-      
-        <script>
-            document.querySelector("form").addEventListener("submit", function (event) {
-                let isValid = true;
-        
-                // Check if all fields are filled
-                this.querySelectorAll("input, select, textarea").forEach(field => {
-                    if (!field.value.trim()) {
-                        field.style.border = "2px solid red";
-                        isValid = false;
-                    } else {
-                        field.style.border = "";
-                    }
-                });
-        
-                if (!isValid) {
-                    alert("Please fill out all required fields.");
-                    event.preventDefault();
-                }
-            });
-          
-
+<div class="header">
+    <img src="https://media.istockphoto.com/id/471906412/photo/beautiful-table-setting-for-an-wedding-reception-or-an-event.jpg?s=2048x2048&w=is&k=20&c=_eAWgEvA_hOaeJ4kQLJWR7rwFcmIm6h9_Z83B59t_fk=" alt="Wedding" style="filter: brightness(0.5);">
     
-    function toggleChat() {
-        const chatWindow = document.getElementById("chat-window");
-        chatWindow.style.display = chatWindow.style.display === "none" ? "block" : "none";
-    }
+    <div class="overlay">
+        <form method="post" action="{% url 'event' %}">
+            {% csrf_token %}
+            
+          
+            <h2>Book <span style="color: rgba(237, 47, 18, 0.866);">Now!</span></h2>
+            <br><br>
 
-    function closeChat() {
-        const chatWindow = document.getElementById("chat-window");
-        chatWindow.style.display = "none";
-    }
+            <!-- Form Fields -->
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            <div>
+                <label>Your name:</label>
+                <input type="text" id="your-name" name="your_name" required>
+            </div>
+            <br>
+            <div>
+                <label>Event Name:</label>
+                <input type="text" id="event-name" name="event-name" required>
+            </div>
+            <br>
+            <div>
+                <label>Event Date:</label>
+                <input type="date" id="event-date" name="event-date" required>
+            </div>
+            <br>
+            <div>
+                <label>Your Mail:</label>
+                <input type="email" id="event-mail" name="mail" required>
+            </div>
+            <br>
+            <div>
+                <label>Select City:</label>
+                <select class="form-control" id="inputState" name="state" required>
+                    <option value="">Select City</option>
+                    <option value="Chandigarh">Chandigarh</option>
+                    <option value="Panchkula">Panchkula</option>
+                    <option value="Mohali">Mohali</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label>Event Description:</label>
+                <textarea id="event-description" name="event-description" rows="4" cols="27" required></textarea>
+            </div>
+            <br>
+            <div>
+                <label>Total No of Guests:</label>
+                <input type="number" id="guests" name="guests" min="0" required>
+            </div>
+            <br>
+            <div>
+                <label>Event Category:</label>
+                <select id="event-category" name="event-category" required>
+                    <option value="meeting">Meeting</option>
+                    <option value="party">Party</option>
+                    <option value="appointment">Appointment</option>
+                    <option value="festival">Festival</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <input type="submit" value="BOOK EVENT">
+            </div>
+        </form>
+    </div>
+</div>
 
-    function handleQuickReply(message) {
-        const messagesContainer = document.getElementById("messages");
+<br>
+<h2 style="background-color: black; color: white; padding: 10px; text-align: center; border-radius: 5px;">
+    Find Us Here
+</h2>
 
-        // Add the user's message
-        const userMessage = document.createElement("div");
-        userMessage.classList.add("user-message");
-        userMessage.textContent = message;
-        messagesContainer.appendChild(userMessage);
+<div class="footer-container">
+    <div class="address">
+        <p>
+            Sunrise Enclave<br>
+            Sector 127<br>
+            PIN Code: 140301<br>
+            Mobile No: 8210224732<br>
+            10:00 AM-7:00PM/Monday-Saturday<br>
+            vickyrajgupta2003@gmail.com
+        </p>
+        <div class="social">
+            <a href="https://www.instagram.com" target="_blank" style="margin-right: 10px;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr7A-iO0im7zectdU5ii8z3noYwBOFq4VC6A&s" alt="Instagram" width="40">
+            </a>
+            <a href="https://www.youtube.com" target="_blank">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQucwI6Jvs_U3R8wuKGgaGg9gvnvDCRA0xp5w&s" alt="YouTube" width="40">
+            </a>
+            <a href="https://www.twitter.com" target="_blank" style="margin-right: 10px;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSimLbnT2Q8AfXMrhyUJpWg_z6omMi5FOW6qw&s">
+            </a>
+        </div>
+    </div>
+    <div class="map">
+        <iframe src="https://maps.google.com/maps?q=Sunrise%20Enclave%2C%20Sector%20127%2C%20Mohali&t=&z=13&ie=UTF8&iwloc=&output=embed" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen></iframe>
+    </div>
+</div>
 
-        // Add the bot's response based on the selected message
-        const botResponse = document.createElement("div");
-        botResponse.classList.add("bot-message");
+<div class="content">
+    <h1>Best Wedding Planner in Chandigarh</h1>
+    <p>Putting all the beautiful pieces together and crafting one-of-a-kind experiences.</p><br>
+    <a href="/contact" class="vicky">Contact us</a>
+</div>
 
-        if (message === "Support") {
-            botResponse.textContent = "For support, please call: 8210224732";
-        } else if (message === "Pricing") {
-            botResponse.textContent = "Our pricing starts from $1000. Please contact support for detailed pricing.";
-        } else if (message === "Hours") {
-            botResponse.textContent = "We are open for 5 hours every day.";
+<div class="foot">
+    <p>&copy;2024 Vicky Event planner. All rights reserved.</p>
+</div>
+
+<script>
+   
+   
+    document.querySelector("form").addEventListener("submit", function (event) {
+        let isValid = true;
+        // Loop through all input, select, and textarea fields in the form
+        this.querySelectorAll("input[required], select[required], textarea[required]").forEach(function(field) {
+            if (!field.value.trim()) {
+                field.style.border = "2px solid red";  // Highlight empty field with red border
+                isValid = false;  // Mark form as invalid
+            } else {
+                field.style.border = "";  // Remove red border if field is filled
+            }
+        });
+
+        // If the form is invalid (i.e., some required fields are empty)
+        if (!isValid) {
+            alert("Please fill out all required fields.");
+            event.preventDefault();  // Prevent form submission
         }
+    });
 
-        messagesContainer.appendChild(botResponse);
 
-        // Scroll to the bottom of the chat
-        messagesContainer.scrollTop = messagesContainer.scrollHeight;
-    }
+
+
+
+
+
+
+
 
     function toggleMenu() {
-const navLinks = document.querySelector('.nav-links');
-navLinks.classList.toggle('active');
-}
-
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('active');
+    }
 </script>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

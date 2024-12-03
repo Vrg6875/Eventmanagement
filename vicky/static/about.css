@@ -2,6 +2,36 @@
 
 
 
+.brand-heading a {
+    text-decoration: none; /* Removes underline */
+    color: #fff; /* White text color */
+    font-family: inherit; /* Inherits the font-family from parent */
+    font-weight: inherit; /* Inherits the font-weight from parent */
+    font-size: inherit; /* Inherits the font size from parent */
+}
+
+/* Optional: Add hover effect for better interactivity */
+.brand-heading a:hover {
+    color: #e75e45; /* Change to a gold/yellow color on hover */
+   /* Add underline on hover */
+}
+
+@media (max-width: 768px) {
+    .brand-heading a {
+        text-decoration: none; /* Removes underline */
+        color: #fff; /* White text color */
+        font-family: inherit; /* Inherits the font-family from parent */
+        font-weight: inherit; /* Inherits the font-weight from parent */
+        font-size: inherit; /* Inherits the font size from parent */
+    }
+
+    /* Optional: Add hover effect for better interactivity on mobile */
+    .brand-heading a:hover {
+        color: #e0743a; /* Change to a gold/yellow color on hover */
+        /* Add underline on hover */
+    }
+}
+
 
 /* Base Styling */
 .first {
@@ -10,9 +40,9 @@
     color: #e8e1e1; /* Light gray text color */
     font-size: 2rem; /* Adjust font size */
     text-align: center; /* Center the text */
-   margin-bottom: -10px;
-  
-   margin-left: -310px;
+    margin-bottom: -10px;
+
+    margin-left: -310px;
     background-color: #370303; /* Dark red background color */
     width: 120%; /* Ensure the background spans the full width of the container */
     padding: 30px; /* Add vertical padding for better spacing */
@@ -31,16 +61,16 @@
         font-family: 'Playfair Display', serif; /* Elegant font choice */
         font-style: italic; /* Italicize the text */
         color: #e8e1e1; /* Light gray text color */
-        font-size: 1.2rem; /* Adjust font size */
+        font-size: 0.9rem; /* Adjust font size */
         text-align: center; /* Center the text */
-       margin-bottom: -15px;
-       
-       margin-left: -316px;
-     
+        margin-bottom: -15px;
+        margin-top: -15px;
+        margin-left: -261px;
+
         background-color: #370303; /* Dark red background color */
-        width: 180%; /* Ensure the background spans the full width of the container */
+        width: 155%; /* Ensure the background spans the full width of the container */
         padding: 30px; /* Add vertical padding for better spacing */
-        
+
     }
 }
 
@@ -397,18 +427,18 @@ body {
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Great+Vibes&display=swap');
 
 .logo {
-    font-size: 2.7rem; 
+    font-size: 2.7rem;
     color: #490606 ;/* Reduce font size for better readability on smaller screens */
      /* Remove excessive right margin */
      /* Center align on mobile */
-    margin-right: 270px; 
+    margin-right: 270px;
     text-align: left; /* Ensure text stays centered */
     letter-spacing: 0.5px; /* Slightly tighter letter spacing */
     display: flex; /* Use Flexbox to align text horizontally */
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
     white-space: nowrap;
-    
+
     font-family: 'Great Vibes'; /* Prevent line breaks within the text */
 }
 
@@ -699,7 +729,7 @@ body {
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
-    
+
     .logofront {
         width: 150px;
         height: 70px;
@@ -708,10 +738,12 @@ body {
     /* Adjust carousel on smaller screens */
     .carousel-inner {
         height: 300px;
+        width: 200px;
     }
 
     .carousel-item img {
         height: 100%;
+        width: 200px;
     }
 }
 
@@ -884,9 +916,6 @@ a {
     color: #007bff;
 }
 
-a:hover {
-    text-decoration: underline;
-}
 
 /* Error Message Styles */
 .messages {
@@ -906,7 +935,7 @@ a:hover {
 table {
     width: auto; /* Allows the table to fit its content */
     color: white; /* Text color */
-  
+
 }
 
 th, td {
@@ -928,9 +957,6 @@ a {
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline;
-}
 
 
 
@@ -1106,7 +1132,7 @@ textarea {
 .l-image {
     /* Sets image width to 100% of its container */
    max-width: 400px;  /* Maximum width of 300px */
-   height: 60px; 
+   height: 60px;
    display: flex;
    justify-content: flex-start; /* Align image to the left */
    width: 100%;
@@ -1215,7 +1241,7 @@ textarea {
 .r-image {
     /* Sets image width to 100% of its container */
    max-width: 400px;  /* Maximum width of 300px */
-   height: 600px; 
+   height: 600px;
    display: flex;
    justify-content: flex-start; /* Align image to the left */
    width: 100%;
@@ -1225,9 +1251,9 @@ textarea {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-   
-  
-  
+
+
+
 
     .right-image, .left-image {
         width: 100%; /* Ensure images are responsive */
@@ -1247,8 +1273,8 @@ textarea {
         font-size: 1rem;
     }
 
-   
-  
+
+
     h1 {
         font-size: 1.5em;
     }
@@ -1309,7 +1335,7 @@ textarea {
 
 .foot p {
     margin: 0; /* Remove the default margin of the paragraph element */
-    font-size: 20px; /* Set the font size of the text */
+    font-size: 15px; /* Set the font size of the text */
 }
 
 /* Event Styles */

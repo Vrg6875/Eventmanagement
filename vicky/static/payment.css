@@ -35,7 +35,7 @@ body {
     align-items: center;
     flex-direction: column;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 415px) {
     form {
         max-width: 90%;
         font-size: 0.9rem;
@@ -352,7 +352,7 @@ body {
 }
 
 /* Mobile responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 415px) {
 
     .logofront {
         width: 150px;
@@ -917,7 +917,7 @@ textarea {
 }
 
 /* Mobile Styles */
-@media (max-width: 768px) {
+@media (max-width: 415px) {
     
     .services-grid, .vicky-grid {
         grid-template-columns: 1fr; /* Single column for services and vicky-grid on mobile */
@@ -1020,7 +1020,7 @@ body {
 /* Media Queries */
 
 /* For tablets and medium devices */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 415px) {
     .foot {
         font-size: 1rem; /* Adjust font size for medium screens */
         padding: 15px 0; /* Adjust padding */
@@ -1397,7 +1397,7 @@ div input {
 }
 
 /* Media Query for Smaller Screens */
-@media (max-width: 768px) {
+@media (max-width: 415px) {
     div label {
         width: auto; /* Remove fixed width for smaller screens */
         text-align: left; /* Align text to the left */

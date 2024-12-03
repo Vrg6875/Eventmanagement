@@ -35,6 +35,8 @@ urlpatterns = [
    
     path('register/',views.register,name='register'),
 
+    path('check_username/', views.check_username, name='check_username'),
+
     path('login/',views.login,name='login'),
 
     
@@ -61,7 +63,18 @@ urlpatterns = [
     path('success/',views.success, name='success'),
 
     path('payment/',views.payment, name='payment'),
+
+    path('adminlogin/',views.adminlogin, name='adminlogin'),
+
+    path('adminlogout/', views.adminlogout, name='adminlogout'),
+
+    path('showdetails/', views.showdetails, name='showdetails'),
+
+
+    path('contactdetails/', views.contactdetails, name='contactdetails'),
     
+
+    path('change_username_password/', views.change_username_password, name='change_username_password'),
 
 
 

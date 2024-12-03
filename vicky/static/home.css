@@ -10,9 +10,9 @@
     color: #e8e1e1; /* Light gray text color */
     font-size: 2rem; /* Adjust font size */
     text-align: center; /* Center the text */
-   margin-bottom: -10px;
+    margin-bottom: -10px;
   
-   margin-left: -310px;
+    margin-left: -310px;
     background-color: #370303; /* Dark red background color */
     width: 120%; /* Ensure the background spans the full width of the container */
     padding: 30px; /* Add vertical padding for better spacing */
@@ -31,16 +31,21 @@
         font-family: 'Playfair Display', serif; /* Elegant font choice */
         font-style: italic; /* Italicize the text */
         color: #e8e1e1; /* Light gray text color */
-        font-size: 1.3rem; /* Adjust font size */
+        font-size: 1.1rem; /* Adjust font size */
         text-align: center; /* Center the text */
-       margin-bottom: -15px;
+        margin-bottom: -15px;
        
-       margin-left: -210px;
+        margin-left: -128px;
      
         background-color: #370303; /* Dark red background color */
-        width: 180%; /* Ensure the background spans the full width of the container */
+        width: 131%; /* Ensure the background spans the full width of the container */
         padding: 30px; /* Add vertical padding for better spacing */
         
+    }
+    .first p {
+        margin-left: 150px;  /* Even smaller margin for very small screens */
+        padding: 5px; /* Even smaller padding */
+        font-size: 20px; /* Optional: Adjust font size further */
     }
 }
 
@@ -112,6 +117,22 @@
 
 
 @media screen and (max-width: 768px) {
+
+
+.foot {
+    text-align: center;
+    background-color: #5a0505;
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 0.5rem;
+    text-wrap: nowrap;
+}
+
+.foot p {
+    margin: 0; /* Remove the default margin of the paragraph element */
+    font-size: 10px; /* Set the font size of the text */
+}
     .footer-container {
         flex-direction: column;
         text-align: center;
@@ -668,12 +689,12 @@ h2 {
     color: #fff;
     padding: 15px;
     margin-bottom: 10px;
-    font-size: 0.9rem;
+    font-size: 0.4rem;
 }
 
 .foot p {
     margin: 0; /* Remove the default margin of the paragraph element */
-    font-size: 20px; /* Set the font size of the text */
+    font-size: 15px; /* Set the font size of the text */
 }
 
 /* Chatbot Container */
@@ -810,9 +831,7 @@ h2 {
 
     
 
-    .foot {
-        padding: 10px; /* Adjust footer padding */
-    }
+   
 
     .chat-window {
         width: 90%; /* Make chat window responsive */
@@ -895,20 +914,7 @@ h2 {
 }
 
 
-/* Footer Styles */
-.foot {
-    text-align: center;
-    background-color: #5a0505;
-    color: #fff;
-    padding: 15px;
-    margin-bottom: 10px;
-    font-size: 0.9rem;
-}
 
-.foot p {
-    margin: 0; /* Remove the default margin of the paragraph element */
-    font-size: 20px; /* Set the font size of the text */
-}
 
 /* Chatbot Container */
 .chatbot-container {
@@ -1045,9 +1051,6 @@ h2 {
     }
 
 
-    .foot {
-        padding: 10px; /* Adjust footer padding */
-    }
 
     .chat-window {
         width: 90%; /* Make chat window responsive */
@@ -1126,20 +1129,7 @@ h2 {
 }
 
 
-/* Footer Styles */
-.foot {
-    text-align: center;
-    background-color: #5a0505;
-    color: #fff;
-    padding: 15px;
-    margin-bottom: 10px;
-    font-size: 0.9rem;
-}
 
-.foot p {
-    margin: 0; /* Remove the default margin of the paragraph element */
-    font-size: 20px; /* Set the font size of the text */
-}
 
 /* Chatbot Container */
 .chatbot-container {
@@ -1334,20 +1324,7 @@ h2 {
     width: 300px;
 }
 
-/* Footer Styles */
-.foot {
-    text-align: center;
-    background-color: #5a0505;
-    color: #fff;
-    padding: 15px;
-    margin-bottom: 10px;
-    font-size: 0.9rem;
-}
 
-.foot p {
-    margin: 0; /* Remove the default margin of the paragraph element */
-    font-size: 20px; /* Set the font size of the text */
-}
 
 /* Chatbot Container */
 .chatbot-container {
@@ -1486,10 +1463,7 @@ h2 {
     }
 
    
-    .foot {
-        padding: 10px; /* Adjust footer padding */
-    }
-
+    
     .chat-window {
         width: 90%; /* Make chat window responsive */
         right: 5%; /* Center chat window */
@@ -1570,19 +1544,6 @@ h2 {
 
 
 /* Footer Styles */
-.foot {
-    text-align: center;
-    background-color: #5a0505;
-    color: #fff;
-    padding: 15px;
-    margin-bottom: 10px;
-    font-size: 0.9rem;
-}
-
-.foot p {
-    margin: 0; /* Remove the default margin of the paragraph element */
-    font-size: 20px; /* Set the font size of the text */
-}
 
 /* Chatbot Container */
 .chatbot-container {
@@ -1722,9 +1683,6 @@ h2 {
 
     
 
-    .foot {
-        padding: 10px; /* Adjust footer padding */
-    }
 
     .chat-window {
         width: 90%; /* Make chat window responsive */
@@ -1865,7 +1823,63 @@ body {
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Lora:wght@400;700&display=swap');
 
 /* Default: Hidden */
+
+
+
+
+
+
+.brand-heading a {
+    text-decoration: none; /* Removes underline */
+    color: #fff; /* White text color */
+    font-family: inherit; /* Inherits the font-family from parent */
+    font-weight: inherit; /* Inherits the font-weight from parent */
+    font-size: inherit; /* Inherits the font size from parent */
+}
+
+/* Optional: Add hover effect for better interactivity */
+.brand-heading a:hover {
+    color: #e75e45; /* Change to a gold/yellow color on hover */
+   /* Add underline on hover */
+}
+
+@media (max-width: 768px) {
+    .brand-heading a {
+        text-decoration: none; /* Removes underline */
+        color: #fff; /* White text color */
+        font-family: inherit; /* Inherits the font-family from parent */
+        font-weight: inherit; /* Inherits the font-weight from parent */
+        font-size: inherit; /* Inherits the font size from parent */
+    }
+
+    /* Optional: Add hover effect for better interactivity on mobile */
+    .brand-heading a:hover {
+        color: #e0743a; /* Change to a gold/yellow color on hover */
+        /* Add underline on hover */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .brand-heading {
+
+    
     display: none; /* Hidden by default */
     color: #fff;
     font-size: 36px; /* Larger font size for more impact */
@@ -1884,7 +1898,7 @@ body {
 @keyframes slideIn {
     0% {
         opacity: 0;
-        transform: translateY(-30px) scale(0.8); /* Start smaller and above */
+        transform: translateY(-30px) scale(0.1); /* Start smaller and above */
     }
     50% {
         opacity: 0.6;
@@ -2023,20 +2037,7 @@ h2 {
 }
 
 
-/* Footer Styles */
-.foot {
-    text-align: center;
-    background-color: #5a0505;
-    color: #fff;
-    padding: 15px;
-    margin-bottom: 10px;
-    font-size: 0.9rem;
-}
 
-.foot p {
-    margin: 0; /* Remove the default margin of the paragraph element */
-    font-size: 20px; /* Set the font size of the text */
-}
 
 /* Chatbot Container */
 .chatbot-container {

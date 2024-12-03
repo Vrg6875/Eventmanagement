@@ -1,3 +1,103 @@
+
+@media screen and (max-width: 415px) {
+    form {
+        max-width: 90%;
+        font-size: 0.9rem;
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 88%;
+        height: 90%;
+        /* Dark overlay */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .header {
+        position: relative;
+        width: 120%;
+        height: 100vh;
+        overflow: hidden;
+    }
+    
+    /* Image Styling */
+    .header img {
+        width: 230%;
+        height: 70%;
+        object-fit:contain;
+        filter: brightness(0.6);
+    }
+
+    form h2 {
+        font-size: 1.5rem;
+    }
+
+    form input, form .vicky {
+        font-size: 0.9rem;
+    }
+}
+/* Form Styling */
+.overlay form {
+    /* Slightly darker background for the form */
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+   
+    text-align: center;
+}
+
+/* Heading Styling */
+.overlay h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Input Styling */
+.overlay input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Submit Button Styling */
+.vicky {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.vicky:hover {
+    background-color: #45a049;
+}
+
+/* Link Styling for Signup */
+.overlay p a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.overlay p a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
 body, html {
     margin: 0;
     padding: 0;
@@ -192,7 +292,7 @@ body {
 }
 
 /* Mobile responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 415px) {
     .navbar ul {
         flex-direction: column;
         text-align: center;
@@ -760,7 +860,7 @@ textarea {
 }
 
 /* Mobile Styles */
-@media (max-width: 768px) {
+@media (max-width: 415px) {
     .navbar ul {
         flex-direction: column;
         align-items: center;

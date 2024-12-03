@@ -179,7 +179,7 @@ body {
         max-width: 90%;
         font-size: 0.9rem;
     }
-   
+
 
 
 
@@ -188,7 +188,7 @@ label {
     display: block;
     text-align: left;
     margin-right: 260px;
-    
+
     margin-top: 0px;
     font-weight: bold;
     color: white;
@@ -212,7 +212,7 @@ label {
         height: 60vh;
         overflow: hidden;
     }
-    
+
     /* Image Styling */
     .header img {
         width: 340%;
@@ -234,15 +234,15 @@ label {
         /* Slightly darker background for the form */
         padding: 200px;
         border-radius: 8px;
-        width: 50%;
+        width: 70%;
         max-width: 500px;
-        margin-left: 100px;
+        margin-left: 70px;
         margin-bottom: 70%;
         text-align: left;
-      
-        
+
+
     }
-    
+
 }
 
 
@@ -256,10 +256,10 @@ label {
     width: 50%;
     max-width: 400px;
     margin-bottom:10%;
-   
+
     text-align: left;
-  
-    
+
+
 }
 /* Logo Styling */
 .logo {
@@ -561,7 +561,7 @@ label {
 
 
 
-    
+
 
     .logofront {
         width: 150px;
@@ -696,7 +696,7 @@ span {
         text-shadow: 1.5px 1.5px 3px rgba(0, 0, 0, 0.4);
         margin-right: 180px; /* Subtle shadow */
     }
-   
+
 }
 
 /* For small screens (phones, 576px and below) */
@@ -709,9 +709,9 @@ span {
     color: #e8e1e1; /* Light gray text color */
     font-size: 2rem; /* Adjust font size */
     text-align: center; /* Center the text */
-   margin-bottom: -25px;
-  
-   margin-left: -310px;
+    margin-bottom: -25px;
+
+    margin-left: -310px;
     background-color: #370303; /* Dark red background color */
     width: 120%; /* Ensure the background spans the full width of the container */
     padding: 30px; /* Add vertical padding for better spacing */
@@ -722,7 +722,7 @@ span {
 }
 
 
-/* Media Queries */
+
 
 /* For medium screens (tablets, 768px and below) */
 @media (max-width: 768px) {
@@ -730,16 +730,37 @@ span {
         font-family: 'Playfair Display', serif; /* Elegant font choice */
         font-style: italic; /* Italicize the text */
         color: #e8e1e1; /* Light gray text color */
-        font-size: 1.4rem; /* Adjust font size */
+        font-size: 0.9rem; /* Adjust font size */
         text-align: center; /* Center the text */
-       margin-bottom: -25px;
-       
-       margin-left: -310px;
-     
+        margin-bottom: -25px;
+        margin-top: -5px;
+        margin-left: -250px;
+
         background-color: #370303; /* Dark red background color */
-        width: 170%; /* Ensure the background spans the full width of the container */
+        width: 152%; /* Ensure the background spans the full width of the container */
         padding: 30px; /* Add vertical padding for better spacing */
-        
+
+    }
+}
+
+
+
+/* For medium screens (tablets, 768px and below) */
+@media (max-width: 400px) {
+    .first {
+        font-family: 'Playfair Display', serif; /* Elegant font choice */
+        font-style: italic; /* Italicize the text */
+        color: #e8e1e1; /* Light gray text color */
+        font-size: 0.9rem; /* Adjust font size */
+        text-align: center; /* Center the text */
+        margin-bottom: -25px;
+        margin-top: -58px;
+        margin-left: -250px;
+
+        background-color: #370303; /* Dark red background color */
+        width: 180%; /* Ensure the background spans the full width of the container */
+        padding: 30px; /* Add vertical padding for better spacing */
+
     }
 }
 
@@ -915,7 +936,8 @@ label {
     display: block;
     text-align: left;
     margin-right: 240px;
-    
+    text-wrap: nowrap;
+
     margin-top: 0px;
     font-weight: bold;
     color: white;
@@ -924,7 +946,7 @@ label {
 /* Input Styles */
 input {
     width: 100%;
-    
+
     box-sizing: border-box;
 }
 
@@ -1036,7 +1058,7 @@ textarea {
 .text-image-container p {
     flex: 1; /* Allows text to take up available space */
     text-align: justify;
-   
+
     line-height: 1.6;
     font-size: 16px;
     max-width: 600px;
@@ -1063,7 +1085,7 @@ textarea {
 .l-image {
     /* Sets image width to 100% of its container */
    max-width: 500px;  /* Maximum width of 300px */
-   height: 60px; 
+   height: 60px;
    display: flex;
    justify-content: flex-start; /* Align image to the left */
    width: 100%;
@@ -1175,7 +1197,7 @@ textarea {
 .r-image {
     /* Sets image width to 100% of its container */
    max-width: 500px;  /* Maximum width of 300px */
-   height: 600px; 
+   height: 600px;
    display: flex;
    justify-content: flex-start; /* Align image to the left */
    width: 100%;
@@ -1185,12 +1207,12 @@ textarea {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-    
+
     .services-grid, .vicky-grid {
         grid-template-columns: 1fr; /* Single column for services and vicky-grid on mobile */
     }
 
-    
+
 
     .right-image, .left-image {
         width: 100%; /* Ensure images are responsive */
@@ -1210,8 +1232,8 @@ textarea {
         font-size: 1rem;
     }
 
-   
-  
+
+
     h1 {
         font-size: 1.5em;
     }
@@ -1282,6 +1304,10 @@ body {
     width: 100%; /* Full width */
     margin-top: auto; /* Push the footer to the bottom */
     position: relative; /* Default position */
+}
+.foot p {
+    margin: 0; /* Remove the default margin of the paragraph element */
+    font-size: 15px; /* Set the font size of the text */
 }
 
 /* Media Queries */
@@ -1709,6 +1735,37 @@ a:hover {
     border-radius: 5px;
 }
 
+
+
+.brand-heading a {
+    text-decoration: none; /* Removes underline */
+    color: #fff; /* White text color */
+    font-family: inherit; /* Inherits the font-family from parent */
+    font-weight: inherit; /* Inherits the font-weight from parent */
+    font-size: inherit; /* Inherits the font size from parent */
+}
+
+/* Optional: Add hover effect for better interactivity */
+.brand-heading a:hover {
+    color: #e75e45; /* Change to a gold/yellow color on hover */
+   /* Add underline on hover */
+}
+
+@media (max-width: 768px) {
+    .brand-heading a {
+        text-decoration: none; /* Removes underline */
+        color: #fff; /* White text color */
+        font-family: inherit; /* Inherits the font-family from parent */
+        font-weight: inherit; /* Inherits the font-weight from parent */
+        font-size: inherit; /* Inherits the font size from parent */
+    }
+
+    /* Optional: Add hover effect for better interactivity on mobile */
+    .brand-heading a:hover {
+        color: #e0743a; /* Change to a gold/yellow color on hover */
+        /* Add underline on hover */
+    }
+}
 
 
 

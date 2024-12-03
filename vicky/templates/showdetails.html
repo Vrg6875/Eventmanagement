@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+
+
+    <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -13,7 +15,7 @@
 
 
     <!-- Main CSS -->
-<link rel="stylesheet" href="{% static 'getting.css' %}?v=1.0">
+<link rel="stylesheet" href="{% static 'showdetails.css' %}?v=1.0">
 
 
     <!-- Bootstrap CSS (from official CDN) -->
@@ -44,37 +46,30 @@
         <!-- <li class="neta">
             <img src="{% static 'logo.jpg' %}" width="180" height="80" alt="Logo" style="filter: brightness(2.3); margin-right: 800px;">
         </li> -->
-        <li><a href="">Home</a></li>
-        <li><a href="/about/">About Us</a></li>
-        <li><a href="/contact/">Contact Us</a></li>
-        <li><a href="/ourwork/">Our Work</a></li>
-        <li><a href="/auth/">Get Started / Sign In</a></li>
-        <li><a href="/event/">Book Event</a></li>
+        <li><a href="/vacant/">Event Details</a></li>
+        <li><a href="/contactdetails/">Contact Details</a></li>
+        <li><a href="/adminlogout/">Logout</a></li>
+        
     </ul>
 </div>
 
     
-  
-<div class="header">
-    <img src="https://images.unsplash.com/photo-1425421598808-4a22ce59cc97?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Wedding" style="filter: brightness(0.5);">
-    <div class="overlay">
-       
-        
-                <p class="cta-text">Already a member?</p> 
-                <a class="cta-link" href="/login/">Log in here</a>
-    
-                <p class="cta-text">New to vicky Events?</p> 
-                <a class="cta-link" href="/register/">Join us today</a>
-            
-        </div>
+    <div class="header">
+        <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Wedding" style="filter: brightness(0.5);">
+        <div class="overlay">
+            <div>
+            </div>
+            <div>
+                <h2 class= "home"> Go To Your event book details</h2> <a href="/vacant/"><h3>Click</h3></a></p>
+                </div>
+                <div>
+                    <h2 class="home">go to your contact details</h2>
+                    <a href="/contactdetails/" class="btn btn-delete">Click</a>
+                </div>
     </div>
-
-
-    <div class="content">
-        <h1>Best Wedding Planner in Chandigarh</h1>
-        <p>Putting all the beautiful pieces together and crafting one-of-a-kind experiences.</p><br>
-        <a href="/contact" class="vicky">Contact us</a>
     </div>
+</form> 
+
 
 <div class="foot">
     <p>&copy;2024 Vicky Event planner. All rights reserved.</p>
@@ -132,6 +127,13 @@ navLinks.classList.toggle('active');
 
 </body>
 </html>
+
+
+
+
+
+
+
 
 
 
