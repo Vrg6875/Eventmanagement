@@ -44,7 +44,7 @@
 
     margin-left: -310px;
     background-color: #370303; /* Dark red background color */
-    width: 120%; /* Ensure the background spans the full width of the container */
+    width: 115.5%; /* Ensure the background spans the full width of the container */
     padding: 30px; /* Add vertical padding for better spacing */
     white-space: nowrap; /* Prevent text wrapping */
     overflow: hidden; /* Hide any overflowing content */
@@ -64,18 +64,23 @@
         font-size: 0.9rem; /* Adjust font size */
         text-align: center; /* Center the text */
         margin-bottom: -15px;
-        margin-top: -15px;
-        margin-left: -261px;
+        margin-top: -24px;
+        margin-left: -211px;
 
         background-color: #370303; /* Dark red background color */
-        width: 155%; /* Ensure the background spans the full width of the container */
+        width: 151%; /* Ensure the background spans the full width of the container */
         padding: 30px; /* Add vertical padding for better spacing */
 
     }
+   
 }
 
 
-
+@media (max-width: 415px) {
+    .first p {
+        margin-left: -300px; /* Reduce margin for smaller screens */
+    }
+}
 
 
 
@@ -694,7 +699,7 @@ body {
 /* Carousel Styles */
 .carousel {
     margin-top: 0px;
-    width: 110%;
+    width: 100%;
 }
 
 .carousel-inner {

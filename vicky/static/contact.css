@@ -142,172 +142,10 @@ body {
     color: white;
 }
 
-/* General Header Styles */
-.header {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
-
-/* Image Styling */
-.header img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.6);
-}
-
-/* Overlay Styling */
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    /* Dark overlay */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
 
 
 
-@media screen and (max-width: 768px) {
-    form {
-        max-width: 90%;
-        font-size: 0.9rem;
-    }
-
-
-
-
-
-label {
-    display: block;
-    text-align: left;
-    margin-right: 260px;
-
-    margin-top: 0px;
-    font-weight: bold;
-    color: white;
-}
-
-    .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        /* Dark overlay */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    .header {
-        position: relative;
-        width: 135%;
-        height: 60vh;
-        overflow: hidden;
-    }
-
-    /* Image Styling */
-    .header img {
-        width: 340%;
-        height: 90%;
-        object-fit:contain;
-        filter: brightness(0.6);
-    }
-
-    form h2 {
-        font-size: 1.5rem;
-    }
-
-    form input, form .vicky {
-        font-size: 0.9rem;
-    }
-
-
-    .overlay form {
-        /* Slightly darker background for the form */
-        padding: 200px;
-        border-radius: 8px;
-        width: 70%;
-        max-width: 500px;
-        margin-left: 70px;
-        margin-bottom: 70%;
-        text-align: left;
-
-
-    }
-
-}
-
-
-
-
-/* Form Styling */
-.overlay form {
-    /* Slightly darker background for the form */
-    padding: 5px;
-    border-radius: 8px;
-    width: 50%;
-    max-width: 400px;
-    margin-bottom:10%;
-
-    text-align: left;
-
-
-}
-/* Logo Styling */
-.logo {
-    font-family: 'Playfair Display', serif; /* Elegant font choice */
-    font-style: italic; /* Italicize the text */
-    font-size: 2.5rem; /* Adjust font size */
-    color: #370303; /* Dark red color */
-    text-align: center; /* Center the text */
-    margin: 20px auto; /* Center the div and add vertical spacing */
-    padding: 20px; /* Add spacing inside the div */
-    /* Light background color */
-    max-width: 100%; /* Ensure it spans the full width of its container */
-    box-sizing: border-box; /* Include padding in width calculation */
-    line-height: 1.5;
-    margin-top: 30%; /* Improve readability */
-}
-
-/* Heading Styling */
-.logo h2 {
-    font-size: 2.5rem;
-    margin: 0 auto; /* Center the heading inside the div */
-    padding: 0 10%; /* Add horizontal padding to create space on smaller screens */
-    white-space: normal; /* Allow text to wrap */
-    word-wrap: break-word; /* Prevent text overflow */
-    text-align: center; /* Ensure the text remains centered */
-    width: 100%;
-    margin-top: 20%; /* Make the heading span the entire container */
-}
-@media (max-width: 768px) {
-    .logo h2 {
-        font-size: 1.8rem; /* Adjust font size for smaller screens */
-        padding: 0 5%; /* Reduce padding for better fit */
-        margin-top: 30%; /* Reduce top margin for compact layout */
-        line-height: 1.4; /* Improve readability */
-    }
-}
-
-
-/* Input Styling */
-.overlay input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
+  
 /* Submit Button Styling */
 .vicky {
     background-color: #4CAF50;
@@ -523,7 +361,7 @@ label {
 /* Carousel Styles */
 .carousel {
     margin-top: 0px;
-    width: 110%;
+    width: 100%;
 }
 
 .carousel-inner {
@@ -711,34 +549,42 @@ span {
     text-align: center; /* Center the text */
     margin-bottom: -25px;
 
-    margin-left: -310px;
+    /* margin-left: -310px; */
     background-color: #370303; /* Dark red background color */
-    width: 120%; /* Ensure the background spans the full width of the container */
+    width: 100%; /* Ensure the background spans the full width of the container */
     padding: 30px; /* Add vertical padding for better spacing */
     white-space: nowrap; /* Prevent text wrapping */
     overflow: hidden; /* Hide any overflowing content */
     text-overflow: ellipsis; /* Add ellipsis if text overflows */
     /* Include padding in width calculation */
 }
+.first p{
+    text-align: center;
+
+}
 
 
 
 
 /* For medium screens (tablets, 768px and below) */
-@media (max-width: 768px) {
+@media (max-width: 450px) {
     .first {
         font-family: 'Playfair Display', serif; /* Elegant font choice */
         font-style: italic; /* Italicize the text */
         color: #e8e1e1; /* Light gray text color */
         font-size: 0.9rem; /* Adjust font size */
         text-align: center; /* Center the text */
-        margin-bottom: -25px;
-        margin-top: -5px;
+        padding-bottom: 5px;
+        margin-top: -69px;
         margin-left: -250px;
 
         background-color: #370303; /* Dark red background color */
-        width: 152%; /* Ensure the background spans the full width of the container */
-        padding: 30px; /* Add vertical padding for better spacing */
+        width: 160%; /* Ensure the background spans the full width of the container */
+        /* Add vertical padding for better spacing */
+
+    }
+    .first p{
+        margin-left: 250px;
 
     }
 }
@@ -746,23 +592,7 @@ span {
 
 
 /* For medium screens (tablets, 768px and below) */
-@media (max-width: 400px) {
-    .first {
-        font-family: 'Playfair Display', serif; /* Elegant font choice */
-        font-style: italic; /* Italicize the text */
-        color: #e8e1e1; /* Light gray text color */
-        font-size: 0.9rem; /* Adjust font size */
-        text-align: center; /* Center the text */
-        margin-bottom: -25px;
-        margin-top: -58px;
-        margin-left: -250px;
 
-        background-color: #370303; /* Dark red background color */
-        width: 180%; /* Ensure the background spans the full width of the container */
-        padding: 30px; /* Add vertical padding for better spacing */
-
-    }
-}
 
 
 /* For small screens (phones, 576px and below) */
@@ -879,20 +709,6 @@ h2 {
     color: green;
 }
 
-/* Form Styles */
-form {
-    width: 300px;
-    margin: auto;
-}
-
-.form-control {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
 
 .btn-primary {
     background-color: #007bff;
@@ -1769,3 +1585,239 @@ a:hover {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header Section */
+.header {
+    background-image: url('https://images.unsplash.com/photo-1629890718918-d759b2d1463b?q=80&w=2059&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D alt="Wedding"style="filter: brightness(0.3);'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the entire header */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    color: white; /* Adjust text color to contrast the image */
+}
+
+
+.logo {
+    margin-bottom: 20px;
+}
+
+.header-title {
+    font-size: 30px;
+    color:white;
+    margin: 0;
+    margin-left: 42%;
+    text-wrap: nowrap;
+}
+
+.header-subtitle {
+    font-size: 24px;
+    color:white;
+    margin: 10px 0 0;
+}
+
+/* Form Section */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    /* background-color: #fff; */
+   
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+/* Contact Information Table */
+.contact-table-container {
+    margin: 20px auto;
+    padding: 20px;
+    /* background-color: beige;
+    border: 1px solid #ccc;
+    border-radius: 8px; */
+    max-width: 600px;
+}
+
+.contact-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.contact-header {
+    background-color:rgb(48, 22, 22);
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 4px 4px 0 0;
+}
+
+.contact-table td {
+    padding: 10px;
+    font-size: 16px;
+    color: #eeeaea;
+   
+}
+
+.contact-table a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact-table a:hover {
+    text-decoration: underline;
+}
+
+/* Messages Section */
+.messages {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+    text-align: left;
+    color: #d9534f;
+}
+
+
+
+@media (max-width: 415px) {
+    .header-title {
+        font-size: 30px;
+        color: white;
+        margin: 0;
+        margin-left: 42%;
+        text-wrap: nowrap;
+    }
+    
+    .header-subtitle {
+        font-size: 17px;
+        color:white;
+        margin: 10px 0 0;
+        margin-left: 42%;
+        width: 200px;
+    }
+    form {
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .form-label {
+        font-size: 13px;
+    }
+
+    .form-input {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .submit-button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .contact-table-container {
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .contact-header {
+        font-size: 16px;
+    }
+
+    .contact-table td {
+        font-size: 12px;
+        padding: 6px;
+    }
+}
+
+@media (max-width: 350px) {
+    .header-title {
+        font-size: 16px;
+    }
+
+    .header-subtitle {
+        font-size: 12px;
+    }
+
+    form {
+        padding: 8px;
+        border-radius: 4px;
+    }
+
+    .form-label {
+        font-size: 12px;
+    }
+
+    .form-input {
+        font-size: 11px;
+        padding: 5px;
+    }
+
+    .submit-button {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+
+    .contact-table-container {
+        padding: 8px;
+        border-radius: 4px;
+    }
+
+    .contact-header {
+        font-size: 14px;
+    }
+
+    .contact-table td {
+        font-size: 11px;
+        padding: 5px;
+    }
+}

@@ -2,6 +2,236 @@
 
 
 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    /* Default width for non-mobile views */
+}
+
+
+
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: rgb(244, 244, 244);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Text Animations */
+.hero-content {
+    max-width: 50%;
+    opacity: 0;
+    
+    transform: translateY(50px) rotateX(10deg); /* Start with slide and slight rotation */
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.hero-content.animated {
+    opacity: 1;
+    transform: translateY(0) rotateX(0); /* Reset position and rotation */
+}
+
+.hero-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    animation: bounceIn 1s ease forwards; /* Bounce animation */
+}
+
+.hero-heading {
+    font-size: 36px;
+    margin: 20px 0;
+    color: #222;
+    animation: fadeInScale 1s ease forwards;
+}
+
+.hero-heading span {
+    color: #ff6347; /* Tomato color */
+}
+
+.hero-text {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+    animation: fadeInLeft 1.5s ease forwards;
+}
+
+.hero-button {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: white;
+    margin-left: 190px;
+    border-radius: 5px;
+    animation: slideInRight 1s ease forwards;
+}
+
+.hero-button:hover {
+    background-color: #ff4500;
+}
+
+/* Image Animations */
+.hero-image img {
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    background-color: beige;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: scale(0.8) rotate(-10deg); /* Start with zoom out and slight rotation */
+    transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.hero-image img.animated {
+    opacity: 1;
+    transform: scale(1) rotate(0); /* Original size and rotation */
+}
+
+.peacock-decor {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 150px;
+    height: auto;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.peacock-decor.animated {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Keyframes for Advanced Animations */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero-content {
+        
+        margin-right: 8%;  
+        opacity: 0;
+           
+        transform: translateY(50px) rotateX(10deg); /* Start with slide and slight rotation */
+        transition: opacity 0.8s ease, transform 0.8s ease;
+        
+        max-width: 100%;
+        transform: translateY(30px); /* Slightly smaller translation for smaller screens */
+    }
+
+    .hero-logo {
+        font-size: 20px;
+    }
+
+    .hero-heading {
+        font-size: 28px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .hero-button {
+        font-size: 14px;
+        padding: 8px 16px;
+        
+            text-decoration: none;
+           
+            background-color: #ff6347;
+            color: white;
+            margin-left: 10px;
+            border-radius: 5px;
+            animation: slideInRight 1s ease forwards;
+        
+        
+    }
+
+    .hero-image img {
+        width: 300px; /* Smaller image for smaller screens */
+        margin-top: 20px;
+    }
+
+    .peacock-decor {
+        width: 100px;
+        bottom: 5px;
+        right: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-heading {
+        font-size: 24px;
+    }
+
+    .hero-button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .hero-image img {
+        width: 250px; /* Further reduce image size for very small screens */
+    }
+}
+
+
 
 /* Base Styling */
 .first {
@@ -10,16 +240,19 @@
     color: #e8e1e1; /* Light gray text color */
     font-size: 2rem; /* Adjust font size */
     text-align: center; /* Center the text */
-    margin-bottom: -10px;
+    margin-bottom: 0px;
   
     margin-left: -310px;
     background-color: #370303; /* Dark red background color */
-    width: 120%; /* Ensure the background spans the full width of the container */
+    width: 115%; /* Ensure the background spans the full width of the container */
     padding: 30px; /* Add vertical padding for better spacing */
     white-space: nowrap; /* Prevent text wrapping */
     overflow: hidden; /* Hide any overflowing content */
     text-overflow: ellipsis; /* Add ellipsis if text overflows */
     /* Include padding in width calculation */
+}
+.first p {
+    margin-left: 360px;
 }
 
 
@@ -33,12 +266,12 @@
         color: #e8e1e1; /* Light gray text color */
         font-size: 1.1rem; /* Adjust font size */
         text-align: center; /* Center the text */
-        margin-bottom: -15px;
+        margin-bottom: -10px;
        
         margin-left: -128px;
      
         background-color: #370303; /* Dark red background color */
-        width: 131%; /* Ensure the background spans the full width of the container */
+        width: 128%; /* Ensure the background spans the full width of the container */
         padding: 30px; /* Add vertical padding for better spacing */
         
     }
@@ -220,9 +453,6 @@
 
 
 
-
-
-
 /* Services Grid */
 .services-grid {
     display: grid;
@@ -238,34 +468,19 @@
     overflow: hidden;
     position: relative;
     text-align: center;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Start with a slight downward offset */
+    transition: opacity 1s ease, transform 1s ease; /* Smooth animation */
 }
 
-
-
-.service-item h2 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    font-size: 1.2em;
-    text-transform: uppercase;
-}
-
-
-.service-item img {
-    width: 100%; /* Ensure image spans the entire width of the item */
-    height: 200px; /* Fixed height for uniformity across all images */
-    object-fit: cover; /* Ensure the image covers the whole area without distortion */
-    object-position: center; /* Center the image */
+.service-item.visible {
+    opacity: 1; /* Fully visible when in view */
+    transform: translateY(0); /* Reset position */
 }
 
 .service-item h2 {
     position: absolute;
-    text-align:left;
+    text-align: left;
     bottom: 0;
     left: 0;
     right: 0;
@@ -275,6 +490,13 @@
     color: white; /* White text color */
     font-size: 0.8em; /* Larger text for service name */
     text-transform: uppercase;
+}
+
+.service-item img {
+    width: 100%; /* Ensure image spans the entire width of the item */
+    height: 200px; /* Fixed height for uniformity across all images */
+    object-fit: cover; /* Ensure the image covers the whole area without distortion */
+    object-position: center; /* Center the image */
 }
 
 /* Mobile Styles (below 768px) */
@@ -293,38 +515,15 @@
     }
 
     .service-item h2 {
-        position: absolute;
-        text-align: left;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: 0;
-        padding: 10px;
-        background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
-        color: white; /* White text color */
-        font-size: 0.6em; /* Reduced font size */
-        text-transform: uppercase;
+        font-size: 0.6em; /* Reduced font size for mobile */
     }
 }
-
-/* Extra Small Devices (phones in portrait mode) */
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Carousel Styles */
 .carousel {
     margin-top: 0px;
-    width: 110%;
+    width: 100%;
 }
 
 .carousel-inner {
@@ -477,12 +676,7 @@
 
 
 
-/* General Styles */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
+
 
 /* General Reset */
 * {
@@ -847,12 +1041,6 @@ h2 {
     }
 }
 
-/* General Styles */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
 
 /* General Reset */
 * {
@@ -1065,13 +1253,8 @@ h2 {
         height: 200px; /* Adjust chat body height */
     }
 }
-``` ```css
-/* General Styles */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
+
+
 
 /* General Reset */
 * {
@@ -1258,12 +1441,7 @@ h2 {
     border-radius: 5px;
 }
 
-/* General Styles */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
+
 
 /* General Reset */
 * {
@@ -1478,12 +1656,6 @@ h2 {
     }
 }
 
-/* General Styles */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
 
 /* General Reset */
 * {
@@ -1714,14 +1886,6 @@ h2 {
 
 
 
-
-/* General Styles */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
 /* General Reset */
 * {
     margin: 0;
@@ -1754,6 +1918,7 @@ body {
     position: relative;
     padding: 10px 20px;
     display: flex;
+    width: 100%;
     align-items: center;
     justify-content: space-between;
 }
@@ -1763,7 +1928,7 @@ body {
     display: none;
     cursor: pointer;
     flex-direction: column;
-    gap: 4px;
+    gap: 6px;
     margin-left: 10px;
 }
 
@@ -1781,7 +1946,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 200%;
+    
     padding: 0;
 }
 
@@ -1914,7 +2080,15 @@ body {
 
 
 
-
+@media (max-width: 415px) {
+    body {
+        width: 110%; /* Adjust body width for mobile */
+    }
+    
+    .navbar {
+        width: 100%; /* Adjust navbar width for mobile */
+    }
+}
 
 @media (min-width: 1024px) {
     .brand-heading {

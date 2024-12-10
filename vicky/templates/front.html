@@ -123,11 +123,26 @@
 
 
 
+<section class="hero-section">
 
+    <div class="hero-content">
+       
+        <h1 class="hero-heading">We Plan <span>Perfect</span> Weddings</h1>
+        <p class="hero-text">Our wedding experts plan your wedding day better than you ever imagined.</p>
+        <a href="#" class="hero-button">Get Free Quote</a>
+    </div>
+
+    <div class="hero-image">
+        <img src="{% static 'event2.jpg' %}" alt="Wedding Couple">
+    </div>
+    <img src="{% static 'event2.jpg' %}" alt="Peacock Decoration" class="peacock-decor">
+    </section>
     <div class="header">
 
     <br>
     <br>
+
+
             <div class="pogo">
             Best Wedding Planner in <br>Chandigarh
         </div>
@@ -154,6 +169,15 @@ At vicky events, we take immense pride in our reputation as the best wedding pla
 
     </div>
 
+
+
+
+
+
+
+
+
+
     <br>
     <br>
    <div class="services-title">
@@ -162,6 +186,20 @@ At vicky events, we take immense pride in our reputation as the best wedding pla
 
     <br>
     <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <div class="services-grid">
         <div class="service-item">
@@ -213,6 +251,19 @@ At vicky events, we take immense pride in our reputation as the best wedding pla
             <h2>Food</h2>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+    
+    <div>
+   
+    </div> 
 
     <br>
     <h2 style="background-color: black; color: white; padding: 10px; text-align: center; border-radius: 5px;">
@@ -348,7 +399,55 @@ At vicky events, we take immense pride in our reputation as the best wedding pla
             </div>
 
 
+
+
+            
+
 <script>
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const serviceItems = document.querySelectorAll(".service-item");
+
+    const handleScroll = () => {
+        serviceItems.forEach(item => {
+            const rect = item.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100) { // Trigger animation slightly before fully in view
+                item.classList.add("visible");
+            }
+        });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Run on load to animate elements already in view
+    handleScroll();
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const animatedElements = document.querySelectorAll(".hero-content, .hero-image img, .peacock-decor");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("animated");
+                }
+            });
+        },
+        { threshold: 0.1 } // Trigger when 10% of the element is visible
+    );
+
+    animatedElements.forEach((el) => observer.observe(el));
+});
+
+
+
+
+
+
+
                 function toggleChat() {
                     const chatWindow = document.getElementById("chat-window");
                     chatWindow.style.display = chatWindow.style.display === "none" ? "block" : "none";
@@ -550,3 +649,7 @@ window.onscroll = function() {
 </body>
 
 </html>
+
+
+
+

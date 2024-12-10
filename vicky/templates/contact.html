@@ -103,115 +103,81 @@
     
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Let’s bring your vision to life. Get in touch today!"
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p>"Let’s bring your vision to life. Get in touch today!"</p>
 </div>
 
 
 
 
 
-
-    <div class="header">
-        <br>
-
-        <img src="https://images.unsplash.com/photo-1629890718918-d759b2d1463b?q=80&w=2059&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Wedding"style="filter: brightness(0.4);">
-        <div class="overlay">
-            
-            <div class="logo">
-                <br><br>
-                <h2>&nbsp;&nbsp;&nbsp;Reach Out To Us <br>&nbsp;&nbsp;&nbsp;We would love to hear from you! <br>Contact us directly by filling this form</h2>
-            </div>
-
-       <form method="post" action="#" >
-        {% csrf_token %}
- 
-
- <br>
- <br>
- <br>
- {% if messages %}
- <ul class="main">
-{% for message in messages %}
-<li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-{% endfor %}
-</ul>
-{% endif %}
-
-     <div>
-         <label for="event-name" style="display: block; margin-bottom: 5px;">Name:</label>
-         <input type="text" id="event-name" name="name" placeholder="Enter name" required style="width: 100%; padding: 8px; margin-bottom: 10px;">
-     </div>
-     
-     <div>
-         <label for="event-date" style="display: block; margin-bottom: 5px;">Event mail:</label>
-         <input type="email" id="event-date" name="email" placeholder="Enter email" required style="width: 100%; padding: 8px; margin-bottom: 10px;">
-     </div>
-     
-     <div>
-         <input type="submit" value="Submit" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; cursor: pointer;">
-     </div>  
-      <div>
-      
-         
-         
-
-
-
-  </div>  
-
-
-
-
-
-
-
-
-
-
-  <div class="contact-table-container">
-    <table>
-        <thead>
-            <tr>
-                <th style="color: white;">Contact Information</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Phone: +91 8210224732 <br> +91 9507682919</td>
-            </tr>
-            <tr>
-                <td><b>Address:</b> Lifestyle Residency, Sector 116, Mohali</td>
-            </tr>  
-            <tr>
-                <td><b>Email:</b> <a href="mailto:vickyrajgupta2003@gmail.com">vickyrajgupta2003@gmail.com</a></td>
-            </tr>
-            <tr>
-                <td><b>Website:</b> <a href="/front/" target="_blank" rel="noopener noreferrer">vickyevents.com</a></td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-
-
-
-
-
-
-
-
- </form>
-
-     </div>
- </div>
- 
-       
-        </div>
-    </div>
-   
 <br>
+<div class="header">
+    <div class="logo">
+        <h2 class="header-title">Reach Out To Us</h2>
+        <p class="header-subtitle">We would love to hear from you!<br>Contact us directly by filling this form.</p>
+    </div>
+
+    <form method="post" action="#">
+        {% csrf_token %}
+        
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+        <div class="form-group">
+            <label for="event-name" class="form-label">Name:</label>
+            <input type="text" id="event-name" name="name" class="form-input" placeholder="Enter name" required>
+        </div>
+        <div class="form-group">
+            <label for="event-name" class="form-label">Phone no.:</label>
+            <input type="text" id="event-name" name="phone" class="form-input" placeholder="Enter phone no." required>
+        </div>
 
 
+        <div class="form-group">
+            <label for="event-email" class="form-label">E-Mail:</label>
+            <input type="email" id="event-email" name="email" class="form-input" placeholder="Enter email" required>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Submit" class="submit-button">
+        </div>
+    </form>
+
+    <div class="contact-table-container">
+        <table class="contact-table">
+            <thead>
+                <tr>
+                    <th class="contact-header">Contact Information</th>
+                    <br>
+                </tr>
+                
+            </thead>
+            
+
+            <tbody>
+                <tr>
+                    <br><br>
+                    <td>Phone: +91 8210224732 <br> +91 9507682919</td>
+                </tr>
+                <tr>
+                    <td><b>Address:</b> Lifestyle Residency, Sector 116, Mohali</td>
+                </tr>  
+                <tr>
+                    <td><b>Email:</b> <a href="mailto:vickyrajgupta2003@gmail.com">vickyrajgupta2003@gmail.com</a></td>
+                </tr>
+                <tr>
+                    <td><b>Website:</b> <a href="/front/" target="_blank" rel="noopener noreferrer">vickyevents.com</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<br>
 
 
 

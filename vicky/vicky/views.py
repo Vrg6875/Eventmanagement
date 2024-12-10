@@ -672,6 +672,11 @@ def success(request):
    
      return render(request,"success.html")     
 
+def successful(request):
+   
+     return render(request,"successful.html")     
+
+
 
 
 
@@ -1246,7 +1251,7 @@ def change_username_password(request):
                     admin_user.username = new_username
                     admin_user.set_password(new_password)
                     admin_user.save()
-                    return redirect('success')  # Redirect to a success page after changing the username and password
+                    return redirect('successful')  # Redirect to a success page after changing the username and password
                 else:
                     form.add_error('confirm_password', 'New passwords do not match.')
             else:

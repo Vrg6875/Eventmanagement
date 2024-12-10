@@ -76,6 +76,8 @@ urlpatterns = [
 
     path('change_username_password/', views.change_username_password, name='change_username_password'),
 
+    path('successful/',views.successful, name='successful'),
+
 
 
 
