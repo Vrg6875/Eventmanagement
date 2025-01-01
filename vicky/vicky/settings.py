@@ -73,6 +73,18 @@ WSGI_APPLICATION = 'vicky.wsgi.application'
 
 
  
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'vickyrajgupta$default',  # Your database name
+#         'USER': 'vickyrajgupta',         # Your MySQL username
+#         'PASSWORD': 'vicky@123',         # Your MySQL password
+#         'HOST': 'vickyrajgupta.mysql.pythonanywhere-services.com',  # PythonAnywhere MySQL host
+#         'PORT': '3306',                  # Default MySQL port
+
+#     }
+# }
+
 
 
 

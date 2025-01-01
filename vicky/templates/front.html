@@ -150,18 +150,28 @@
        <br>
       
 
-        <div class="renu">
-           <p>
-           
-            Putting all the beautiful pieces together and crafting one-of-a-kind wedding experiences of all shapes and sizes, we at vicky events are known as the best wedding planners in Chandigarh. As the best wedding planner in Chandigarh, we have designed and produced events across the globe, ranging from an intimate wedding for fifty people to a grand-scale wedding for more than thousands. As the best wedding planner in Chandigarh, we take pride in being the architects of your most momentous life event. Renowned for our exceptional craftsmanship, we have earned the esteemed title of the best wedding planner in Chandigarh. And the results are nothing less than MAGIC!
+       
 
-At vicky events, we take immense pride in our reputation as the best wedding planner in Chandigarh. With our meticulous diligence and unmatched creativity, we as the best wedding planner in Chandigarh continue to surpass expectations in wedding designs and production. From conceptualization to execution, we, as the best wedding planner in Chandigarh, strive to curate unforgettable wedding experiences that reflect the unique personalities and dreams of each couple. Our team of the best wedding planner in Chandigarh consists of dedicated professionals, who work tirelessly to ensure that every element, from venue selection to decor, catering, entertainment, and more can seamlessly come together to create a symphony of beauty and joy. We, as the best wedding planner in Chandigarh, understand the significance of this momentous occasion and aim to leave a lasting impression, turning dreams into reality. With vicky events, your wedding day becomes a magical celebration that will be cherished for a lifetime.
-           </p>
 
-           <div>
+
+       <div class="renu">
+        <p>
+            Putting all the beautiful pieces together and crafting one-of-a-kind wedding experiences of all shapes and sizes, we at vicky events are known as the best wedding planners in Chandigarh.
+            <span class="more-text" style="display: none;">
+                As the best wedding planner in Chandigarh, we have designed and produced events across the globe, ranging from an intimate wedding for fifty people to a grand-scale wedding for more than thousands. As the best wedding planner in Chandigarh, we take pride in being the architects of your most momentous life event. Renowned for our exceptional craftsmanship, we have earned the esteemed title of the best wedding planner in Chandigarh. And the results are nothing less than MAGIC!
+    
+                At vicky events, we take immense pride in our reputation as the best wedding planner in Chandigarh. With our meticulous diligence and unmatched creativity, we as the best wedding planner in Chandigarh continue to surpass expectations in wedding designs and production. From conceptualization to execution, we, as the best wedding planner in Chandigarh, strive to curate unforgettable wedding experiences that reflect the unique personalities and dreams of each couple. Our team of the best wedding planner in Chandigarh consists of dedicated professionals, who work tirelessly to ensure that every element, from venue selection to decor, catering, entertainment, and more can seamlessly come together to create a symphony of beauty and joy. We, as the best wedding planner in Chandigarh, understand the significance of this momentous occasion and aim to leave a lasting impression, turning dreams into reality. With vicky events, your wedding day becomes a magical celebration that will be cherished for a lifetime.
+            </span>
+        </p>
+        <a class="load-more-text" href="javascript:void(0)" style="display: none; color: black;">Load More</a>
+    
+        <div>
             <img src="{% static 'event.jpg' %}" class="r-image">
         </div>
+    </div>
+    
         </div>
+    </div>
         
 
 <br>
@@ -404,6 +414,44 @@ At vicky events, we take immense pride in our reputation as the best wedding pla
             
 
 <script>
+
+document.addEventListener('DOMContentLoaded', () => {
+    const loadMoreText = document.querySelector('.load-more-text');
+    const moreText = document.querySelector('.more-text');
+
+    const toggleLoadMore = () => {
+        const mediaQuery = window.matchMedia('(max-width: 768px)');
+        if (mediaQuery.matches) {
+            // Enable the Load More feature for mobile devices
+            loadMoreText.style.display = 'inline-block';
+            loadMoreText.addEventListener('click', () => {
+                if (moreText.style.display === 'none' || moreText.style.display === '') {
+                    moreText.style.display = 'inline';
+                    loadMoreText.textContent = 'Show Less';
+                } else {
+                    moreText.style.display = 'none';
+                    loadMoreText.textContent = 'Load More';
+                }
+            });
+        } else {
+            // Disable the Load More feature for larger devices
+            loadMoreText.style.display = 'none';
+            moreText.style.display = 'inline';
+        }
+    };
+
+    // Initialize the toggle on page load
+    toggleLoadMore();
+
+    // Listen for window resize events to update the toggle
+    window.addEventListener('resize', toggleLoadMore);
+});
+
+
+
+
+
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
